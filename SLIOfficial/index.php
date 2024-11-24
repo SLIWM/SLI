@@ -15,6 +15,7 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/Nav.css">
+  <link rel="stylesheet" href="css/anchor.css">
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
@@ -74,7 +75,7 @@
         </div>
         <div class="col-lg-6 order-lg-1">
           <div class="p-5">
-            <h1 class="display-2">How we started</h1>
+            <h1 class="display-2" id="top">How we started</h1>
             <div><br></div>
             <p class="lead">SALT & LIGHT INTERNATIONAL is a non profit, Christian mission organization dedicated in
               sharing and serving one another with the love of Jesus Christ.<br><br>
@@ -358,6 +359,13 @@
       </div>
     </div>
   </section>
+
+  <nav>
+  <ul>
+    <li><a href="#top" class="scroll-to-top"><i class="fas fa-arrow-up"></i></a></li>
+  </ul>
+</nav>
+
 
 
   <!-- Footer -->
