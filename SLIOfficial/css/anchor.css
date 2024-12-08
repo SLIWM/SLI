@@ -1,0 +1,30 @@
+.anch ul {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    list-style-type: none;
+  }
+  
+  .anch ul li {
+    margin-bottom: 10px;
+  }
+  
+  a.scroll-to-top {
+    display: inline-block;
+    font-size: 30px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    text-decoration: none;
+  }
+  
+  a.scroll-to-top:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Smooth scroll for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }

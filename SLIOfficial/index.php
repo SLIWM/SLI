@@ -15,6 +15,7 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/Nav.css">
+  <link rel="stylesheet" href="css/anchor.css">
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
@@ -22,7 +23,9 @@
 
   <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-body-tertiary transparent">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#!">Salt and Light</a>
+      <img src="img/logo/SLILOGO.png" alt="" width="30" height="24" class="d-inline-block align-text-top" style="margin-right:10px">
+      SALT AND LIGHT
+      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -74,7 +77,7 @@
         </div>
         <div class="col-lg-6 order-lg-1">
           <div class="p-5">
-            <h1 class="display-2">How we started</h1>
+            <h1 class="display-2" id="top">How we started</h1>
             <div><br></div>
             <p class="lead">SALT & LIGHT INTERNATIONAL is a non profit, Christian mission organization dedicated in
               sharing and serving one another with the love of Jesus Christ.<br><br>
@@ -293,7 +296,7 @@
     <div class="">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d247277.27976546402!2d120.9152628!3d14.4440132!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1188b629bbb%3A0x87d34a7714012269!2sSalt%20and%20Light%20Christian%20Fellowship!5e0!3m2!1sen!2sph!4v1723907967962!5m2!1sen!2sph"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
@@ -358,6 +361,13 @@
       </div>
     </div>
   </section>
+
+  <nav>
+  <ul>
+    <li><a href="#top" class="scroll-to-top"><i class="fas fa-arrow-up"></i></a></li>
+  </ul>
+</nav>
+
 
 
   <!-- Footer -->
