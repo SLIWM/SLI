@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="saltandlight.css">
+  <link rel="stylesheet" href="css/saltandlight.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +34,7 @@
         <div class="navbar-nav ms-auto py-0">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link" aria-current="page" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="album.php">Albums</a></li>
+           <li class="nav-item"><a class="nav-link" href="Albums">Albums</a></li>
             <li class="nav-item"><a class="nav-link" href="#followus">Follow Us</a></li>
             <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
           
