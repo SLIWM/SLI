@@ -84,11 +84,9 @@ include 'db.php';
                     <?php if (!empty($album['Files'])): ?>
                         <?php foreach ($album['Files'] as $file): ?>
                             <div class="col-lg-4 col-sm-6">
-                                <a class="portfolio-box" href="<?php echo htmlspecialchars($file['Path']); ?>" title="<?php echo htmlspecialchars($file['Label']); ?>">
+                                <a class="portfolio-box"  >
                                     <img class="img-fluid" src="../SALTANDLIGHTBackOffice/php/New/<?php echo htmlspecialchars($file['Path']); ?>" alt="<?php echo htmlspecialchars($file['Label']); ?>" />
-                                    <div class="portfolio-box-caption">
-                                        <div class="project-name"><?php echo htmlspecialchars($file['Label']); ?></div>
-                                    </div>
+                                    
                                 </a>
                             </div>
                         <?php endforeach; ?>
