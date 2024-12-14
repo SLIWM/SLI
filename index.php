@@ -1,498 +1,738 @@
-<!DOCTYPE html>
+<?php
+include_once('php/displayEmbed.php');
+?>
+<!doctype html>
 <html lang="en">
 
 <head>
-  
-  <title>SALT AND LIGHT FELLOWSHIP</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/saltandlight.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/Nav.css">
-  <link rel="stylesheet" href="css/anchor.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Festava Live - Bootstrap 5 CSS Template</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/saltandlight.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/templatemo-festava-live.css" rel="stylesheet">
+
+    <!--
+
+TemplateMo 583 Festava Live
+
+https://templatemo.com/tm-583-festava-live
+
+-->
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+<body>
 
+    <main>
 
-  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-body-tertiary transparent">
-    <div class="container-fluid">
-      <img src="img/logo/SLILOGO.png" alt="" width="30" height="24" class="d-inline-block align-text-top" style="margin-right:10px">
-      SALT AND LIGHT
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav ms-auto py-0">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" aria-current="page" href="#about">About</a></li>
-           <li class="nav-item"><a class="nav-link" href="Albums">Albums</a></li>
-            <li class="nav-item"><a class="nav-link" href="#followus">Follow Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-          
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <!-- Bootstrap JS and dependencies -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    window.addEventListener('scroll', function () {
-      const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-        navbar.classList.remove('transparent');
-      } else {
-        navbar.classList.add('transparent');
-        navbar.classList.remove('scrolled');
-      }
-    });
-  </script>
-  <div class="hero-image">
-    <div class="hero-text">
-      <h1 class="qwitcher-grypen-bold display-1">We are the Salt and <br> Light of the World</h1>
-      <p>우리는 세상의 소금과 빛입니다</p>
-      <p class="lead">Matthew: 5:13-16</p>
+        <header class="site-header">
+            <div class="container">
+                <div class="row">
 
-    </div>
-  </div> 
+                    <div class="col-lg-12 col-12 d-flex flex-wrap">
+                        <p class="d-flex me-4 mb-0">
+                            <i class="bi-person custom-icon me-2"></i>
+                            <strong class="text-dark">Welcome to Salt and Light</strong>
+                        </p>
+                    </div>
 
-
-  <!-- Content section 1-->
-  <section id="scroll">
-    <div class="container px-5" id="about">
-      <div class="row gx-5 align-items-center">
-        <div class="col-lg-6 order-lg-2">
-          <div class="p-5"><img class="img-fluid rounded" src="img/section/img1.jpg" alt="..." style="-webkit-filter: grayscale(100%);
-  filter: grayscale(100%);" /></div>
-        </div>
-        <div class="col-lg-6 order-lg-1">
-          <div class="p-5">
-            <h1 class="display-2" id="top">How we started</h1>
-            <div><br></div>
-            <p class="lead">SALT & LIGHT INTERNATIONAL is a non profit, Christian mission organization dedicated in
-              sharing and serving one another with the love of Jesus Christ.<br><br>
-              We aim to proclaim the gospel, bringing our community to acknowledge Jesus Christ to be our only Savior
-              and Lord.</p>
-            <hr class="solid" style="border-top: 3px solid #bbb;">
-            <h1 class="display-2">우리의 시작</h1>
-            <div><br></div>
-            <p class="lead">소금과 빛 국제는 예수 그리스도의 사랑으로 서로 나누고 섬기는 데 헌신하는 비영리 기독교 선교 단체입니다.<br><br>
-              우리는 복음을 전하여 우리 공동체가 예수 그리스도를 우리의 유일한 구원자이자 주님으로 인정하도록 하는 것을 목표로 합니다.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <hr class="solid" style="border-top: 3px solid #bbb;">
-  <div class="text-center">
-    <h1 class="display-1">Our Story 우리의 이야기</h1>
-
-
-  </div>
-<!-- Timeline -->
-  <div class="container-fluid">
-    <div class="row">
-
-      <div class="col">
-        <div class="container my-5">
-          <div class="row">
-            <div class="col-md-6 offset-md-3">
-
-              <ul class="timeline-3">
-                <li>
-                  <p class="" style="font-weight: bold;">2005.10</p>
-                  <p>Start of SALT AND LIGHT (Philippines)<br>소금과 빛의 시작 (필리핀)
-                  </p>
-                </li>
-                <li>
-                  <p class="" style="font-weight: bold;">2008.11</p>
-                  <p>Start of SALT AND LIGHT (India)<br>소금과 빛의 시작 (인도)
-                  </p>
-                </li>
-                <li>
-                  <p class="" style="font-weight: bold;">2011.04</p>
-                  <p>Unified the name of organization into SALT & LIGHT INTERNATIONAL WORLD MISSION INC.<br>조직 이름을 소금과 빛
-                    국제 월드 미션 주식회사로 통일
-                  </p>
-                </li>
-                <li>
-                  <p class="" style="font-weight: bold;">2012.07</p>
-                  <p>MOA with City of San Pedro<br>산 페드로 시와의 양해각서
-                  </p>
-                </li>
-                <li>
-                  <p class="" style="font-weight: bold;">2012.10</p>
-                  <p>Completion of construction of Salt and Light LOVE Community Center (Brgy. Landayan)<br>소금과 빛 LOVE
-                    커뮤니티 센터 (브랑가이 랜다얀) 건설 완료 (2010-2012)
-                  </p>
-                </li>
-                <li>
-                  <p class="" style="font-weight: bold;">2013.05</p>
-                  <p>Vision trip to Korea (Scholars and Ministers)<br>한국 비전 여행 (학자 및 목회자)
-                  </p>
-                </li>
-              </ul>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="container my-5">
-          <div class="row">
-            <div class="col-md-6 offset-md-3">
+        </header>
 
-              <ul class="timeline-3">
-                <li>
-                  <p class="" style="font-weight: bold;">2013.09</p>
-                  <p>Completion of Salt and Light Center in Chennai, India<br>인도 첸나이의 소금과 빛 센터 완공
-                  </p>
-                </li>
-                <li>
-                  <p class="" style="font-weight: bold;">2013.11</p>
-                  <p>Completion of Salt and Light Church in Catmon, Batangas<br>카트몬, 바탄가스의 소금과 빛 교회 완공
-                  </p>
-                </li>
-                <li>
-                  <p class="" style="font-weight: bold;">2014.06</p>
-                  <p>Started Salt and Light Bible College (Chennai, India)<br>소금과 빛 성경 대학 개설 (첸나이, 인도)
-                  </p>
-                </li>
-                <li>
-                  <p class="" style="font-weight: bold;">2015.03</p>
-                  <p>Joined Global Mission Society (Missionary Sungwon & Ara)<br>글로벌 미션 사회 가입 (선교사 성원 & 아라)
-                  </p>
-                </li>
-                <li>
-                  <p class="" style="font-weight: bold;">2016.07</p>
-                  <p>Ministry Cooperation with PTS College<br>PTS 대학과의 사역 협력
-                  </p>
-                </li>
-                <li>
-                  <p class="" style="font-weight: bold;">2017.06</p>
-                  <p>Start of Salt and Light Daycare (with CSWD San Pedro)<br>소금과 빛 데이케어 시작 (CSWD 산 페드로와 함께)
-                  </p>
-                </li>
-              </ul>
+
+        <nav class="navbar navbar-expand-lg" style="z-index: 500;">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    SALT AND LIGHT
+                </a>
+
+                <a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">Buy Ticket</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_1">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_2">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_3">Artists</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_4">Schedule</a>
+                        </li>
+
+                      
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_6">Contact</a>
+                        </li>
+                    </ul>
+
+                    
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="container my-5">
-          <div class="row">
-            <div class="col-md-6 offset-md-3">
+        </nav>
 
-              <ul class="timeline-3">
-                <li>
-                  <p class="" style="font-weight: bold;">2018.01</p>
-                  <p>Completion of Salt and Light Faith Center (Brgy Cuyab)<br>소금과 빛 신앙 센터 완공 (브랑가이 쿠야브)
-                  </p>
-                </li>
-                <li>
-                  <p class="" style="font-weight: bold;">2018.05</p>
-                  <p>Award Received from City of San Pedro<br>산 페드로 시로부터 받은 상
-                  </p>
-                  <p class="" style="font-weight: bold;">2018.05</p>
-                  <p>Started Y-Tree Ministry<br>Y-Tree 사역 시작
-                  </p>
-                </li>
-                <li>
-                  <p class="" style="font-weight: bold;">2019.02</p>
-                  <p>Opening of Salt and Light Health Center (with CHO San Pedro)<br>소금과 빛 건강 센터 개소 (CHO 산 페드로와 함께)
-                  </p>
-                </li>
-                <li>
-                  <p class="" style="font-weight: bold;">2020.04</p>
-                  <p>Start of Online Ministry SALT & LIGHT ON (Youtube)<br>온라인 사역 시작 SALT & LIGHT ON (유튜브)
-                  </p>
-                </li>
-                <li>
-                  <p class="" style="font-weight: bold;">2020.07</p>
-                  <p>Start of Online Children Ministry- Salt and Light KIDS (Youtube)<br>온라인 어린이 사역 시작 - 소금과 빛 KIDS
-                    (유튜브)
-                  </p>
-                </li>
-                <li>
-                  <p class="" style="font-weight: bold;">2022.02</p>
-                  <p>Completion of House of Mission (Brgy Cuyab)<br>선교의 집 완공 (브랑가이 쿠야브)
-                  </p>
-              </ul>
+
+        <section class="hero-section" id="section_1">
+            <div class="section-overlay"></div>
+
+            <div class="container d-flex justify-content-center align-items-center">
+                <div class="row">
+
+                    <div class="col-12 mt-auto mb-5 text-center">
+                        <small>우리는 세상의 소금과 빛입니다
+                            <br>
+                            Matthew: 5:13-16</small>
+
+                        <h1 class="text-white mb-5">We are the Salt and
+                            Light of the World</h1>
+
+                        <a class="btn custom-btn smoothscroll" href="#section_2">Let's begin</a>
+                    </div>
+
+                    <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
+                        <div class="date-wrap">
+                            <h5 class="text-white">
+                                <i class="custom-icon bi-clock me-2"></i>
+                                10:20<sup>am</sup>, Sunday
+                            </h5>
+                        </div>
+
+                        <div class="location-wrap mx-auto py-3 py-lg-0">
+                            <h5 class="text-white">
+                                <i class="custom-icon bi-geo-alt me-2"></i>
+                                Cuyab, San Pedro, Philippines
+                            </h5>
+                        </div>
+
+                        <div class="social-share">
+                            <ul class="social-icon d-flex align-items-center justify-content-center">
+                                <span class="text-white me-3">Share:</span>
+
+                                <li class="social-icon-item">
+                                    <a href="https://web.facebook.com/slcf2009" class="social-icon-link">
+                                        <span class="bi-facebook"></span>
+                                    </a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="https://www.youtube.com/@SaltandLightON" class="social-icon-link">
+                                        <span class="bi-youtube"></span>
+                                    </a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="https://www.youtube.com/@SaltandLightKIDS" class="social-icon-link">
+                                        <span class="bi-youtube"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> 
-  
- 
+            <div class="video-wrap">
+                <video autoplay="" loop="" muted="" class="custom-video" poster="">
+                    <source src="video/pexels-2022395.mp4" type="video/mp4">
 
-<!--Mission/Vission-->
-  <div class="container">
-    <div class="row">
-
-      <div class="col-lg-4 d-none d-lg-block">
-        <div class="card">
-          <img src="img/about/1.jpg" class="card-img-top" alt="Waterfall" />
-          <div class="card-body" style="background: #3A269A;">
-            <h5 class="card-title display-3 text-warning">VISION</h5>
-            <p class="card-text lead text-white">
-              To be the Salt & Light of the World
-            </p>
-           
-
-          </div>
-        </div>
-      </div>    
-
-      <div class="col-lg-4 d-none d-lg-block">
-        <div class="card">
-          <img src="img/about/2.jpg" class="card-img-top" alt="Sunset Over the Sea" />
-          <div class="card-body" style="background: #3A269A;">
-            <h5 class="card-title display-3 text-warning">MISSION</h5>
-            <p class="card-text lead text-white">
-              To be and make disciples of Jesus Christ
-            </p>
-           
-          </div>
-        </div>
-
-      </div>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
 
 
-      <div class="col-lg-4 d-none d-lg-block">
-        <div class="card">
-          <img src="img/about/3.jpg" class="card-img-top" alt="Sunset over the Sea" />
-          <div class="card-body" style="background: #3A269A;">
-            <h5 class="card-title display-3 text-warning">PASSION</h5>
-            <p class="card-text lead text-white">
-              To love and God and love one another
-            </p>
+        <section class="about-section section-padding" id="section_2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+                        <div class="services-info">
+                            <h2 class="text-white mb-4">How we started</h2>
+
+                            <p class="text-white">SALT & LIGHT INTERNATIONAL is a non profit, Christian mission organization dedicated in
+                                sharing and serving one another with the love of Jesus Christ.<br><br>
+                                We aim to proclaim the gospel, bringing our community to acknowledge Jesus Christ to be our only Savior
+                                and Lord.</p>
+
+
+                          
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="about-text-wrap">
+                            <img  src="img/carousel/Carousel3.jpg" class="about-image img-fluid">
+
+                          
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container-fluid text-white" style="color:white!important;">
+                <div class="row">
             
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-   <!-- Map -->
-   <div class="container p-5 my-5 border text-center" style="background-color:#fef0e4;">
-    <h1 class="display-3">We Want You Here</h1>
-    <p class="lead">We are one family with multiple campuses across the community. Whether this is your first time
-      visiting a church or you’re just new to San Pedro,Laguna. we’re glad you’re here.</p>
-    <a href="https://maps.app.goo.gl/AsjbH1aRM7YqLXLT9"><button type="button" class="btn btn-primary btn-lg">Find our
-        Church</button></a>
-    <div><br></div>
-    <div class="">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d247277.27976546402!2d120.9152628!3d14.4440132!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1188b629bbb%3A0x87d34a7714012269!2sSalt%20and%20Light%20Christian%20Fellowship!5e0!3m2!1sen!2sph!4v1723907967962!5m2!1sen!2sph"
-        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </div>
-
-  <!-- Social Media -->
-  <section class="py-5" id="followus">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-md-8">
-          <span class="text-muted">How can we help you?</span>
-          <h2 class="fw-bold display-5">Follow us on our social media</h2>
-          <p class="lead mb-4">우리 소셜 미디어를 팔로우하세요</p>
-        </div>
-
-        <div class="container-fluid">
-          <div class="col">
-            <div class="row gy-3">
-              <div class="col">
-                <div class="border rounded-3 bg-white p-5">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-facebook" viewBox="0 0 16 16">
-                    <path
-                      d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
-                  </svg>
-                  <h3 class="fw-bold mb-0">Salt and Light Fellowship</h3>
-                  <p class="my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat consectetur erat
-                    dolor quis pulvinar.</p><a class="btn btn-primary" href="https://web.facebook.com/slcf2009">Like and
-                    Follow</a>
+                  <div class="col">
+                    <div class="container my-5">
+                      <div class="row">
+                        <div class="col-md-6 offset-md-3 text-white">
+            
+                          <ul class="timeline-3">
+                            <li>
+                              <p class="text-white" style="font-weight: bold;">2005.10</p>
+                              <p class="text-white">Start of SALT AND LIGHT (Philippines)<br>소금과 빛의 시작 (필리핀)
+                              </p>
+                            </li>
+                            <li>
+                              <p class="text-white" style="font-weight: bold;">2008.11</p>
+                              <p class="text-white">Start of SALT AND LIGHT (India)<br>소금과 빛의 시작 (인도)
+                              </p>
+                            </li>
+                            <li>
+                              <p class="text-white" style="font-weight: bold;">2011.04</p>
+                              <p class="text-white">Unified the name of organization into SALT & LIGHT INTERNATIONAL WORLD MISSION INC.<br>조직 이름을 소금과 빛
+                                국제 월드 미션 주식회사로 통일
+                              </p>
+                            </li>
+                            <li>
+                              <p class="text-white" style="font-weight: bold;">2012.07</p>
+                              <p class="text-white">MOA with City of San Pedro<br>산 페드로 시와의 양해각서
+                              </p>
+                            </li>
+                            <li>
+                              <p class="text-white" style="font-weight: bold;">2012.10</p>
+                              <p class="text-white">Completion of construction of Salt and Light LOVE Community Center (Brgy. Landayan)<br>소금과 빛 LOVE
+                                커뮤니티 센터 (브랑가이 랜다얀) 건설 완료 (2010-2012)
+                              </p>
+                            </li>
+                            <li>
+                              <p class="text-white" style="font-weight: bold;">2013.05</p>
+                              <p class="text-white">Vision trip to Korea (Scholars and Ministers)<br>한국 비전 여행 (학자 및 목회자)
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="container my-5">
+                      <div class="row">
+                        <div class="col-md-6 offset-md-3">
+            
+                          <ul class="timeline-3">
+                            <li>
+                              <p class="text-white" style="font-weight: bold;">2013.09</p>
+                              <p class="text-white">Completion of Salt and Light Center in Chennai, India<br>인도 첸나이의 소금과 빛 센터 완공
+                              </p>
+                            </li>
+                            <li>
+                              <p class="text-white" style="font-weight: bold;">2013.11</p>
+                              <p class="text-white">Completion of Salt and Light Church in Catmon, Batangas<br>카트몬, 바탄가스의 소금과 빛 교회 완공
+                              </p>
+                            </li>
+                            <li>
+                              <p class="text-white" style="font-weight: bold;">2014.06</p>
+                              <p class="text-white">Started Salt and Light Bible College (Chennai, India)<br>소금과 빛 성경 대학 개설 (첸나이, 인도)
+                              </p>
+                            </li>
+                            <li>
+                              <p class="text-white" style="font-weight: bold;">2015.03</p>
+                              <p class="text-white">Joined Global Mission Society (Missionary Sungwon & Ara)<br>글로벌 미션 사회 가입 (선교사 성원 & 아라)
+                              </p>
+                            </li>
+                            <li>
+                              <p class="text-white" style="font-weight: bold;">2016.07</p>
+                              <p class="text-white">Ministry Cooperation with PTS College<br>PTS 대학과의 사역 협력
+                              </p>
+                            </li>
+                            <li>
+                              <p class="text-white" style="font-weight: bold;">2017.06</p>
+                              <p class="text-white">Start of Salt and Light Daycare (with CSWD San Pedro)<br>소금과 빛 데이케어 시작 (CSWD 산 페드로와 함께)
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="container my-5">
+                      <div class="row">
+                        <div class="col-md-6 offset-md-3">
+            
+                          <ul class="timeline-3">
+                            <li>
+                              <p class="text-white" style="font-weight: bold;">2018.01</p>
+                              <p class="text-white">Completion of Salt and Light Faith Center (Brgy Cuyab)<br>소금과 빛 신앙 센터 완공 (브랑가이 쿠야브)
+                              </p>
+                            </li>
+                            <li>
+                              <p class="text-white" style="font-weight: bold;">2018.05</p>
+                              <p class="text-white">Award Received from City of San Pedro<br>산 페드로 시로부터 받은 상
+                              </p>
+                              <p class="text-white" style="font-weight: bold;">2018.05</p>
+                              <p class="text-white">Started Y-Tree Ministry<br>Y-Tree 사역 시작
+                              </p>
+                            </li>
+                            <li>
+                              <p class="text-white" style="font-weight: bold;">2019.02</p>
+                              <p class="text-white">Opening of Salt and Light Health Center (with CHO San Pedro)<br>소금과 빛 건강 센터 개소 (CHO 산 페드로와 함께)
+                              </p>
+                            </li>
+                            <li>
+                              <p class="text-white" style="font-weight: bold;">2020.04</p>
+                              <p class="text-white">Start of Online Ministry SALT & LIGHT ON (Youtube)<br>온라인 사역 시작 SALT & LIGHT ON (유튜브)
+                              </p>
+                            </li>
+                            <li>
+                              <p class="text-white"style="font-weight: bold;">2020.07</p>
+                              <p class="text-white">Start of Online Children Ministry- Salt and Light KIDS (Youtube)<br>온라인 어린이 사역 시작 - 소금과 빛 KIDS
+                                (유튜브)
+                              </p>
+                            </li>
+                            <li>
+                              <p class="text-white"style="font-weight: bold;">2022.02</p>
+                              <p class="text-white">Completion of House of Mission (Brgy Cuyab)<br>선교의 집 완공 (브랑가이 쿠야브)
+                              </p>
+                          </ul>
+                        </div>
+            
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="col">
-                <div class="border rounded-3 bg-white p-5">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-youtube" viewBox="0 0 16 16">
-                    <path
-                      d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
-                  </svg>
-                  <h3 class="fw-bold mb-0">Salt and Light<br>On</h3>
-                  <p class="my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat consectetur erat
-                    dolor quis pulvinar.</p><a class="btn btn-primary" href="https://www.youtube.com/@SaltandLightON"
-                    target="_blank">Subscribe</a>
-                </div>
-              </div>
+              </div> 
+              
+        </section>
 
 
-              <div class="col">
-                <div class="border rounded-3 bg-white p-5">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-youtube" viewBox="0 0 16 16">
-                    <path
-                      d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
-                  </svg>
-                  <h3 class="fw-bold mb-0">Salt and Light<br>KIDS</h3>
-                  <p class="my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat consectetur erat
-                    dolor quis pulvinar.</p><a class="btn btn-primary" href="https://www.youtube.com/@SaltandLightKIDS"
-                    target="_blank">Subscribe</a>
+        <section class="artists-section section-padding" id="section_3">
+          
+
+
+            <div class="container" name="MeetUS">
+                <div class="row justify-content-center">
+
+                    <div class="col-12 text-center">
+                        <h2 class="mb-4">Recent Activities</h1>
+                    </div>
+<!--
+                    <div class="col-lg-5 col-12">
+                        <div class="artists-thumb">
+                            <div class="artists-image-wrap">
+                                <img src="images/artists/joecalih-UmTZqmMvQcw-unsplash.jpg"
+                                    class="artists-image img-fluid">
+                            </div>
+
+                            <div class="artists-hover">
+                                <p>
+                                    <strong>Name:</strong>
+                                    Madona
+                                </p>
+
+                                <p>
+                                    <strong>Birthdate:</strong>
+                                    August 16, 1958
+                                </p>
+
+                                <p>
+                                    <strong>Music:</strong>
+                                    Pop, R&amp;B
+                                </p>
+
+                                <hr>
+
+                                <p class="mb-0">
+                                    <strong>Youtube Channel:</strong>
+                                    <a href="#">Madona Official</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 col-12">
+                        <div class="artists-thumb">
+                            <div class="artists-image-wrap">
+                                <img src="images/artists/abstral-official-bdlMO9z5yco-unsplash.jpg"
+                                    class="artists-image img-fluid">
+                            </div>
+
+                            <div class="artists-hover">
+                                <p>
+                                    <strong>Name:</strong>
+                                    Rihana
+                                </p>
+
+                                <p>
+                                    <strong>Birthdate:</strong>
+                                    Feb 20, 1988
+                                </p>
+
+                                <p>
+                                    <strong>Music:</strong>
+                                    Country
+                                </p>
+
+                                <hr>
+
+                                <p class="mb-0">
+                                    <strong>Youtube Channel:</strong>
+                                    <a href="#">Rihana Official</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="artists-thumb">
+                            <img src="images/artists/soundtrap-rAT6FJ6wltE-unsplash.jpg"
+                                class="artists-image img-fluid">
+
+                            <div class="artists-hover">
+                                <p>
+                                    <strong>Name:</strong>
+                                    Bruno Bros
+                                </p>
+
+                                <p>
+                                    <strong>Birthdate:</strong>
+                                    October 8, 1985
+                                </p>
+
+                                <p>
+                                    <strong>Music:</strong>
+                                    Pop
+                                </p>
+
+                                <hr>
+
+                                <p class="mb-0">
+                                    <strong>Youtube Channel:</strong>
+                                    <a href="#">Bruno Official</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+-->
+<?php fetchAndDisplayIframe(); ?> 
                 </div>
-              </div>
+
+                
+              
             </div>
-          </div>
+        </section>
+
+
+        <section class="schedule-section section-padding" id="section_4">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12 text-center">
+                        <h2 class="text-white mb-4">Event Schedule</h1>
+
+                            <div class="table-responsive">
+                                <table class="schedule-table table table-dark ">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Date</th>
+
+                                            <th scope="col">Wednesday</th>
+
+                                            <th scope="col">Saturday</th>
+
+                                            <th scope="col">Sunday</th>
+
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Time</th>
+
+                                            <td scope="col" >
+                                                <h3>Wednesday Service</h3>
+
+                                                <p class="mb-2">5:00 - 7:00 PM</p>                                            
+
+                                            </td>
+
+                                            <td scope="col">
+                                                <h3>Dawn Watch</h3>
+                                                <p class="mb-2">5:00 - 6:00 AM</p>   
+                                            </td>
+                                            <td scope="col" >
+                                                <h3>Sunday Service</h3>
+                                                <p class="mb-2">10:20 - 11:00 AM</p>
+                                            </td>
+                                        </tr>   
+                                    </tbody>
+                                </table>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+     
+
+
+        <section class="contact-section section-padding" id="section_6">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-8 col-12 mx-auto">
+                        <h2 class="text-center mb-4">Interested? Let's talk</h2>
+
+                        <nav class="d-flex justify-content-center">
+                            <div class="nav nav-tabs align-items-baseline justify-content-center" id="nav-tab"
+                                role="tablist">
+                                <button class="nav-link " id="nav-ContactForm-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-ContactForm" type="button" role="tab"
+                                    aria-controls="nav-ContactForm" aria-selected="false">
+                                    <h5>Contact Form</h5>
+                                </button>
+
+                                <button class="nav-link active" id="nav-ContactMap-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-ContactMap" type="button" role="tab"
+                                    aria-controls="nav-ContactMap" aria-selected="false">
+                                    <h5>Google Maps</h5>
+                                </button>
+                            </div>
+                        </nav>
+
+                        <div class="tab-content shadow-lg mt-5" id="nav-tabContent">
+                            <div class="tab-pane fade show " id="nav-ContactForm" role="tabpanel"
+                                aria-labelledby="nav-ContactForm-tab">
+                                <form class="custom-form contact-form mb-5 mb-lg-0" action="#" method="post"
+                                    role="form">
+                                    <div class="contact-form-body">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-12">
+                                                <input type="text" name="contact-name" id="contact-name"
+                                                    class="form-control" placeholder="Full name" required>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-12">
+                                                <input type="email" name="contact-email" id="contact-email"
+                                                    pattern="[^ @]*@[^ @]*" class="form-control"
+                                                    placeholder="Email address" required>
+                                            </div>
+                                        </div>
+
+                                        <input type="text" name="contact-company" id="contact-company"
+                                            class="form-control" placeholder="Company" required>
+
+                                        <textarea name="contact-message" rows="3" class="form-control"
+                                            id="contact-message" placeholder="Message"></textarea>
+
+                                        <div class="col-lg-4 col-md-10 col-8 mx-auto">
+                                            <button type="submit" class="form-control">Send message</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="tab-pane active" id="nav-ContactMap" role="tabpanel"
+                                aria-labelledby="nav-ContactMap-tab">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d384516.76896130416!2d121.064158705444!3d14.3584622606757!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1188b629bbb%3A0x87d34a7714012269!2sSalt%20and%20Light%20Church!5e0!3m2!1sen!2sph!4v1734151826061!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <!-- You can easily copy the embed code from Google Maps -> Share -> Embed a map // -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="site-footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12">
+                        <h2 class="text-white mb-lg-0">SALT AND LIGHT</h2>
+                    </div>
+
+                    <div class="col-lg-6 col-12 d-flex justify-content-lg-end align-items-center">
+                        <ul class="social-icon d-flex justify-content-lg-end">
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link">
+                                    <span class="bi-twitter"></span>
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link">
+                                    <span class="bi-apple"></span>
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link">
+                                    <span class="bi-instagram"></span>
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link">
+                                    <span class="bi-youtube"></span>
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link">
+                                    <span class="bi-pinterest"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <nav>
-  <ul>
-    <li><a href="#top" class="scroll-to-top"><i class="fas fa-arrow-up"></i></a></li>
-  </ul>
-</nav>
+        <div class="container">
+            <div class="row">
 
+                <div class="col-lg-6 col-12 mb-4 pb-2">
+                    <h5 class="site-footer-title mb-3">Links</h5>
 
+                    <ul class="site-footer-links">
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Home</a>
+                        </li>
 
-  <!-- Footer -->
-  <footer class="text-center text-lg-start bg-body-tertiary text-muted">
-    <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <!-- Left -->
-      <div class="me-5 d-none d-lg-block">
-        <span>Get connected with us on social networks:</span>
-      </div>
-      <!-- Left -->
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">About</a>
+                        </li>
 
-      <!-- Right -->
-      <div>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Artists</a>
+                        </li>
 
-    <!-- Section: Links  -->
-    <section class="">
-      <div class="container text-center text-md-start mt-5">
-        <!-- Grid row -->
-        <div class="row mt-3">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <!-- Content -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              <i class="fas fa-gem me-3"></i>SALT AND LIGHT
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Schedule</a>
+                        </li>
 
-            </h6>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua
-            </p>
-          </div>
-          <!-- Grid column -->
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Pricing</a>
+                        </li>
 
-          <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Products
-            </h6>
-            <p>
-              <a href="#!" class="text-reset">Angular</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">React</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Vue</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Laravel</a>
-            </p>
-          </div>
-          <!-- Grid column -->
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
 
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Useful links
-            </h6>
-            <p>
-              <a href="#!" class="text-reset">Pricing</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Settings</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Orders</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Help</a>
-            </p>
-          </div>
-          <!-- Grid column -->
+                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                    <h5 class="site-footer-title mb-3">Have a question?</h5>
 
-          <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <p><i class="fas fa-home me-3"></i>Salt and Light Faith Center, Blk. 4, Lot 5 & 7, Elvinda 7, Barangay
-              Cuyab, San Pedro, Philippines, 4023</p>
-            <p>
-              <i class="fas fa-envelope me-3"></i>saltandlight2009@gmail.com
-            </p>
-            <p><i class="fas fa-phone me-3"></i>+288240863</p>
+                    <p class="text-white d-flex mb-1">
+                        <a href="tel: 090-080-0760" class="site-footer-link">
+                            090-080-0760
+                        </a>
+                    </p>
 
-          </div>
-          <!-- Grid column -->
+                    <p class="text-white d-flex">
+                        <a href="mailto:sliadmin@slmissions.org" class="site-footer-link">
+                            sliadmin@slmissions.org
+                        </a>
+                    </p>
+                    <p class="text-white d-flex">
+                        <a href="mailto:saltandlight2009@gmail.com" class="site-footer-link">
+                            saltandlight2009@gmail.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0">
+                    <h5 class="site-footer-title mb-3">Location</h5>
+
+                    <p class="text-white d-flex mt-3 mb-2">
+                        Barangay Cuyab, San Pedro, Philippines, 4023</p>
+
+                    <a class="link-fx-1 color-contrast-higher mt-3" href="#section_6">
+                        <span>Our Maps</span>
+                        <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="16" cy="16" r="15.5"></circle>
+                                <line x1="10" y1="18" x2="16" y2="12"></line>
+                                <line x1="16" y1="12" x2="22" y2="18"></line>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
-        <!-- Grid row -->
-      </div>
-    </section>
-    <!-- Section: Links  -->
 
-    <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-      © 2024 Copyright:
-      <a class="text-reset fw-bold" href="">SALT AND LIGHT FELLOWSHIP</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
+        <div class="site-footer-bottom">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-4 col-12 mt-5">
+                        <p class="copyright-text">Copyright © 2025 Salt and Light Philippines</p>
+                    </div>
+
+                    <div class="col-lg-8 col-12 mt-lg-5">
+                        <ul class="site-footer-links">
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Terms &amp; Conditions</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Privacy Policy</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Your Feedback</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--
+
+T e m p l a t e M o
+
+-->
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/custom.js"></script>
 
 </body>
 
