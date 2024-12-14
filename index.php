@@ -11,7 +11,7 @@ include_once('php/displayEmbed.php');
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Festava Live - Bootstrap 5 CSS Template</title>
+    <title>Salt and Light</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,7 +61,7 @@ https://templatemo.com/tm-583-festava-live
                     SALT AND LIGHT
                 </a>
 
-                <a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">Buy Ticket</a>
+                
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -641,11 +641,7 @@ https://templatemo.com/tm-583-festava-live
                         <li class="site-footer-link-item">
                             <a href="#" class="site-footer-link">Schedule</a>
                         </li>
-
-                        <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Pricing</a>
-                        </li>
-
+                      
                         <li class="site-footer-link-item">
                             <a href="#" class="site-footer-link">Contact</a>
                         </li>
