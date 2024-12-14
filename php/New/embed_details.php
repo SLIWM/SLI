@@ -3,9 +3,9 @@
 include_once("../../connections/db.php");
 
 // Initialize variables
-$id = $type = $iframe = $isActive = '';
+$id = $type = $label = $iframe = $isActive = '';
 $isEditing = false;
-$embed = ['id' => '', 'type' => '', 'iframe' => '', 'createdDate' => '', 'isActive' => 1];
+$embed = ['id' => '', 'type' => '', 'label' => '', 'iframe' => '', 'createdDate' => '', 'isActive' => 1];
 
 // Check if we're editing an embed
 if (isset($_GET['id'])) {
@@ -23,16 +23,17 @@ if (isset($_GET['id'])) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['saveEmbed'])) {
         $type = $_POST['type'];
+        $label = $_POST['label']; // Get the label from the form
         $iframe = $_POST['iframe'];
         $isActive = isset($_POST['isActive']) ? 1 : 0;  // Checkbox for isActive
         $createdDate = date('Y-m-d H:i:s');  // Current date for creation
 
         if ($isEditing) {
-            $stmt = $conn->prepare("UPDATE embed SET type = ?, iframe = ?, isActive = ? WHERE id = ?");
-            $stmt->bind_param("isii", $type, $iframe, $isActive, $id);
+            $stmt = $conn->prepare("UPDATE embed SET type = ?, label = ?, iframe = ?, isActive = ? WHERE id = ?");
+            $stmt->bind_param("sssii", $type, $label, $iframe, $isActive, $id);
         } else {
-            $stmt = $conn->prepare("INSERT INTO embed (type, iframe, createdDate, isActive) VALUES (?, ?, ?, ?)");
-            $stmt->bind_param("issi", $type, $iframe, $createdDate, $isActive);
+            $stmt = $conn->prepare("INSERT INTO embed (type, label, iframe, createdDate, isActive) VALUES (?, ?, ?, ?, ?)");
+            $stmt->bind_param("ssssi", $type, $label, $iframe, $createdDate, $isActive);
         }
 
         if ($stmt->execute()) {
@@ -48,11 +49,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Album Details</title>
+    <title>Embed Details</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -63,10 +63,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <!-- Link to Custom CSS -->
     <link href="../../css/custom.css" rel="stylesheet">
 </head>
-
 <body>
-<div class="sidebar">
-
+    <div class="sidebar">
         <h3 class="text-center text-white mb-4">Menu</h3>
         <a href="dashboard.php">Dashboard</a>
         <a href="user_list.php">Users</a>
@@ -81,6 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button class="logout-btn" onclick="window.location.href='logout.php'">Logout</button>
         </div>
     </div>
+
     <div class="container mt-5">
         <h1 class="text-center"><?= $isEditing ? 'Edit Embed' : 'Create Embed' ?></h1>
 
@@ -89,6 +88,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="form-group">
                 <label for="type">Embed Type</label>
                 <input type="number" class="form-control" id="type" name="type" value="<?= $embed['type'] ?>" required>
+            </div>
+
+            <!-- Embed Label -->
+            <div class="form-group">
+                <label for="label">Embed Label</label>
+                <input type="text" class="form-control" id="label" name="label" value="<?= $embed['label'] ?>" required>
             </div>
 
             <!-- Iframe Content -->
@@ -116,5 +121,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>

@@ -36,7 +36,8 @@ https://templatemo.com/tm-583-festava-live
 </head>
 
 <body>
-
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></script>
     <main>
 
         <header class="site-header">
@@ -79,7 +80,7 @@ https://templatemo.com/tm-583-festava-live
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_3">Artists</a>
+                            <a class="nav-link click-scroll" href="#section_3">Activities</a>
                         </li>
 
                         <li class="nav-item">
@@ -342,7 +343,7 @@ https://templatemo.com/tm-583-festava-live
                 <div class="row justify-content-center">
 
                     <div class="col-12 text-center">
-                        <h2 class="mb-4">Recent Activities</h1>
+                        <h2 class="mb-4">Recent Activities</h2>
                     </div>
 <!--
                     <div class="col-lg-5 col-12">
@@ -440,10 +441,20 @@ https://templatemo.com/tm-583-festava-live
                         </div>
                     </div>
 -->
-<?php fetchAndDisplayIframe(); ?> 
-                </div>
+                                
+                         <div class="col-12 text-center">
+                             <h3 class="mb-4">Facebook</h3>
+                        </div>
+                             <?php fetchAndDisplayIframe(1); ?> 
+                    <div  class="row justify-content-center" style="padding-top:40px"> 
+                        <div class="col-12 text-center">
+                        <h3 class="mb-4">Youtube</h3>
+                        </div>
+                            <?php fetchAndDisplayIframe(2); ?> 
 
-                
+                    </div>
+
+                </div>  
               
             </div>
         </section>

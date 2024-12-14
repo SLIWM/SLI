@@ -55,7 +55,7 @@ $result = $conn->query($sql);
                         <tr>
                             <th>#</th>
                             <th>Type</th>
-                            
+                            <th>Label</th>
                             <th>Is Active</th>
                             <th>Created Date</th>
                             <th>Actions</th>
@@ -68,7 +68,7 @@ $result = $conn->query($sql);
                                 echo "<tr>";
                                 echo "<td>" . $row['id'] . "</td>";
                                 echo "<td>" . $row['type'] . "</td>";
-                                
+                                echo "<td>" . $row['label']. "</td>";
                                 echo "<td>" . ($row['isActive'] ? 'Yes' : 'No') . "</td>";
                                 echo "<td>" . $row['createdDate'] . "</td>";
                                 echo "<td>

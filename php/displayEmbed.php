@@ -3,11 +3,11 @@
 include_once('connections/db.php');
 
 // Function to fetch iframe content from the database and display it
-function fetchAndDisplayIframe() {
+function fetchAndDisplayIframe($type) {
     global $conn;  // Use the global $conn variable from db.php
 
     // Query to retrieve iframe content from the database
-    $sql = "SELECT iframe FROM embed WHERE isActive = 1";  // Adjust the query as needed to retrieve all active iframes
+    $sql = "SELECT iframe FROM embed WHERE isActive = 1 and type =$type limit 2";  // Adjust the query as needed to retrieve all active iframes
     $result = $conn->query($sql);
 
     // Check if we have any results
@@ -17,7 +17,7 @@ function fetchAndDisplayIframe() {
             $iframeContent = $row['iframe'];  // Get the iframe content
 
             // Display each iframe
-            echo '<div class="col-lg-5 col-12">
+            echo '<div class="col-lg-6 col-12">
                     <div>
                         <div>
                             ' . $iframeContent . '  <!-- Output the iframe content -->
