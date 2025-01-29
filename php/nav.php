@@ -53,7 +53,7 @@ function showNav($isRoot){
                             </div>        
                         </div>
                     </div>
-                </header>        
+        </header>        
         <nav class="navbar navbar-expand" style="z-index: 500;">
             <div class="container">
                 <a class="navbar-brand" href="../">

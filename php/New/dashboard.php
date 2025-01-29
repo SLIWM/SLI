@@ -40,6 +40,7 @@ while ($row = $result_users_roles->fetch_assoc()) {
         'role' => $row['role']
     ];
 }
+include_once('../sidebar.php');
 ?>
 
 <!DOCTYPE html>
@@ -56,36 +57,19 @@ while ($row = $result_users_roles->fetch_assoc()) {
     <link href="../../css/sidebar.css" rel="stylesheet">
 
     <!-- Link to custom.css -->
-    <link href="../../css/custom.css" rel="stylesheet">
 
     
 </head>
 <body>
 
-    <!-- Side Navbar -->
-    <div class="sidebar">
-        
-        <h3 class="text-center text-white mb-4">Menu</h3>
-        <a href="dashboard.php">Dashboard</a>
-        <a href="user_list.php">Users</a>
-        <a href="role_list.php">Roles</a>
-        <a href="position_list.php">Positions</a>
-        <a href="album_list.php">Albums</a>
-        <a href="file_list.php">Files</a>
-        <a href="user_details.php">User Details</a>
-        
-        <!-- Logout Button -->
-        <div class="text-center mt-4">
-            <button class="logout-btn" onclick="window.location.href='logout.php'">Logout</button>
-        </div>
-    </div>
+<?php showSidebar(); ?> 
 
     <div class="container" style="margin-left: 250px; padding-top: 20px;">
         <h1 class="text-center mb-4">Dashboard</h1>
 
         <!-- Files Grouped by Album and Date Table -->
-        <div class="card mb-4">
-            <div class="card-body">
+        <div class="content">
+            <div class="container mt-5">
                 <h3 class="card-title">Files Grouped by Album and Date</h3>
                 <table class="table table-striped">
                     <thead>
@@ -115,8 +99,8 @@ while ($row = $result_users_roles->fetch_assoc()) {
         </div>
 
         <!-- List of Users and Their Roles -->
-        <div class="card">
-            <div class="card-body">
+        <div class="content">
+        <div class="container mt-5">
                 <h3 class="card-title">Users and Their Roles</h3>
                 <ul class="list-group">
                     <?php foreach ($users as $user): ?>

@@ -41,6 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header("Location: role_list.php"); // Redirect to role list page after inserting
     }
 }
+include_once('../sidebar.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -57,28 +59,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link href="../../css/sidebar.css" rel="stylesheet">
 
     <!-- Link to custom.css -->
-    <link href="../../css/custom.css" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Side Navbar -->
-    <div class="sidebar">
-        <h3 class="text-center text-white mb-4">Menu</h3>
-        <a href="dashboard.php">Dashboard</a> <!-- Dashboard is now the first menu item -->
-        <a href="user_list.php">Users</a>
-        <a href="role_list.php">Roles</a>
-        <a href="position_list.php">Positions</a>
-        <a href="album_list.php">Albums</a>
-        <a href="file_list.php">Files</a>
-        <a href="user_details.php">User Details</a>
-    </div>
+     <!-- Side Navbar -->
+     <?php showSidebar(); ?> 
 
-    <div class="container" style="margin-left: 250px; padding-top: 20px;">
+    <div class="container mt-5" style="margin-left: 250px; padding-top: 20px;">
         <h1 class="text-center mb-4"><?php echo $roleID ? 'Edit' : 'Create'; ?> Role</h1>
 
         <!-- Role Form -->
-        <div class="card">
-            <div class="card-body">
+        <div class="content">
+        <div class="container mt-5">
                 <form method="POST">
                     <div class="form-group">
                         <label for="label">Role Name</label>

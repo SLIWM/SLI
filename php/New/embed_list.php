@@ -2,10 +2,12 @@
 // embed_list.php - Display a list of all embeds
 
 include_once("../../connections/db.php");
+include_once('../sidebar.php');
 
 // Fetch all embeds from the database
 $sql = "SELECT * FROM embed";
 $result = $conn->query($sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -17,34 +19,21 @@ $result = $conn->query($sql);
 
     <!-- Bootstrap 4 CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Link to sidebar.css -->
     <link href="../../css/sidebar.css" rel="stylesheet">
-
     <!-- Link to custom.css -->
-    <link href="../../css/custom.css" rel="stylesheet">
 
 </head>
 <body>
 
-    <!-- Side Navbar -->
-    <div class="sidebar">
-        <h3 class="text-center text-white mb-4">Menu</h3>
-        <a href="dashboard.php">Dashboard</a>
-        <a href="user_list.php">Users</a>
-        <a href="role_list.php">Roles</a>
-        <a href="position_list.php">Positions</a>
-        <a href="embed_list.php">Embeds</a>
-        <a href="file_list.php">Files</a>
-        <a href="user_details.php">User Details</a>
-    </div>
+<?php showSidebar(); ?> 
 
     <div class="container" style="margin-left: 250px; padding-top: 20px;">
         <h1 class="text-center mb-4">Embed List</h1>
 
         <!-- Table displaying all embeds -->
-        <div class="card">
-            <div class="card-body">
+        <div class="content">
+            <div class="container mt-5">
                 <!-- Create New Embed Button (Aligned to the right) -->
                 <div class="d-flex justify-content-end mb-3">
                     <a href="embed_details.php" class="btn btn-primary btn-sm">Create New Embed</a>

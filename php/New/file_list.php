@@ -2,6 +2,7 @@
 // file_list.php - List all files
 
 include_once("../../connections/db.php");
+include_once('../sidebar.php');
 
 // Fetch all files from the database
 $sql = "SELECT f.ID, f.Label, f.FileName, f.UploadedDate, u.Username AS UploadedBy, f.IsActive FROM files f JOIN user u ON f.UploadedBy = u.ID";
@@ -23,30 +24,20 @@ $result = $conn->query($sql);
      <link href="../../css/sidebar.css" rel="stylesheet">
 
 <!-- Link to custom.css -->
-<link href="../../css/custom.css" rel="stylesheet">
 
 </head>
 <body>
-
-    <!-- Side Navbar -->
-    <div class="sidebar">
-        <h3 class="text-center text-white mb-4">Menu</h3>
-        <a href="dashboard.php">Dashboard</a> <!-- Dashboard is now the first menu item -->
-        <a href="user_list.php">Users</a>
-        <a href="role_list.php">Roles</a>
-        <a href="position_list.php">Positions</a>
-        <a href="album_list.php">Albums</a>
-        <a href="file_list.php">Files</a>
-        <a href="user_details.php">User Details</a>
-    </div>
-
-    <div class="container mt-5">
-        <h2>File List</h2>
-
+<?php showSidebar(); ?> 
+<div class="content">
+<div class="container mt-5">
+        <h1 class="text-center mb-4">File List</h1>
+        <div class="d-flex justify-content-end mb-3">
         <a href="file_details.php" class="btn btn-primary btn-sm mb-3">Add New File</a>
 
+        </div>
+
         <!-- Table for files -->
-        <table class="table table-bordered">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -75,6 +66,7 @@ $result = $conn->query($sql);
                 <?php } ?>
             </tbody>
         </table>
+    </div>
     </div>
 
 </body>

@@ -62,6 +62,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
+include_once('../sidebar.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -78,26 +80,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="../../css/sidebar.css" rel="stylesheet">
 
     <!-- Link to custom.css -->
-    <link href="../../css/custom.css" rel="stylesheet">
 
 </head>
 <body>
 
-    <!-- Side Navbar -->
-    <div class="sidebar">
-        <h3 class="text-center text-white mb-4">Menu</h3>
-        <a href="dashboard.php">Dashboard</a> <!-- Dashboard is now the first menu item -->
-        <a href="user_list.php">Users</a>
-        <a href="role_list.php">Roles</a>
-        <a href="position_list.php">Positions</a>
-        <a href="album_list.php">Albums</a>
-        <a href="file_list.php">Files</a>
-        <a href="user_details.php">User Details</a>
-    </div>
+<?php showSidebar(); ?> 
 
     <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
-        <div class="card" style="width: 40%; max-width: 500px;">
-            <div class="card-body">
+    <div class="content">
+    <div class="container mt-5">
                 <h1 class="text-center mb-4"><?= $isEditing ? 'Edit User' : 'Create User' ?></h1>
 
                 <!-- Error Message (if passwords do not match) -->

@@ -50,95 +50,64 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
+include_once('../sidebar.php');
 ?>
 
+<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Embed Details</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Link to Sidebar CSS -->
     <link href="../../css/sidebar.css" rel="stylesheet">
 
     <!-- Link to Custom CSS -->
-    <link href="../../css/custom.css" rel="stylesheet">
-
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.tiny.cloud/1/YOUR_API_KEY/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
-    
+
+  
 </head>
-
 <body>
-    <div class="sidebar">
-        <h3 class="text-center text-white mb-4">Menu</h3>
-        <a href="dashboard.php">Dashboard</a>
-        <a href="user_list.php">Users</a>
-        <a href="role_list.php">Roles</a>
-        <a href="position_list.php">Positions</a>
-        <a href="embed_list.php">Embeds</a>
-        <a href="file_list.php">Files</a>
-        <a href="user_details.php">User Details</a>
+    <?php showSidebar(); ?> 
 
-        <!-- Logout Button -->
-        <div class="text-center mt-4">
-            <button class="logout-btn" onclick="window.location.href='logout.php'">Logout</button>
+    <div class="content">
+        <div class="container mt-5">
+            <h1 class="text-center"> <?= $isEditing ? 'Edit Embed' : 'Create Embed' ?> </h1>
+            <form method="post" class="mt-4">
+                <div class="form-group">
+                    <label for="type">Embed Type</label>
+                    <input type="number" class="form-control" id="type" name="type" value="<?= htmlspecialchars($embed['type']) ?>" required>
+                </div>
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" id="title" name="title" value="<?= htmlspecialchars($embed['title']) ?>" required>
+                </div>
+                <div class="form-group">
+                    <label for="serviceDate">Service Date</label>
+                    <input type="date" class="form-control" id="serviceDate" name="serviceDate" value="<?= htmlspecialchars($embed['serviceDate']) ?>">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" id="description" name="description" rows="5"><?= htmlspecialchars($embed['description']) ?></textarea>
+                </div>
+                <script> CKEDITOR.replace('description'); </script>
+                <div class="form-group">
+                    <label for="iframe">Iframe Content</label>
+                    <textarea class="form-control" id="iframe" name="iframe" rows="5" required><?= htmlspecialchars($embed['iframe']) ?></textarea>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="isActive" name="isActive" <?= isset($embed['isActive']) && $embed['isActive'] ? 'checked' : '' ?>>
+                    <label class="form-check-label" for="isActive">Is Active</label>
+                </div>
+                <button type="submit" name="saveEmbed" class="btn btn-primary btn-sm mt-3">
+                    <?= $isEditing ? 'Update Embed' : 'Create Embed' ?>
+                </button>
+            </form>
         </div>
-    </div>
-
-    <div class="container mt-5">
-        <h1 class="text-center"><?= $isEditing ? 'Edit Embed' : 'Create Embed' ?></h1>
-
-        <form method="post" class="mt-4">
-            <!-- Embed Type -->
-            <div class="form-group">
-                <label for="type">Embed Type</label>
-                <input type="number" class="form-control" id="type" name="type" value="<?= htmlspecialchars($embed['type']) ?>" required>
-            </div>
-
-            <!-- Title -->
-            <div class="form-group">
-                <label for="title">Title</label>
-                <input type="text" class="form-control" id="title" name="title" value="<?= htmlspecialchars($embed['title']) ?>" required>
-            </div>
-
-            <!-- Service Date -->
-            <div class="form-group">
-                <label for="serviceDate">Service Date</label>
-                <input type="date" class="form-control" id="serviceDate" name="serviceDate" value="<?= htmlspecialchars($embed['serviceDate']) ?>">
-            </div>
-
-            <!-- Description (WYSIWYG Editor) -->
-
-<div class="form-group">
-    <label for="description">Description</label>
-    <textarea class="form-control" id="description" name="description" rows="5"><?= htmlspecialchars($embed['description']) ?></textarea>
-</div>
-<script>
-    CKEDITOR.replace('description');
-    </script>
-            <!-- Iframe Content -->
-            <div class="form-group">
-                <label for="iframe">Iframe Content</label>
-                <textarea class="form-control" id="iframe" name="iframe" rows="5" required><?= htmlspecialchars($embed['iframe']) ?></textarea>
-            </div>
-
-            <!-- Is Active Checkbox -->
-            <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="isActive" name="isActive"
-                    <?= isset($embed['isActive']) && $embed['isActive'] ? 'checked' : '' ?>>
-                <label class="form-check-label" for="isActive">Is Active</label>
-            </div>
-
-            <!-- Submit Button -->
-            <button type="submit" name="saveEmbed" class="btn btn-primary btn-sm mt-3">
-                <?= $isEditing ? 'Update Embed' : 'Create Embed' ?>
-            </button>
-        </form>
     </div>
 
     <!-- Bootstrap JS -->
@@ -147,3 +116,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+

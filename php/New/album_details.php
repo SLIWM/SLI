@@ -120,6 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 // Fetch all albums for the "Move to Album" dropdown
 $albumsQuery = "SELECT ID, Label FROM album";
 $albumsResult = $conn->query($albumsQuery);
+include_once('../sidebar.php');
 
 ?>
 
@@ -138,34 +139,17 @@ $albumsResult = $conn->query($albumsQuery);
     <link href="../../css/sidebar.css" rel="stylesheet">
 
     <!-- Link to Custom CSS -->
-    <link href="../../css/custom.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Side Navbar -->
-    <div class="sidebar">
-        <span class="menu-toggle" id="menuToggle">&#9776;</span> <!-- Hamburger Icon -->
-        <h3 class="text-center text-white mb-4">Menu</h3>
-        <a href="dashboard.php">Dashboard</a>
-        <a href="user_list.php">Users</a>
-        <a href="role_list.php">Roles</a>
-        <a href="position_list.php">Positions</a>
-        <a href="album_list.php">Albums</a>
-        <a href="file_list.php">Files</a>
-        <a href="user_details.php">User Details</a>
+<?php showSidebar(); ?> 
 
-        <!-- Logout Button -->
-        <div class="text-center mt-4">
-            <button class="logout-btn" onclick="window.location.href='logout.php'">Logout</button>
-        </div>
-    </div>
 
-    <div class="container-fluid">
-        <div class="row justify-content-center">
+<div class="container" style="margin-left: 250px; padding-top: 20px;">
             <!-- Album Details Card -->
             <div class="col-12 col-md-8 col-lg-10">
-                <div class="card">
-                    <div class="card-body">
+            <div class="content">
+            <div class="container mt-5">
                         <h1 class="text-center"><?= $isEditing ? 'Edit Album' : 'Create Album' ?></h1>
 
                         <form method="post" class="mt-4">
@@ -193,8 +177,8 @@ $albumsResult = $conn->query($albumsQuery);
 
             <!-- File Upload Form -->
             <div class="col-12 col-md-8 col-lg-10 mt-4">
-                <div class="card">
-                    <div class="card-body">
+            <div class="content">
+            <div class="container mt-5">
                         <h4>Upload Files</h4>
                         <form method="post" enctype="multipart/form-data">
                             <div class="form-group">
@@ -210,8 +194,8 @@ $albumsResult = $conn->query($albumsQuery);
 
             <!-- File Gallery -->
             <div class="col-12 col-md-8 col-lg-10 mt-4">
-                <div class="card">
-                    <div class="card-body">
+            <div class="content">
+            <div class="container mt-5">
                         <h4>Uploaded Files</h4>
 
                         <!-- Move to Album and Delete Buttons -->
@@ -285,7 +269,6 @@ $albumsResult = $conn->query($albumsQuery);
 
 
         </div>
-    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
