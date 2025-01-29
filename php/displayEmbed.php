@@ -34,7 +34,7 @@ function fetchAndDisplayIframe($type) {
                     </div>
                     <div class="col-lg-6 col-12">
                         <div class="about-text-wrap">
-                            <div class="col-lg-6 col-12">
+                            <div class="col-lg-12 col-12">
                                 <div>
                                     <div class="video-container">
                                         ' . $iframeContent . '  <!-- Output the iframe content -->
