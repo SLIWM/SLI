@@ -1,19 +1,19 @@
 <?php
-include_once('php/displayEmbed.php');
+
 include_once('php/nav.php');
 
 ?>
 <!doctype html>
 <html lang="en">
 
-<?php iniHeader(); ?> 
+<?php iniHeader(1); ?> 
 
 
 <body>
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></script>
     <main>
-    <?php showNav(); ?> 
+    <?php showNav(1); ?> 
 
         <section class="hero-section" id="section_1">
             <div class="section-overlay"></div>
@@ -372,7 +372,7 @@ include_once('php/nav.php');
         </section>
     </main>
 
-<?php iniFooter(); ?> 
+<?php iniFooter(1); ?> 
  
 
     <!-- JAVASCRIPT FILES -->

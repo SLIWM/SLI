@@ -1,29 +1,24 @@
 <?php
-include_once('php/displayEmbed.php');
-include_once('php/nav.php');
+include_once('../php/displayEmbed.php');
+include_once('../php/nav.php');
 ?>
 <!doctype html>
 <html lang="en">
 
-<?php iniHeader(); ?> 
+<?php iniHeader(0); ?> 
 
 <body>
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></script>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"></script>
     <main>
-        <?php showNav(); ?> 
+        <?php showNav(0); ?> 
 
         <section class="about-section section-padding" id="section_2">
             <div class="container">
             <?php fetchAndDisplayIframe(2); ?> 
             </div>  
         </section>
-
-
-     
-
-
       
     </main>
 

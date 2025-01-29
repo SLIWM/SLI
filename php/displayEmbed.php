@@ -1,6 +1,6 @@
 <?php
 // Include the database connection
-include_once('connections/db.php');
+include_once('../connections/db.php');
 
 // Function to fetch iframe content from the database and display it
 function fetchAndDisplayIframe($type) {

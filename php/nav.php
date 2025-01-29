@@ -1,76 +1,130 @@
 <?php 
-function showNav(){
-echo '
-<header class="site-header">
-            <div class="container">
-                <div class="row">
+function showNav($isRoot){
+    if ($isRoot==1)
+    {
 
-                    <div class="col-lg-12 col-12 d-flex flex-wrap">
-                        <p class="d-flex me-4 mb-0">
-                            <i class="bi-person custom-icon me-2"></i>
-                            <strong class="text-dark">Welcome to Salt and Light</strong>
-                        </p>
+        echo '
+        <header class="site-header">
+                    <div class="container">
+                        <div class="row">        
+                            <div class="col-lg-12 col-12 d-flex flex-wrap">
+                                <p class="d-flex me-4 mb-0">
+                                    <i class="bi-person custom-icon me-2"></i>
+                                    <strong class="text-dark">Welcome to Salt and Light</strong>
+                                </p>
+                            </div>        
+                        </div>
                     </div>
-
+                </header>        
+        <nav class="navbar navbar-expand" style="z-index: 500;">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    SALT AND LIGHT
+                </a> 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>        
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+                        <li class="nav-item">
+                            <a class="nav-link " href="#">Home</a>
+                        </li>        
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Sermons/">Sermons</a>
+                        </li>                       
+                    </ul>                   
                 </div>
             </div>
-        </header>
+        </nav>
+        ';
+    }
 
+    else{
+        echo '
+        <header class="site-header">
+                    <div class="container">
+                        <div class="row">        
+                            <div class="col-lg-12 col-12 d-flex flex-wrap">
+                                <p class="d-flex me-4 mb-0">
+                                    <i class="bi-person custom-icon me-2"></i>
+                                    <strong class="text-dark">Welcome to Salt and Light</strong>
+                                </p>
+                            </div>        
+                        </div>
+                    </div>
+                </header>        
         <nav class="navbar navbar-expand" style="z-index: 500;">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
-            SALT AND LIGHT
-        </a>               
+            <div class="container">
+                <a class="navbar-brand" href="../">
+                    SALT AND LIGHT
+                </a> 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>        
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+                        <li class="nav-item">
+                            <a class="nav-link " href="../">Home</a>
+                        </li>        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sermons</a>
+                        </li>                       
+                    </ul>                   
+                </div>
+            </div>
+        </nav>
+        ';
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    }
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
-                <li class="nav-item">
-                    <a class="nav-link " href="index.php">Home</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#section_2">Sermons</a>
-                </li>                       
-            </ul>                   
-        </div>
-    </div>
-</nav>
-';
 }
 
 
-function iniHeader(){
- echo '
- 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+function iniHeader($isRoot){
+ if ($isRoot==1){
 
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Salt and Light</title>
-    <!-- CSS FILES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="css/saltandlight.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-icons.css" rel="stylesheet">
-    <link href="css/templatemo-festava-live.css" rel="stylesheet">    <!--
+    echo ' 
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Salt and Light</title>
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="css/saltandlight.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link href="css/templatemo-festava-live.css" rel="stylesheet">    
+    </head>
+    
+     ';
+ }
+ else{
+    echo ' 
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Salt and Light</title>
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="../css/saltandlight.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap-icons.css" rel="stylesheet">
+        <link href="../css/templatemo-festava-live.css" rel="stylesheet">    
+    </head>
+    
+     ';
+ }
 
-TemplateMo 583 Festava Live
-
-https://templatemo.com/tm-583-festava-live
-
--->
-</head>
-
- ';
 
 }
 
