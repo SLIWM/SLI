@@ -3,9 +3,12 @@
 include_once("../../connections/db.php");
 
 // Initialize variables
-$id = $type = $label = $iframe = $isActive = '';
+$id = $type = $title = $serviceDate = $description = $iframe = $isActive = '';
 $isEditing = false;
-$embed = ['id' => '', 'type' => '', 'label' => '', 'iframe' => '', 'createdDate' => '', 'isActive' => 1];
+$embed = [
+    'id' => '', 'type' => '', 'title' => '', 'serviceDate' => '', 'description' => '',
+    'iframe' => '', 'createdDate' => '', 'isActive' => 1
+];
 
 // Check if we're editing an embed
 if (isset($_GET['id'])) {
@@ -23,17 +26,19 @@ if (isset($_GET['id'])) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['saveEmbed'])) {
         $type = $_POST['type'];
-        $label = $_POST['label']; // Get the label from the form
+        $title = $_POST['title']; // New title field
+        $serviceDate = !empty($_POST['serviceDate']) ? $_POST['serviceDate'] : NULL; // Allow NULL values
+        $description = $_POST['description']; // New description field
         $iframe = $_POST['iframe'];
         $isActive = isset($_POST['isActive']) ? 1 : 0;  // Checkbox for isActive
         $createdDate = date('Y-m-d H:i:s');  // Current date for creation
 
         if ($isEditing) {
-            $stmt = $conn->prepare("UPDATE embed SET type = ?, label = ?, iframe = ?, isActive = ? WHERE id = ?");
-            $stmt->bind_param("sssii", $type, $label, $iframe, $isActive, $id);
+            $stmt = $conn->prepare("UPDATE embed SET type = ?, title = ?, serviceDate = ?, description = ?, iframe = ?, isActive = ? WHERE id = ?");
+            $stmt->bind_param("issssii", $type, $title, $serviceDate, $description, $iframe, $isActive, $id);
         } else {
-            $stmt = $conn->prepare("INSERT INTO embed (type, label, iframe, createdDate, isActive) VALUES (?, ?, ?, ?, ?)");
-            $stmt->bind_param("ssssi", $type, $label, $iframe, $createdDate, $isActive);
+            $stmt = $conn->prepare("INSERT INTO embed (type, title, serviceDate, description, iframe, createdDate, isActive) VALUES (?, ?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param("isssssi", $type, $title, $serviceDate, $description, $iframe, $createdDate, $isActive);
         }
 
         if ($stmt->execute()) {
@@ -62,7 +67,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <!-- Link to Custom CSS -->
     <link href="../../css/custom.css" rel="stylesheet">
+
+    <script src="https://cdn.tiny.cloud/1/YOUR_API_KEY/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+    
 </head>
+
 <body>
     <div class="sidebar">
         <h3 class="text-center text-white mb-4">Menu</h3>
@@ -87,19 +97,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <!-- Embed Type -->
             <div class="form-group">
                 <label for="type">Embed Type</label>
-                <input type="number" class="form-control" id="type" name="type" value="<?= $embed['type'] ?>" required>
+                <input type="number" class="form-control" id="type" name="type" value="<?= htmlspecialchars($embed['type']) ?>" required>
             </div>
 
-            <!-- Embed Label -->
+            <!-- Title -->
             <div class="form-group">
-                <label for="label">Embed Label</label>
-                <input type="text" class="form-control" id="label" name="label" value="<?= $embed['label'] ?>" required>
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" name="title" value="<?= htmlspecialchars($embed['title']) ?>" required>
             </div>
 
+            <!-- Service Date -->
+            <div class="form-group">
+                <label for="serviceDate">Service Date</label>
+                <input type="date" class="form-control" id="serviceDate" name="serviceDate" value="<?= htmlspecialchars($embed['serviceDate']) ?>">
+            </div>
+
+            <!-- Description (WYSIWYG Editor) -->
+
+<div class="form-group">
+    <label for="description">Description</label>
+    <textarea class="form-control" id="description" name="description" rows="5"><?= htmlspecialchars($embed['description']) ?></textarea>
+</div>
+<script>
+    CKEDITOR.replace('description');
+    </script>
             <!-- Iframe Content -->
             <div class="form-group">
                 <label for="iframe">Iframe Content</label>
-                <textarea class="form-control" id="iframe" name="iframe" rows="5" required><?= $embed['iframe'] ?></textarea>
+                <textarea class="form-control" id="iframe" name="iframe" rows="5" required><?= htmlspecialchars($embed['iframe']) ?></textarea>
             </div>
 
             <!-- Is Active Checkbox -->

@@ -1,104 +1,19 @@
 <?php
 include_once('php/displayEmbed.php');
+include_once('php/nav.php');
+
 ?>
 <!doctype html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php iniHeader(); ?> 
 
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Salt and Light</title>
-
-    <!-- CSS FILES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="css/saltandlight.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="css/bootstrap-icons.css" rel="stylesheet">
-
-    <link href="css/templatemo-festava-live.css" rel="stylesheet">
-
-    <!--
-
-TemplateMo 583 Festava Live
-
-https://templatemo.com/tm-583-festava-live
-
--->
-</head>
 
 <body>
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></script>
     <main>
-
-        <header class="site-header">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-12 col-12 d-flex flex-wrap">
-                        <p class="d-flex me-4 mb-0">
-                            <i class="bi-person custom-icon me-2"></i>
-                            <strong class="text-dark">Welcome to Salt and Light</strong>
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </header>
-
-
-        <nav class="navbar navbar-expand-lg" style="z-index: 500;">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    SALT AND LIGHT
-                </a>
-
-                
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_1">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_2">About</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_3">Activities</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_4">Schedule</a>
-                        </li>
-
-                      
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_6">Contact</a>
-                        </li>
-                    </ul>
-
-                    
-                </div>
-            </div>
-        </nav>
-
+    <?php showNav(); ?> 
 
         <section class="hero-section" id="section_1">
             <div class="section-overlay"></div>
@@ -335,130 +250,7 @@ https://templatemo.com/tm-583-festava-live
         </section>
 
 
-        <section class="artists-section section-padding" id="section_3">
-          
-
-
-            <div class="container" name="MeetUS">
-                <div class="row justify-content-center">
-
-                    <div class="col-12 text-center">
-                        <h2 class="mb-4">Recent Activities</h2>
-                    </div>
-<!--
-                    <div class="col-lg-5 col-12">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="images/artists/joecalih-UmTZqmMvQcw-unsplash.jpg"
-                                    class="artists-image img-fluid">
-                            </div>
-
-                            <div class="artists-hover">
-                                <p>
-                                    <strong>Name:</strong>
-                                    Madona
-                                </p>
-
-                                <p>
-                                    <strong>Birthdate:</strong>
-                                    August 16, 1958
-                                </p>
-
-                                <p>
-                                    <strong>Music:</strong>
-                                    Pop, R&amp;B
-                                </p>
-
-                                <hr>
-
-                                <p class="mb-0">
-                                    <strong>Youtube Channel:</strong>
-                                    <a href="#">Madona Official</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-5 col-12">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="images/artists/abstral-official-bdlMO9z5yco-unsplash.jpg"
-                                    class="artists-image img-fluid">
-                            </div>
-
-                            <div class="artists-hover">
-                                <p>
-                                    <strong>Name:</strong>
-                                    Rihana
-                                </p>
-
-                                <p>
-                                    <strong>Birthdate:</strong>
-                                    Feb 20, 1988
-                                </p>
-
-                                <p>
-                                    <strong>Music:</strong>
-                                    Country
-                                </p>
-
-                                <hr>
-
-                                <p class="mb-0">
-                                    <strong>Youtube Channel:</strong>
-                                    <a href="#">Rihana Official</a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="artists-thumb">
-                            <img src="images/artists/soundtrap-rAT6FJ6wltE-unsplash.jpg"
-                                class="artists-image img-fluid">
-
-                            <div class="artists-hover">
-                                <p>
-                                    <strong>Name:</strong>
-                                    Bruno Bros
-                                </p>
-
-                                <p>
-                                    <strong>Birthdate:</strong>
-                                    October 8, 1985
-                                </p>
-
-                                <p>
-                                    <strong>Music:</strong>
-                                    Pop
-                                </p>
-
-                                <hr>
-
-                                <p class="mb-0">
-                                    <strong>Youtube Channel:</strong>
-                                    <a href="#">Bruno Official</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
--->
-                                
-                         <div class="col-12 text-center">
-                             <h3 class="mb-4">Facebook</h3>
-                        </div>
-                             <?php fetchAndDisplayIframe(1); ?> 
-                    <div  class="row justify-content-center" style="padding-top:40px"> 
-                        <div class="col-12 text-center">
-                        <h3 class="mb-4">Youtube</h3>
-                        </div>
-                            <?php fetchAndDisplayIframe(2); ?> 
-
-                    </div>
-
-                </div>  
-              
-            </div>
-        </section>
-
+      
 
         <section class="schedule-section section-padding" id="section_4">
             <div class="container">
@@ -509,10 +301,7 @@ https://templatemo.com/tm-583-festava-live
                 </div>
             </div>
         </section>
-
-
-     
-
+   
 
         <section class="contact-section section-padding" id="section_6">
             <div class="container">
@@ -583,156 +372,8 @@ https://templatemo.com/tm-583-festava-live
         </section>
     </main>
 
-
-    <footer class="site-footer">
-        <div class="site-footer-top">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-6 col-12">
-                        <h2 class="text-white mb-lg-0">SALT AND LIGHT</h2>
-                    </div>
-
-                    <div class="col-lg-6 col-12 d-flex justify-content-lg-end align-items-center">
-                        <ul class="social-icon d-flex justify-content-lg-end">
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link">
-                                    <span class="bi-twitter"></span>
-                                </a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link">
-                                    <span class="bi-apple"></span>
-                                </a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link">
-                                    <span class="bi-instagram"></span>
-                                </a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link">
-                                    <span class="bi-youtube"></span>
-                                </a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link">
-                                    <span class="bi-pinterest"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-6 col-12 mb-4 pb-2">
-                    <h5 class="site-footer-title mb-3">Links</h5>
-
-                    <ul class="site-footer-links">
-                        <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Home</a>
-                        </li>
-
-                        <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">About</a>
-                        </li>
-
-                        <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Artists</a>
-                        </li>
-
-                        <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Schedule</a>
-                        </li>
-                      
-                        <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                    <h5 class="site-footer-title mb-3">Have a question?</h5>
-
-                    <p class="text-white d-flex mb-1">
-                        <a href="tel: 090-080-0760" class="site-footer-link">
-                            090-080-0760
-                        </a>
-                    </p>
-
-                    <p class="text-white d-flex">
-                        <a href="mailto:sliadmin@slmissions.org" class="site-footer-link">
-                            sliadmin@slmissions.org
-                        </a>
-                    </p>
-                    <p class="text-white d-flex">
-                        <a href="mailto:saltandlight2009@gmail.com" class="site-footer-link">
-                            saltandlight2009@gmail.com
-                        </a>
-                    </p>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0">
-                    <h5 class="site-footer-title mb-3">Location</h5>
-
-                    <p class="text-white d-flex mt-3 mb-2">
-                        Barangay Cuyab, San Pedro, Philippines, 4023</p>
-
-                    <a class="link-fx-1 color-contrast-higher mt-3" href="#section_6">
-                        <span>Our Maps</span>
-                        <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
-                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="16" cy="16" r="15.5"></circle>
-                                <line x1="10" y1="18" x2="16" y2="12"></line>
-                                <line x1="16" y1="12" x2="22" y2="18"></line>
-                            </g>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="site-footer-bottom">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-4 col-12 mt-5">
-                        <p class="copyright-text">Copyright © 2025 Salt and Light Philippines</p>
-                    </div>
-
-                    <div class="col-lg-8 col-12 mt-lg-5">
-                        <ul class="site-footer-links">
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Terms &amp; Conditions</a>
-                            </li>
-
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Privacy Policy</a>
-                            </li>
-
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Your Feedback</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!--
-
-T e m p l a t e M o
-
--->
+<?php iniFooter(); ?> 
+ 
 
     <!-- JAVASCRIPT FILES -->
     <script src="js/jquery.min.js"></script>
