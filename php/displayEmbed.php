@@ -23,20 +23,20 @@ function fetchAndDisplayIframe($type) {
             echo  '
             <div class="container section-padding">
                 <div class="row">
-                    <div class="col-lg-6 col-6 mb-4 mb-lg-0 d-flex align-items-center">
+                    <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
                         <div class="services-info">
                             <h2 class="text-white mb-4"> '. $Title . '</h2>
                             
 
-                            '. $shortText .'
+                            '. $shortText .' . . .
                             
                         </div>
                     </div>
-                    <div class="col-lg-6 col-6">
+                    <div class="col-lg-6 col-12">
                         <div class="about-text-wrap">
                             <div class="col-lg-6 col-12">
                                 <div>
-                                    <div>
+                                    <div class="video-container">
                                         ' . $iframeContent . '  <!-- Output the iframe content -->
                                     </div>
                                 </div>
