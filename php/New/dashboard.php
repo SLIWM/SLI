@@ -49,10 +49,8 @@ include_once('../sidebar.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-
     <!-- Bootstrap 4 CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Link to sidebar.css -->
     <link href="../../css/sidebar.css" rel="stylesheet">
 

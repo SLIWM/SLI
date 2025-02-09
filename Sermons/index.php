@@ -16,7 +16,11 @@ include_once('../php/nav.php');
 
         <section class="about-section section-padding" id="section_2">
             <div class="container">
-            <?php fetchAndDisplayIframe(2); ?> 
+            <?php
+                $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;  // Get page number from URL
+                fetchAndDisplayIframe(2, $page);
+            ?>
+
             </div>  
         </section>
       
