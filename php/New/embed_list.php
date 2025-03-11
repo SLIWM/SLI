@@ -1,13 +1,24 @@
 <?php
-// embed_list.php - Display a list of all embeds
+// embed_list.php - Display a paginated list of all embeds
 
 include_once("../../connections/db.php");
 include_once('../sidebar.php');
 
-// Fetch all embeds from the database
-$sql = "SELECT * FROM embed";
-$result = $conn->query($sql);
+// Pagination settings
+$limit = 10; // Number of records per page
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+$start = ($page - 1) * $limit;
 
+// Fetch total records for pagination
+$totalQuery = "SELECT COUNT(*) as total FROM embed";
+$totalResult = $conn->query($totalQuery);
+$totalRow = $totalResult->fetch_assoc();
+$totalRecords = $totalRow['total'];
+$totalPages = ceil($totalRecords / $limit);
+
+// Fetch paginated results
+$sql = "SELECT * FROM embed order by 1 desc LIMIT $start, $limit";
+$result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -19,9 +30,7 @@ $result = $conn->query($sql);
 
     <!-- Bootstrap 4 CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Link to sidebar.css -->
     <link href="../../css/sidebar.css" rel="stylesheet">
-    <!-- Link to custom.css -->
 
 </head>
 <body>
@@ -31,10 +40,8 @@ $result = $conn->query($sql);
     <div class="container" style="margin-left: 250px; padding-top: 20px;">
         <h1 class="text-center mb-4">Embed List</h1>
 
-        <!-- Table displaying all embeds -->
         <div class="content">
             <div class="container mt-5">
-                <!-- Create New Embed Button (Aligned to the right) -->
                 <div class="d-flex justify-content-end mb-3">
                     <a href="embed_details.php" class="btn btn-primary btn-sm">Create New Embed</a>
                 </div>
@@ -53,11 +60,12 @@ $result = $conn->query($sql);
                     <tbody>
                         <?php
                         if ($result->num_rows > 0) {
-                            while($row = $result->fetch_assoc()) {
+                            while ($row = $result->fetch_assoc()) {
+                                $typeText = ($row['type'] == 2) ? 'YouTube' : (($row['type'] == 1) ? 'Facebook' : 'Unknown');
                                 echo "<tr>";
                                 echo "<td>" . $row['id'] . "</td>";
-                                echo "<td>" . $row['type'] . "</td>";
-                                echo "<td>" . $row['label']. "</td>";
+                                echo "<td>" . $typeText . "</td>";
+                                echo "<td>" . $row['title'] . "</td>";
                                 echo "<td>" . ($row['isActive'] ? 'Yes' : 'No') . "</td>";
                                 echo "<td>" . $row['createdDate'] . "</td>";
                                 echo "<td>
@@ -71,6 +79,28 @@ $result = $conn->query($sql);
                         ?>
                     </tbody>
                 </table>
+
+                <!-- Pagination -->
+                <nav>
+                    <ul class="pagination justify-content-center">
+                        <?php if ($page > 1): ?>
+                            <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
+                            <li class="page-item"><a class="page-link" href="?page=<?= $page - 1 ?>">Previous</a></li>
+                        <?php endif; ?>
+
+                        <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+                            <li class="page-item <?= ($i == $page) ? 'active' : '' ?>">
+                                <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                            </li>
+                        <?php endfor; ?>
+
+                        <?php if ($page < $totalPages): ?>
+                            <li class="page-item"><a class="page-link" href="?page=<?= $page + 1 ?>">Next</a></li>
+                            <li class="page-item"><a class="page-link" href="?page=<?= $totalPages ?>">Last</a></li>
+                        <?php endif; ?>
+                    </ul>
+                </nav>
+
             </div>
         </div>
     </div>
