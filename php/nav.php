@@ -15,7 +15,7 @@ function showNav($isRoot){
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
                         <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="WhoWeAre.html" class="nav-item nav-link">Who we are</a>
+                        <a href="WhoWeAre.php" class="nav-item nav-link">Who we are</a>
                         <a href="service.html" class="nav-item nav-link">History</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Ministries</a>

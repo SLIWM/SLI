@@ -61,12 +61,11 @@ include_once('php/nav.php');
         <div class="container pt-5">
             <div class="row g-5 pt-5">
                 <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
-                    <h1 class="display-4 text-white mb-4 animated slideInRight">Our Team</h1>
+                    <h1 class="display-4 text-white mb-4 animated slideInRight">Who we are</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Our Team</li>
+                            <li class="breadcrumb-item"><a class="text-white" href="#">We are the salt and light of the world</a></li>
+                            
                         </ol>
                     </nav>
                 </div>
@@ -101,100 +100,142 @@ include_once('php/nav.php');
 
 
     <!-- Team Start -->
-    <div class="container-fluid bg-light py-5">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Our Team</div>
-                    <h1 class="mb-4">Meet Our Experienced Team Members</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
-                        amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
-                        clita duo justo et tempor eirmod magna dolore erat amet</p>
-                    <a class="btn btn-primary rounded-pill px-4" href="">Read More</a>
-                </div>
-                <div class="col-lg-7">
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="row g-4">
-                                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                                    <div class="team-item bg-white text-center rounded p-4 pt-0">
-                                        <img class="img-fluid rounded-circle p-4" src="img/team-1.jpg" alt="">
-                                        <h5 class="mb-0">Boris Johnson</h5>
-                                        <small>Founder & CEO</small>
-                                        <div class="d-flex justify-content-center mt-3">
-                                            <a class="btn btn-square btn-primary m-1" href=""><i
-                                                    class="fab fa-facebook-f"></i></a>
-                                            <a class="btn btn-square btn-primary m-1" href=""><i
-                                                    class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-square btn-primary m-1" href=""><i
-                                                    class="fab fa-instagram"></i></a>
-                                            <a class="btn btn-square btn-primary m-1" href=""><i
-                                                    class="fab fa-linkedin-in"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
-                                    <div class="team-item bg-white text-center rounded p-4 pt-0">
-                                        <img class="img-fluid rounded-circle p-4" src="img/team-2.jpg" alt="">
-                                        <h5 class="mb-0">Adam Crew</h5>
-                                        <small>Executive Manager</small>
-                                        <div class="d-flex justify-content-center mt-3">
-                                            <a class="btn btn-square btn-primary m-1" href=""><i
-                                                    class="fab fa-facebook-f"></i></a>
-                                            <a class="btn btn-square btn-primary m-1" href=""><i
-                                                    class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-square btn-primary m-1" href=""><i
-                                                    class="fab fa-instagram"></i></a>
-                                            <a class="btn btn-square btn-primary m-1" href=""><i
-                                                    class="fab fa-linkedin-in"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 pt-md-4">
-                            <div class="row g-4">
-                                <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
-                                    <div class="team-item bg-white text-center rounded p-4 pt-0">
-                                        <img class="img-fluid rounded-circle p-4" src="img/team-3.jpg" alt="">
-                                        <h5 class="mb-0">Kate Winslet</h5>
-                                        <small>Co Founder</small>
-                                        <div class="d-flex justify-content-center mt-3">
-                                            <a class="btn btn-square btn-primary m-1" href=""><i
-                                                    class="fab fa-facebook-f"></i></a>
-                                            <a class="btn btn-square btn-primary m-1" href=""><i
-                                                    class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-square btn-primary m-1" href=""><i
-                                                    class="fab fa-instagram"></i></a>
-                                            <a class="btn btn-square btn-primary m-1" href=""><i
-                                                    class="fab fa-linkedin-in"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 wow fadeIn" data-wow-delay="0.7s">
-                                    <div class="team-item bg-white text-center rounded p-4 pt-0">
-                                        <img class="img-fluid rounded-circle p-4" src="img/team-4.jpg" alt="">
-                                        <h5 class="mb-0">Cody Gardner</h5>
-                                        <small>Project Manager</small>
-                                        <div class="d-flex justify-content-center mt-3">
-                                            <a class="btn btn-square btn-primary m-1" href=""><i
-                                                    class="fab fa-facebook-f"></i></a>
-                                            <a class="btn btn-square btn-primary m-1" href=""><i
-                                                    class="fab fa-twitter"></i></a>
-                                            <a class="btn btn-square btn-primary m-1" href=""><i
-                                                    class="fab fa-instagram"></i></a>
-                                            <a class="btn btn-square btn-primary m-1" href=""><i
-                                                    class="fab fa-linkedin-in"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- Timeline -->
+<div class="container-fluid">
+    <div class="row">
+
+      <div class="col">
+        <div class="container my-5">
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+
+              <ul class="timeline-3">
+                <li>
+                  <p class="" style="font-weight: bold;">2005.10</p>
+                  <p>Start of SALT AND LIGHT (Philippines)<br>소금과 빛의 시작 (필리핀)
+                  </p>
+                </li>
+                <li>
+                  <p class="" style="font-weight: bold;">2008.11</p>
+                  <p>Start of SALT AND LIGHT (India)<br>소금과 빛의 시작 (인도)
+                  </p>
+                </li>
+                <li>
+                  <p class="" style="font-weight: bold;">2011.04</p>
+                  <p>Unified the name of organization into SALT & LIGHT INTERNATIONAL WORLD MISSION INC.<br>조직 이름을 소금과 빛
+                    국제 월드 미션 주식회사로 통일
+                  </p>
+                </li>
+                <li>
+                  <p class="" style="font-weight: bold;">2012.07</p>
+                  <p>MOA with City of San Pedro<br>산 페드로 시와의 양해각서
+                  </p>
+                </li>
+                <li>
+                  <p class="" style="font-weight: bold;">2012.10</p>
+                  <p>Completion of construction of Salt and Light LOVE Community Center (Brgy. Landayan)<br>소금과 빛 LOVE
+                    커뮤니티 센터 (브랑가이 랜다얀) 건설 완료 (2010-2012)
+                  </p>
+                </li>
+                <li>
+                  <p class="" style="font-weight: bold;">2013.05</p>
+                  <p>Vision trip to Korea (Scholars and Ministers)<br>한국 비전 여행 (학자 및 목회자)
+                  </p>
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
+      </div>
+      <div class="col">
+        <div class="container my-5">
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+
+              <ul class="timeline-3">
+                <li>
+                  <p class="" style="font-weight: bold;">2013.09</p>
+                  <p>Completion of Salt and Light Center in Chennai, India<br>인도 첸나이의 소금과 빛 센터 완공
+                  </p>
+                </li>
+                <li>
+                  <p class="" style="font-weight: bold;">2013.11</p>
+                  <p>Completion of Salt and Light Church in Catmon, Batangas<br>카트몬, 바탄가스의 소금과 빛 교회 완공
+                  </p>
+                </li>
+                <li>
+                  <p class="" style="font-weight: bold;">2014.06</p>
+                  <p>Started Salt and Light Bible College (Chennai, India)<br>소금과 빛 성경 대학 개설 (첸나이, 인도)
+                  </p>
+                </li>
+                <li>
+                  <p class="" style="font-weight: bold;">2015.03</p>
+                  <p>Joined Global Mission Society (Missionary Sungwon & Ara)<br>글로벌 미션 사회 가입 (선교사 성원 & 아라)
+                  </p>
+                </li>
+                <li>
+                  <p class="" style="font-weight: bold;">2016.07</p>
+                  <p>Ministry Cooperation with PTS College<br>PTS 대학과의 사역 협력
+                  </p>
+                </li>
+                <li>
+                  <p class="" style="font-weight: bold;">2017.06</p>
+                  <p>Start of Salt and Light Daycare (with CSWD San Pedro)<br>소금과 빛 데이케어 시작 (CSWD 산 페드로와 함께)
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="container my-5">
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+
+              <ul class="timeline-3">
+                <li>
+                  <p class="" style="font-weight: bold;">2018.01</p>
+                  <p>Completion of Salt and Light Faith Center (Brgy Cuyab)<br>소금과 빛 신앙 센터 완공 (브랑가이 쿠야브)
+                  </p>
+                </li>
+                <li>
+                  <p class="" style="font-weight: bold;">2018.05</p>
+                  <p>Award Received from City of San Pedro<br>산 페드로 시로부터 받은 상
+                  </p>
+                  <p class="" style="font-weight: bold;">2018.05</p>
+                  <p>Started Y-Tree Ministry<br>Y-Tree 사역 시작
+                  </p>
+                </li>
+                <li>
+                  <p class="" style="font-weight: bold;">2019.02</p>
+                  <p>Opening of Salt and Light Health Center (with CHO San Pedro)<br>소금과 빛 건강 센터 개소 (CHO 산 페드로와 함께)
+                  </p>
+                </li>
+                <li>
+                  <p class="" style="font-weight: bold;">2020.04</p>
+                  <p>Start of Online Ministry SALT & LIGHT ON (Youtube)<br>온라인 사역 시작 SALT & LIGHT ON (유튜브)
+                  </p>
+                </li>
+                <li>
+                  <p class="" style="font-weight: bold;">2020.07</p>
+                  <p>Start of Online Children Ministry- Salt and Light KIDS (Youtube)<br>온라인 어린이 사역 시작 - 소금과 빛 KIDS
+                    (유튜브)
+                  </p>
+                </li>
+                <li>
+                  <p class="" style="font-weight: bold;">2022.02</p>
+                  <p>Completion of House of Mission (Brgy Cuyab)<br>선교의 집 완공 (브랑가이 쿠야브)
+                  </p>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
+  </div> 
+  
     <!-- Team End -->
 
 
