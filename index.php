@@ -28,13 +28,14 @@ include_once('php/nav.php');
         <div class="container pt-5">
             <div class="row g-5 pt-5">
                 <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
-                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated slideInRight">AI.Tech</div>
+                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated slideInRight">Salt and Light</div>
                     
                     <h1 class="display-4 text-white mb-4 animated slideInRight">
-                        Artificial Intelligence for Your Business
+                    We are the Salt and <br> Light of the World 
                     </h1>
                     <p class="text-white mb-4 animated slideInRight">
-                        Tempor rebum no at dolore lorem clita rebum rebum ipsum rebum stet dolor sed justo kasd.
+                    우리는 세상의 소금과 빛입니다
+                    <p class="text-white mb-4 animated slideInRight">Matthew: 5:13-16</p>
                     </p>
                     <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight">Read More</a>
                     <a href="" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
