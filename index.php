@@ -10,12 +10,45 @@ include_once('php/nav.php');
 
 
 <body>
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></script>
+
     <main>
     <?php showNav(1); ?> 
+  <!-- Hero Start -->
+<div class="hero-section position-relative">
+    <!-- Background Video -->
+    <video autoplay loop muted playsinline class="hero-video">
+        <source src="video/newVid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-        <section class="hero-section" id="section_1">
+    <!-- Overlay -->
+    <div class="hero-overlay"></div>
+
+    <div class="container-fluid pt-5 hero-header mb-5">
+        <div class="container pt-5">
+            <div class="row g-5 pt-5">
+                <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated slideInRight">AI.Tech</div>
+                    
+                    <h1 class="display-4 text-white mb-4 animated slideInRight">
+                        Artificial Intelligence for Your Business
+                    </h1>
+                    <p class="text-white mb-4 animated slideInRight">
+                        Tempor rebum no at dolore lorem clita rebum rebum ipsum rebum stet dolor sed justo kasd.
+                    </p>
+                    <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight">Read More</a>
+                    <a href="" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
+                </div>
+                <div class="col-lg-6 align-self-end text-center text-lg-end">
+                    <img class="img-fluid" src="img/hero-img.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero End -->
+
+     <!--   <section class="hero-section" id="section_1">
             <div class="section-overlay"></div>
 
             <div class="container d-flex justify-content-center align-items-center">
@@ -81,295 +114,91 @@ include_once('php/nav.php');
                     Your browser does not support the video tag.
                 </video>
             </div>
-        </section>
+        </section> -->
 
 
-        <section class="about-section section-padding" id="section_2">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
-                        <div class="services-info">
-                            <h2 class="text-white mb-4">How we started</h2>
-
-                            <p class="text-white">SALT & LIGHT INTERNATIONAL is a non profit, Christian mission organization dedicated in
-                                sharing and serving one another with the love of Jesus Christ.<br><br>
-                                We aim to proclaim the gospel, bringing our community to acknowledge Jesus Christ to be our only Savior
-                                and Lord.</p>
-
-
-                          
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-12">
-                        <div class="about-text-wrap">
-                            <img  src="img/carousel/Carousel3.jpg" class="about-image img-fluid">
-
-                          
-                        </div>
-                    </div>
-
+         <!-- Testimonial Start -->
+    <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                    
+                    <h1 class="mb-4">This is how we started</h1>
+                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
+                        amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
+                        clita duo justo et tempor eirmod magna dolore erat amet</p>
+                    <a class="btn btn-primary rounded-pill px-4" href="">Read More</a>
                 </div>
-            </div>
-            <div class="container-fluid text-white" style="color:white!important;">
-                <div class="row">
-            
-                  <div class="col">
-                    <div class="container my-5">
-                      <div class="row">
-                        <div class="col-md-6 offset-md-3 text-white">
-            
-                          <ul class="timeline-3">
-                            <li>
-                              <p class="text-white" style="font-weight: bold;">2005.10</p>
-                              <p class="text-white">Start of SALT AND LIGHT (Philippines)<br>소금과 빛의 시작 (필리핀)
-                              </p>
-                            </li>
-                            <li>
-                              <p class="text-white" style="font-weight: bold;">2008.11</p>
-                              <p class="text-white">Start of SALT AND LIGHT (India)<br>소금과 빛의 시작 (인도)
-                              </p>
-                            </li>
-                            <li>
-                              <p class="text-white" style="font-weight: bold;">2011.04</p>
-                              <p class="text-white">Unified the name of organization into SALT & LIGHT INTERNATIONAL WORLD MISSION INC.<br>조직 이름을 소금과 빛
-                                국제 월드 미션 주식회사로 통일
-                              </p>
-                            </li>
-                            <li>
-                              <p class="text-white" style="font-weight: bold;">2012.07</p>
-                              <p class="text-white">MOA with City of San Pedro<br>산 페드로 시와의 양해각서
-                              </p>
-                            </li>
-                            <li>
-                              <p class="text-white" style="font-weight: bold;">2012.10</p>
-                              <p class="text-white">Completion of construction of Salt and Light LOVE Community Center (Brgy. Landayan)<br>소금과 빛 LOVE
-                                커뮤니티 센터 (브랑가이 랜다얀) 건설 완료 (2010-2012)
-                              </p>
-                            </li>
-                            <li>
-                              <p class="text-white" style="font-weight: bold;">2013.05</p>
-                              <p class="text-white">Vision trip to Korea (Scholars and Ministers)<br>한국 비전 여행 (학자 및 목회자)
-                              </p>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="container my-5">
-                      <div class="row">
-                        <div class="col-md-6 offset-md-3">
-            
-                          <ul class="timeline-3">
-                            <li>
-                              <p class="text-white" style="font-weight: bold;">2013.09</p>
-                              <p class="text-white">Completion of Salt and Light Center in Chennai, India<br>인도 첸나이의 소금과 빛 센터 완공
-                              </p>
-                            </li>
-                            <li>
-                              <p class="text-white" style="font-weight: bold;">2013.11</p>
-                              <p class="text-white">Completion of Salt and Light Church in Catmon, Batangas<br>카트몬, 바탄가스의 소금과 빛 교회 완공
-                              </p>
-                            </li>
-                            <li>
-                              <p class="text-white" style="font-weight: bold;">2014.06</p>
-                              <p class="text-white">Started Salt and Light Bible College (Chennai, India)<br>소금과 빛 성경 대학 개설 (첸나이, 인도)
-                              </p>
-                            </li>
-                            <li>
-                              <p class="text-white" style="font-weight: bold;">2015.03</p>
-                              <p class="text-white">Joined Global Mission Society (Missionary Sungwon & Ara)<br>글로벌 미션 사회 가입 (선교사 성원 & 아라)
-                              </p>
-                            </li>
-                            <li>
-                              <p class="text-white" style="font-weight: bold;">2016.07</p>
-                              <p class="text-white">Ministry Cooperation with PTS College<br>PTS 대학과의 사역 협력
-                              </p>
-                            </li>
-                            <li>
-                              <p class="text-white" style="font-weight: bold;">2017.06</p>
-                              <p class="text-white">Start of Salt and Light Daycare (with CSWD San Pedro)<br>소금과 빛 데이케어 시작 (CSWD 산 페드로와 함께)
-                              </p>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="container my-5">
-                      <div class="row">
-                        <div class="col-md-6 offset-md-3">
-            
-                          <ul class="timeline-3">
-                            <li>
-                              <p class="text-white" style="font-weight: bold;">2018.01</p>
-                              <p class="text-white">Completion of Salt and Light Faith Center (Brgy Cuyab)<br>소금과 빛 신앙 센터 완공 (브랑가이 쿠야브)
-                              </p>
-                            </li>
-                            <li>
-                              <p class="text-white" style="font-weight: bold;">2018.05</p>
-                              <p class="text-white">Award Received from City of San Pedro<br>산 페드로 시로부터 받은 상
-                              </p>
-                              <p class="text-white" style="font-weight: bold;">2018.05</p>
-                              <p class="text-white">Started Y-Tree Ministry<br>Y-Tree 사역 시작
-                              </p>
-                            </li>
-                            <li>
-                              <p class="text-white" style="font-weight: bold;">2019.02</p>
-                              <p class="text-white">Opening of Salt and Light Health Center (with CHO San Pedro)<br>소금과 빛 건강 센터 개소 (CHO 산 페드로와 함께)
-                              </p>
-                            </li>
-                            <li>
-                              <p class="text-white" style="font-weight: bold;">2020.04</p>
-                              <p class="text-white">Start of Online Ministry SALT & LIGHT ON (Youtube)<br>온라인 사역 시작 SALT & LIGHT ON (유튜브)
-                              </p>
-                            </li>
-                            <li>
-                              <p class="text-white"style="font-weight: bold;">2020.07</p>
-                              <p class="text-white">Start of Online Children Ministry- Salt and Light KIDS (Youtube)<br>온라인 어린이 사역 시작 - 소금과 빛 KIDS
-                                (유튜브)
-                              </p>
-                            </li>
-                            <li>
-                              <p class="text-white"style="font-weight: bold;">2022.02</p>
-                              <p class="text-white">Completion of House of Mission (Brgy Cuyab)<br>선교의 집 완공 (브랑가이 쿠야브)
-                              </p>
-                          </ul>
-                        </div>
-            
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> 
-              
-        </section>
+                <div class="col-lg-7 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="owl-carousel testimonial-carousel border-start border-primary">
 
-
-      
-
-        <section class="schedule-section section-padding" id="section_4">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-12 text-center">
-                        <h2 class="text-white mb-4">Event Schedule</h1>
-
-                            <div class="table-responsive">
-                                <table class="schedule-table table table-dark ">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Date</th>
-
-                                            <th scope="col">Wednesday</th>
-
-                                            <th scope="col">Saturday</th>
-
-                                            <th scope="col">Sunday</th>
-
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">Time</th>
-
-                                            <td scope="col" >
-                                                <h3>Wednesday Service</h3>
-
-                                                <p class="mb-2">5:00 - 7:00 PM</p>                                            
-
-                                            </td>
-
-                                            <td scope="col">
-                                                <h3>Dawn Watch</h3>
-                                                <p class="mb-2">5:00 - 6:00 AM</p>   
-                                            </td>
-                                            <td scope="col" >
-                                                <h3>Sunday Service</h3>
-                                                <p class="mb-2">10:20 - 11:00 AM</p>
-                                            </td>
-                                        </tr>   
-                                    </tbody>
-                                </table>
+                       
+                        <div class="testimonial-item ps-5">
+                          <h1 class="mb-4">Vission</h1>
+                            <p class="fs-4">Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>
+                            <div class="d-flex align-items-center">
+                                
+                               
                             </div>
+                        </div>
+                        <div class="testimonial-item ps-5">
+                        <h1 class="mb-4">Mission</h1>
+                            <p class="fs-4">Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>
+                            <div class="d-flex align-items-center">
+                                
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-   
+        </div>
+    </div>
+    <!-- Testimonial End -->
 
-        <section class="contact-section section-padding" id="section_6">
-            <div class="container">
-                <div class="row">
 
-                    <div class="col-lg-8 col-12 mx-auto">
-                        <h2 class="text-center mb-4">Interested? Let's talk</h2>
 
-                        <nav class="d-flex justify-content-center">
-                            <div class="nav nav-tabs align-items-baseline justify-content-center" id="nav-tab"
-                                role="tablist">
-                                <button class="nav-link " id="nav-ContactForm-tab" data-bs-toggle="tab"
-                                    data-bs-target="#nav-ContactForm" type="button" role="tab"
-                                    aria-controls="nav-ContactForm" aria-selected="false">
-                                    <h5>Contact Form</h5>
-                                </button>
 
-                                <button class="nav-link active" id="nav-ContactMap-tab" data-bs-toggle="tab"
-                                    data-bs-target="#nav-ContactMap" type="button" role="tab"
-                                    aria-controls="nav-ContactMap" aria-selected="false">
-                                    <h5>Google Maps</h5>
-                                </button>
-                            </div>
-                        </nav>
-
-                        <div class="tab-content shadow-lg mt-5" id="nav-tabContent">
-                            <div class="tab-pane fade show " id="nav-ContactForm" role="tabpanel"
-                                aria-labelledby="nav-ContactForm-tab">
-                                <form class="custom-form contact-form mb-5 mb-lg-0" action="#" method="post"
-                                    role="form">
-                                    <div class="contact-form-body">
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-12">
-                                                <input type="text" name="contact-name" id="contact-name"
-                                                    class="form-control" placeholder="Full name" required>
-                                            </div>
-
-                                            <div class="col-lg-6 col-md-6 col-12">
-                                                <input type="email" name="contact-email" id="contact-email"
-                                                    pattern="[^ @]*@[^ @]*" class="form-control"
-                                                    placeholder="Email address" required>
-                                            </div>
-                                        </div>
-
-                                        <input type="text" name="contact-company" id="contact-company"
-                                            class="form-control" placeholder="Company" required>
-
-                                        <textarea name="contact-message" rows="3" class="form-control"
-                                            id="contact-message" placeholder="Message"></textarea>
-
-                                        <div class="col-lg-4 col-md-10 col-8 mx-auto">
-                                            <button type="submit" class="form-control">Send message</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-
-                            <div class="tab-pane active" id="nav-ContactMap" role="tabpanel"
-                                aria-labelledby="nav-ContactMap-tab">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d384516.76896130416!2d121.064158705444!3d14.3584622606757!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1188b629bbb%3A0x87d34a7714012269!2sSalt%20and%20Light%20Church!5e0!3m2!1sen!2sph!4v1734151826061!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                <!-- You can easily copy the embed code from Google Maps -> Share -> Embed a map // -->
-                            </div>
-                        </div>
+        <!-- Case Start -->
+<div class="container-fluid py-4">
+        <div class="container py-5">
+           
+            <div class="row g-4">
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="img/carousel/Carousel3.jpg" alt="">
+                        <a class="case-overlay text-decoration-none" href="">
+                            <small>Salt and light international </small>
+                            
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
                     </div>
-
+                </div>
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="img/carousel/Carousel3.jpg" alt="">
+                        <a class="case-overlay text-decoration-none" href="">
+                            <small>Salt and light church</small>
+                            
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="img/carousel/Carousel3.jpg" alt="">
+                        <a class="case-overlay text-decoration-none" href="">
+                            <small>Korean button
+                            </small>                           
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+<!-- Case End -->
+ 
     </main>
 
 <?php iniFooter(1); ?> 

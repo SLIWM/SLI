@@ -1,254 +1,153 @@
 <?php 
 function showNav($isRoot){
-    if ($isRoot==1)
-    {
-
+  
         echo '
-        <header class="site-header">
-                    <div class="container">
-                        <div class="row">        
-                            <div class="col-lg-12 col-12 d-flex flex-wrap">
-                                <p class="d-flex me-4 mb-0">
-                                    <i class="bi-person custom-icon me-2"></i>
-                                    <strong class="text-dark">Welcome to Salt and Light</strong>
-                                </p>
-                            </div>        
-                        </div>
-                    </div>
-                </header>        
-        <nav class="navbar navbar-expand" style="z-index: 500;">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    SALT AND LIGHT
-                </a> 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-primary sticky-top">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="text-white">SLI</h1>
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
-                </button>        
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
-                        <li class="nav-item">
-                            <a class="nav-link " href="#">Home</a>
-                        </li>        
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Sermons/">Sermons</a>
-                        </li>                       
-                    </ul>                   
-                </div>
-            </div>
-        </nav>
-        ';
-    }
-
-    else{
-        echo '
-        <header class="site-header">
-                    <div class="container">
-                        <div class="row">        
-                            <div class="col-lg-12 col-12 d-flex flex-wrap">
-                                <p class="d-flex me-4 mb-0">
-                                    <i class="bi-person custom-icon me-2"></i>
-                                    <strong class="text-dark">Welcome to Salt and Light</strong>
-                                </p>
-                            </div>        
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">Who we are</a>
+                        <a href="service.html" class="nav-item nav-link">History</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Ministries</a>
+                            <div class="dropdown-menu bg-light mt-2">
+                                <a href="feature.html" class="dropdown-item">Salt and Light International</a>
+                                <a href="team.html" class="dropdown-item">Salt and Light Church</a>
+                                   <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="404.html" class="dropdown-item">404 Page</a>
+                            </div>
                         </div>
+                        <a href="contact.html" class="nav-item nav-link">Updates and News</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                     </div>
-        </header>        
-        <nav class="navbar navbar-expand" style="z-index: 500;">
-            <div class="container">
-                <a class="navbar-brand" href="../">
-                    SALT AND LIGHT
-                </a> 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>        
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
-                        <li class="nav-item">
-                            <a class="nav-link " href="../">Home</a>
-                        </li>        
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sermons</a>
-                        </li>                       
-                    </ul>                   
+                   
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
+    </div>
         ';
-
-    }
+    
 
 }
 
 
 function iniHeader($isRoot){
- if ($isRoot==1){
+
 
     echo ' 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">    
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <title>Salt and Light</title>
-        <!-- CSS FILES -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="stylesheet" href="css/saltandlight.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
-        <link href="css/templatemo-festava-live.css" rel="stylesheet">    
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>AI.Tech - Artificial Intelligence HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstraps.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
     
      ';
- }
- else{
-    echo ' 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">    
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <title>Salt and Light</title>
-        <!-- CSS FILES -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="stylesheet" href="../css/saltandlight.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/bootstrap-icons.css" rel="stylesheet">
-        <link href="../css/templatemo-festava-live.css" rel="stylesheet">    
-    </head>
-    
-     ';
- }
+
 
 
 }
 
 function iniFooter(){
 echo '
-   <footer class="site-footer">
-        <div class="site-footer-top">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-6 col-12">
-                        <h2 class="text-white mb-lg-0">SALT AND LIGHT</h2>
-                    </div>
-
-                    <div class="col-lg-6 col-12 d-flex justify-content-lg-end align-items-center">
-                        <ul class="social-icon d-flex justify-content-lg-end">
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link">
-                                    <span class="bi-twitter"></span>
-                                </a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link">
-                                    <span class="bi-apple"></span>
-                                </a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link">
-                                    <span class="bi-instagram"></span>
-                                </a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link">
-                                    <span class="bi-youtube"></span>
-                                </a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link">
-                                    <span class="bi-pinterest"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+   <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                    <a href="index.html" class="d-inline-block mb-3">
+                        <h1 class="text-white">SALT AND LIGHT</h1>
+                    </a>
+                    <p class="mb-0">some message</p>
                 </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-
-                
-
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                    <h5 class="site-footer-title mb-3">Have a question?</h5>
-
-                    <p class="text-white d-flex mb-1">
-                        <a href="tel: 090-080-0760" class="site-footer-link">
-                            090-080-0760
-                        </a>
-                    </p>
-
-                    <p class="text-white d-flex">
-                        <a href="mailto:sliadmin@slmissions.org" class="site-footer-link">
-                            sliadmin@slmissions.org
-                        </a>
-                    </p>
-                    <p class="text-white d-flex">
+                <div class="col-md-6 col-lg-5 wow fadeIn" data-wow-delay="0.3s">
+                    <h5 class="text-white mb-4">Get In Touch</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Barangay Cuyab, San Pedro, Philippines, 4023</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>090-080-0760</p>
+                    <p><i class="fa fa-envelope me-3"></i>
                         <a href="mailto:saltandlight2009@gmail.com" class="site-footer-link">
                             saltandlight2009@gmail.com
-                        </a>
-                    </p>
+                        </a></p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
-
-                <div class="col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0">
-                    <h5 class="site-footer-title mb-3">Location</h5>
-
-                    <p class="text-white d-flex mt-3 mb-2">
-                        Barangay Cuyab, San Pedro, Philippines, 4023</p>
-
-                    <a class="link-fx-1 color-contrast-higher mt-3" href="#section_6">
-                        <span>Our Maps</span>
-                        <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
-                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="16" cy="16" r="15.5"></circle>
-                                <line x1="10" y1="18" x2="16" y2="12"></line>
-                                <line x1="16" y1="12" x2="22" y2="18"></line>
-                            </g>
-                        </svg>
-                    </a>
-                </div>
+               
+               
             </div>
         </div>
-
-        <div class="site-footer-bottom">
-            <div class="container">
+        <div class="container wow fadeIn" data-wow-delay="0.1s">
+            <div class="copyright">
                 <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
 
-                    <div class="col-lg-4 col-12 mt-5">
-                        <p class="copyright-text">Copyright © 2025 Salt and Light Philippines</p>
+                        <!--/*** This template is free as long as you keep the footer authors credit link/attribution link/backlink. If you d like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
                     </div>
-
-                    <div class="col-lg-8 col-12 mt-lg-5">
-                        <ul class="site-footer-links">
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Terms &amp; Conditions</a>
-                            </li>
-
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Privacy Policy</a>
-                            </li>
-
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Your Feedback</a>
-                            </li>
-                        </ul>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FAQs</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+  
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 
 ';
 
