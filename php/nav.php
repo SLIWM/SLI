@@ -4,7 +4,7 @@ function showNav($isRoot){
         echo '
         <div class="container-fluid sticky-top">
         <div class="container">
-            <nav class="navbar navbar-expand-lg bg-primary sticky-top">
+           <nav class="navbar navbar-expand-lg navbar-dark p-0">
                 <a href="index.html" class="navbar-brand">
                     <h1 class="text-white">SLI</h1>
                 </a>
@@ -14,7 +14,7 @@ function showNav($isRoot){
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="../SLI" class="nav-item nav-link active">Home</a>
                         <a href="WhoWeAre.php" class="nav-item nav-link">Who we are</a>
                         <a href="service.html" class="nav-item nav-link">History</a>
                         <div class="nav-item dropdown">
@@ -22,14 +22,15 @@ function showNav($isRoot){
                             <div class="dropdown-menu bg-light mt-2">
                                 <a href="feature.html" class="dropdown-item">Salt and Light International</a>
                                 <a href="team.html" class="dropdown-item">Salt and Light Church</a>
-                                   <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                                 <a href="404.html" class="dropdown-item">404 Page</a>
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Updates and News</a>
                         <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                     </div>
-                   
+                   <button type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
+                        data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
                 </div>
             </nav>
         </div>
@@ -136,6 +137,8 @@ echo '
         </div>
     </div>
   
+ <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -147,7 +150,9 @@ echo '
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    
+    <script src="js/maincopy.js"></script>
+   
 
 ';
 

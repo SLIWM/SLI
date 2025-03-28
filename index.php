@@ -14,39 +14,23 @@ include_once('php/nav.php');
     <main>
     <?php showNav(1); ?> 
   <!-- Hero Start -->
-<div class="hero-section position-relative">
-    <!-- Background Video -->
-    <video autoplay loop muted playsinline class="hero-video">
-        <source src="video/newVid.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <!-- Overlay -->
-    <div class="hero-overlay"></div>
-
-    <div class="container-fluid pt-5 hero-header mb-5">
+   <!-- Hero Start -->
+   <div class="container-fluid pt-5 bg-primary hero-header mb-5">
         <div class="container pt-5">
             <div class="row g-5 pt-5">
                 <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
-                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated slideInRight">Salt and Light</div>
-                    
-                    <h1 class="display-4 text-white mb-4 animated slideInRight">
-                    We are the Salt and <br> Light of the World 
-                    </h1>
-                    <p class="text-white mb-4 animated slideInRight">
-                    우리는 세상의 소금과 빛입니다
-                    <p class="text-white mb-4 animated slideInRight">Matthew: 5:13-16</p>
-                    </p>
+                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated slideInRight">AI.Tech</div>
+                    <h1 class="display-4 text-white mb-4 animated slideInRight">Artificial Intelligence for Your Business</h1>
+                    <p class="text-white mb-4 animated slideInRight">Tempor rebum no at dolore lorem clita rebum rebum ipsum
+                        rebum stet dolor sed justo kasd. Ut dolor sed magna dolor sea diam. Sit diam sit</p>
                     <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight">Read More</a>
                     <a href="" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
                 </div>
-                <div class="col-lg-6 align-self-end text-center text-lg-end">
-                    <img class="img-fluid" src="img/hero-img.png" alt="">
-                </div>
+           
             </div>
         </div>
     </div>
-</div>
+    <!-- Hero End -->
 <!-- Hero End -->
 
      <!--   <section class="hero-section" id="section_1">
@@ -168,31 +152,19 @@ include_once('php/nav.php');
                 <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
                     <div class="case-item position-relative overflow-hidden rounded mb-2">
                         <img class="img-fluid" src="img/carousel/Carousel3.jpg" alt="">
-                        <a class="case-overlay text-decoration-none" href="">
-                            <small>Salt and light international </small>
-                            
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
+                        
                     </div>
                 </div>
                 <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
                     <div class="case-item position-relative overflow-hidden rounded mb-2">
                         <img class="img-fluid" src="img/carousel/Carousel3.jpg" alt="">
-                        <a class="case-overlay text-decoration-none" href="">
-                            <small>Salt and light church</small>
-                            
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
+                       
                     </div>
                 </div>
                 <div class="col-lg-4 wow fadeIn" data-wow-delay="0.7s">
                     <div class="case-item position-relative overflow-hidden rounded mb-2">
                         <img class="img-fluid" src="img/carousel/Carousel3.jpg" alt="">
-                        <a class="case-overlay text-decoration-none" href="">
-                            <small>Korean button
-                            </small>                           
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
+                        
                     </div>
                 </div>
             </div>
@@ -200,17 +172,12 @@ include_once('php/nav.php');
     </div>
 <!-- Case End -->
  
-    </main>
+</main>
 
 <?php iniFooter(1); ?> 
  
 
-    <!-- JAVASCRIPT FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/click-scroll.js"></script>
-    <script src="js/custom.js"></script>
+ 
 
 </body>
 
