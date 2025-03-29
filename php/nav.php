@@ -21,13 +21,14 @@ function showNav($isRoot){
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Ministries</a>
                             <div class="dropdown-menu bg-light mt-2">
                                 <a href="feature.html" class="dropdown-item">Salt and Light International</a>
-                                <a href="team.html" class="dropdown-item">Salt and Light Church</a>
+                                <a href="SLIC.php" class="dropdown-item">Salt and Light Church</a>
                                 <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                                 <a href="404.html" class="dropdown-item">404 Page</a>
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Updates and News</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                        <a href="Sermons.php" class="nav-item nav-link">Sermons</a>
+                        <a href="ContactUs.php" class="nav-item nav-link">Contact Us</a>
                     </div>
                    <button type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
                         data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>

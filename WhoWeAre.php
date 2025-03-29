@@ -29,12 +29,7 @@ include_once('php/nav.php');
             <div class="row g-5 pt-5">
                 <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
                     <h1 class="display-4 text-white mb-4 animated slideInRight">Who we are</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
-                            <li class="breadcrumb-item"><a class="text-white" href="#">We are the salt and light of the world</a></li>
-                            
-                        </ol>
-                    </nav>
+                    <p class="text-white mb-4 animated slideInRight">우리는 세상의 소금과 빛입니다</p>
                 </div>
                 <div class="col-lg-6 align-self-end text-center text-lg-end">
                     <img class="img-fluid" src="img/hero-img.png" alt="" style="max-height: 300px;">
