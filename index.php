@@ -37,7 +37,7 @@ include_once('php/nav.php');
     <div class="container-xxl py-5">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s"><br>
                     
                     <h1 class="mb-4">This is how we started</h1>
                     <p class="mb-4">SALT & LIGHT INTERNATIONAL is a non profit, Christian mission organization dedicated in
