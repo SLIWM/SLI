@@ -75,6 +75,10 @@ function iniHeader($isRoot){
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="css/whoweare.css">
+  <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/saltandlight.css">
+
 </head>
 
     
