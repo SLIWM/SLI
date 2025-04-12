@@ -6,7 +6,7 @@ function showNav($isRoot){
         <div class="container">
            <nav class="navbar navbar-expand-lg navbar-dark p-0">
                 <a href="index.html" class="navbar-brand">
-                    <h1 class="text-white">SLI</h1>
+                    <img src="img/logo/SLILOGO.png" alt="Logo" class="d-inline-block align-top" style="height: 55px;">
                 </a>
                 <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
@@ -16,7 +16,7 @@ function showNav($isRoot){
                     <div class="navbar-nav ms-auto">
                         <a href="../SLI" class="nav-item nav-link active">Home</a>
                         <a href="WhoWeAre.php" class="nav-item nav-link">Who we are</a>
-                        <a href="service.html" class="nav-item nav-link">History</a>
+                        <a href="History.php" class="nav-item nav-link">History</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Ministries</a>
                             <div class="dropdown-menu bg-light mt-2">
@@ -26,7 +26,7 @@ function showNav($isRoot){
                                 <a href="404.html" class="dropdown-item">404 Page</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Updates and News</a>
+                        <a href="Updates.php" class="nav-item nav-link">Updates and News</a>
                         <a href="Sermons.php" class="nav-item nav-link">Sermons</a>
                         <a href="ContactUs.php" class="nav-item nav-link">Contact Us</a>
                     </div>
@@ -75,8 +75,8 @@ function iniHeader($isRoot){
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-<link rel="stylesheet" href="css/whoweare.css">
-  <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/whoweare.css">
+    <link rel="stylesheet" href="css/timeline.css">
     <link rel="stylesheet" href="css/saltandlight.css">
 
 </head>

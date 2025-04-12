@@ -3,7 +3,11 @@ body, html {
         height: 100%;
         margin: 0;
 }
-
+.logo-with-border {
+  border: 3px solid #000;  /* Black border with 3px width */
+  border-radius: 5px;      /* Optional: Add rounded corners */
+  padding: 5px;            /* Optional: Add some space between the image and the border */
+}
 /* The hero image */
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */

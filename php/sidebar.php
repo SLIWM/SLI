@@ -12,6 +12,7 @@ echo '
         <a href="embed_list.php">Embeds</a>
         <a href="album_list.php">Albums</a>
         <a href="file_list.php">Files</a>
+        <a href="update_list.php">Updates and news</a>
         <a href="user_details.php">User Details</a>
         
     </div>
