@@ -33,6 +33,9 @@ include_once('php/nav.php');
                 <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
                     <h1 class="display-4 text-white mb-4 animated slideInRight">Our History</h1>
                     <p class="text-white mb-4 animated slideInRight">우리는 세상의 소금과 빛입니다</p>
+                    <p class="text-white mb-4 animated slideInRight">Salt and Light Ministry began its mission in October 2005 in the Philippines, followed by its expansion to India in November 2008. In April 2011, the organization unified under the name Salt & Light International World Mission Inc. A memorandum of agreement was signed with the City of San Pedro in July 2012, and by October of the same year, the Salt and Light LOVE Community Center in Brgy. Landayan was completed after two years of construction. In May 2013, a vision trip to Korea was held with scholars and ministers, followed by the completion of the Salt and Light Center in Chennai, India in September, and the Salt and Light Church in Catmon, Batangas in November. June 2014 marked the opening of Salt and Light Bible College in Chennai. In March 2015, the ministry joined the Global Mission Society, represented by Missionaries Sungwon and Ara. July 2016 saw a ministry partnership with PTS College, and in June 2017, the Salt and Light Daycare was launched in collaboration with CSWD San Pedro.
+
+The Faith Center in Brgy. Cuyab was completed in January 2018, and in May, the ministry received an award from the City of San Pedro and also launched the Y-Tree Ministry. February 2019 marked the opening of the Salt and Light Health Center in partnership with CHO San Pedro. In response to the pandemic, April 2020 saw the beginning of the online ministry SALT & LIGHT ON via YouTube, followed by the launch of the online children's ministry Salt and Light KIDS in July. Most recently, in February 2022, the House of Mission in Brgy. Cuyab was completed, further strengthening the foundation and reach of Salt and Light’s vision around the world.</p>
                 </div>
                 <div class="col-lg-6 align-self-end text-center text-lg-end">
                     <img class="img-fluid" src="img/hero-img.png" alt="" style="max-height: 400px;">
@@ -41,6 +44,10 @@ include_once('php/nav.php');
         </div>
     </div>
     <!-- Hero End -->
+
+    <!-- Salt and Light Ministry began its mission in October 2005 in the Philippines, followed by its expansion to India in November 2008. In April 2011, the organization unified under the name Salt & Light International World Mission Inc. A memorandum of agreement was signed with the City of San Pedro in July 2012, and by October of the same year, the Salt and Light LOVE Community Center in Brgy. Landayan was completed after two years of construction. In May 2013, a vision trip to Korea was held with scholars and ministers, followed by the completion of the Salt and Light Center in Chennai, India in September, and the Salt and Light Church in Catmon, Batangas in November. June 2014 marked the opening of Salt and Light Bible College in Chennai. In March 2015, the ministry joined the Global Mission Society, represented by Missionaries Sungwon and Ara. July 2016 saw a ministry partnership with PTS College, and in June 2017, the Salt and Light Daycare was launched in collaboration with CSWD San Pedro.
+
+The Faith Center in Brgy. Cuyab was completed in January 2018, and in May, the ministry received an award from the City of San Pedro and also launched the Y-Tree Ministry. February 2019 marked the opening of the Salt and Light Health Center in partnership with CHO San Pedro. In response to the pandemic, April 2020 saw the beginning of the online ministry SALT & LIGHT ON via YouTube, followed by the launch of the online children's ministry Salt and Light KIDS in July. Most recently, in February 2022, the House of Mission in Brgy. Cuyab was completed, further strengthening the foundation and reach of Salt and Light’s vision around the world. -->
 
 
     <!-- Full Screen Search Start -->

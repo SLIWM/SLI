@@ -8,6 +8,12 @@ body, html {
   border-radius: 5px;      /* Optional: Add rounded corners */
   padding: 5px;            /* Optional: Add some space between the image and the border */
 }
+
+.content {
+  white-space: normal;  /* Allow text to wrap */
+  word-wrap: break-word; /* Break long words and wrap them */
+  overflow-wrap: break-word; /* Ensure long words break and wrap */
+}
 /* The hero image */
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */

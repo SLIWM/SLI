@@ -6,7 +6,7 @@ include_once("../../connections/db.php");
 $id = $title = $eventDate = $details = '';
 $isEditing = false;
 $update = [
-    'id' => '', 'title' => '', 'eventDate' => '', 'details' => '', 'isActive' => 1
+    'id' => '', 'Title' => '', 'eventDate' => '', 'Details' => '', 'isActive' => 1
 ];
 
 // Check if we're editing an update

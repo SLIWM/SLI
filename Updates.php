@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include_once('php/nav.php'); ?>
-<?php include_once("../../connections/db.php"); // Include database connection ?>
+
+
+<?php include_once('php/nav.php');
+include_once('php/displayUpdates.php');
+?>
 
 <?php iniHeader(1); ?>
 
@@ -57,35 +60,21 @@
         <div class="container py-5">
             <div class="row g-5">
 
+                <!-- News Item 1 -->
                 <?php
-                // Fetch updates from the database
-                $sql = "SELECT * FROM sli.updates ORDER BY eventDate DESC";
-                $result = $conn->query($sql);
+                $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;  // Get page number from URL
+                fetchAndDisplayUpdates( $page);
+            ?>
 
-                if ($result->num_rows > 0) {
-                    // Loop through each update
-                    while ($row = $result->fetch_assoc()) {
-                        // Format the date to a readable format
-                        $formattedDate = date('F j, Y', strtotime($row['eventDate']));
-                        echo '<div class="col-md-6 news-item wow fadeIn" data-wow-delay="0.1s">';
-                        echo '<h3>' . htmlspecialchars($row['Title']) . '</h3>';
-                        echo '<p class="date">' . $formattedDate . '</p>';
-                        echo '<p class="content">' . htmlspecialchars($row['Details']) . '</p>';
-                        echo '<a href="update_details.php?id=' . $row['id'] . '" class="read-more">Read more...</a>';
-                        echo '</div>';
-                    }
-                } else {
-                    echo '<p>No updates found.</p>';
-                }
-                ?>
-                
             </div>
         </div>
         <!-- Updates Section End -->
+
     </div>
 
     <!-- Footer Start -->
     <?php iniFooter(1); ?> 
     <!-- Footer End -->
 </body>
+
 </html>

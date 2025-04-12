@@ -20,9 +20,9 @@ function showNav($isRoot){
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Ministries</a>
                             <div class="dropdown-menu bg-light mt-2">
-                                <a href="feature.html" class="dropdown-item">Salt and Light International</a>
+                                <a href="international.php" class="dropdown-item">Salt and Light International</a>
                                 <a href="SLIC.php" class="dropdown-item">Salt and Light Church</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="testimonial.php" class="dropdown-item">Testimonial</a>
                                 <a href="404.html" class="dropdown-item">404 Page</a>
                             </div>
                         </div>
