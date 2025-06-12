@@ -1,6 +1,8 @@
 <?php
 // Include the database connection
 include_once('connections/db.php');
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 function fetchAndDisplayIframe($type, $page = 1, $limit = 5) {
     global $conn;
@@ -31,10 +33,9 @@ function fetchAndDisplayIframe($type, $page = 1, $limit = 5) {
                 <div class="row">
                     <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
                         <div class="services-info">
-                            <h1>'. $Title .'</h2>
+                            <h1>'. $Title .'</h1>
                             '. $shortText .'...
-                        
-                        </br></br><a class="btn btn-primary rounded-pill px-4" href="https://www.youtube.com/@SaltandLightON">Show More</a>
+                            </br></br><a class="btn btn-primary rounded-pill px-4" href="https://www.youtube.com/@SaltandLightON">Show More</a>
                         </div>
                     </div>
                     <div class="col-lg-6 col-12">
@@ -45,7 +46,8 @@ function fetchAndDisplayIframe($type, $page = 1, $limit = 5) {
                         </div>
                     </div>
                 </div>
-            </div>';
+            </div>
+            <hr class="my-5">';
         }
 
         // Display Pagination
