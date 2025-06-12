@@ -26,7 +26,7 @@ include_once('php/nav.php');
                     <p class="text-white mb-4 animated slideInRight" >Matthew: 5:13-16</p>
                     <p class="text-white mb-4 animated slideInRight" >SUNDAYS AT 10:20 AM & 12:00 PM • Salt and Light Faith Center, Blk. 4, Lot 5 & 7, Elvinda 7, Barangay Cuyab, San Pedro, Philippines, 4023</p>
                     <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight">Read More</a>
-                    <a href="" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
+                    <a href="ContactUs.php" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
                 </div>
            
             </div>
@@ -121,7 +121,7 @@ include_once('php/nav.php');
 
 
 
-<section class="py-5" id="followus">
+<section class="py-5" id="followus" style="display:none">
 	<div class="container">
 		<div class="row justify-content-center text-center">
 			<div class="col-md-8">

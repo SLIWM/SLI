@@ -17,6 +17,7 @@ function showNav($isRoot){
                         <a href="../SLI" class="nav-item nav-link active">Home</a>
                         <a href="WhoWeAre.php" class="nav-item nav-link">Who we are</a>
                         <a href="History.php" class="nav-item nav-link">History</a>
+                        <!--
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Ministries</a>
                             <div class="dropdown-menu bg-light mt-2">
@@ -26,7 +27,7 @@ function showNav($isRoot){
                                 <a href="404.html" class="dropdown-item">404 Page</a>
                             </div>
                         </div>
-                        <a href="Updates.php" class="nav-item nav-link">Updates and News</a>
+                        <a href="Updates.php" class="nav-item nav-link">Updates and News</a> -->
                         <a href="Sermons.php" class="nav-item nav-link">Sermons</a>
                         <a href="ContactUs.php" class="nav-item nav-link">Contact Us</a>
                     </div>
@@ -98,7 +99,7 @@ echo '
                     <a href="index.html" class="d-inline-block mb-3">
                         <h1 class="text-white">SALT AND LIGHT</h1>
                     </a>
-                    <p class="mb-0">some message</p>
+                    <p class="mb-0"></p>
                 </div>
                 <div class="col-md-6 col-lg-5 wow fadeIn" data-wow-delay="0.3s">
                     <h5 class="text-white mb-4">Get In Touch</h5>
@@ -124,7 +125,7 @@ echo '
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="#">Salt and Light Church</a>, All Right Reserved.
 
                         <!--/*** This template is free as long as you keep the footer authors credit link/attribution link/backlink. If you d like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
