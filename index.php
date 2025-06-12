@@ -5,7 +5,13 @@ include_once('php/nav.php');
 ?>
 <!doctype html>
 <html lang="en">
-<title>SLI</title>
+<head>
+    <meta charset="UTF-8">
+    <title>SLI</title>
+    <link rel="icon" type="image/png" href="img/logo/SLILOGO.png">
+    <!-- Other head content like CSS, meta tags -->
+</head>
+
 <?php iniHeader(1); ?> 
 
 

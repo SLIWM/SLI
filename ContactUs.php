@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="icon" type="image/png" href="img/logo/SLILOGO.png">
+    <!-- Other head content like CSS, meta tags -->
+</head>
+
 <?php
 
 include_once('php/nav.php');

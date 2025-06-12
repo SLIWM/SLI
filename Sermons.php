@@ -2,9 +2,18 @@
 include_once('php/displayEmbed.php');
 include_once('php/nav.php');
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 ?>
 <!doctype html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sermons</title>
+    <link rel="icon" type="image/png" href="img/logo/SLILOGO.png">
+    <!-- Other head content like CSS, meta tags -->
+</head>
 
 <?php iniHeader(1); ?> 
 

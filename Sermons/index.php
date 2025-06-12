@@ -4,7 +4,7 @@ include_once('../php/nav.php');
 ?>
 <!doctype html>
 <html lang="en">
-
+<title>SLI</title>
 <?php iniHeader(0); ?> 
 
 <body>

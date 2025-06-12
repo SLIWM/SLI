@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <title>History</title>
+ <head>
+    <meta charset="UTF-8">
+    <title>History</title>
+    <link rel="icon" type="image/png" href="img/logo/SLILOGO.png">
+    <!-- Other head content like CSS, meta tags -->
+</head>
 <?php
 
 include_once('php/nav.php');
