@@ -105,7 +105,14 @@ include_once('php/nav.php');
 
 
 
-    <section class="showcase">
+    
+
+
+    <!-- Team Start -->
+
+ 
+<div class="container p-5 my-5 border text-center" style="background-color:#fef0e4;">
+   <section class="showcase">
             <div class="container-fluid p-0">
                 <div class="row g-0">
                     <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/whoweare/img2.jpg')"></div>
@@ -124,158 +131,7 @@ include_once('php/nav.php');
             
             </div>
         </section>
-
-
-    <!-- Team Start -->
-
-    <div class="text-center">
-<h1 class="display-1">Our Story 우리의 이야기</h1>
-
-
-</div>
-
-<!-- Timeline -->
-
-<div class="container-fluid" >
-    <div class="row">
-    
-      <div class="col">
-        <div class="container my-5">
-            <div class="row">
-              <div class="col-md-6 offset-md-3">
-             
-                <ul class="timeline-3">
-                  <li>
-                    <p class="" style="font-weight: bold;">2005.10</p>
-                    <p>Start of SALT AND LIGHT (Philippines)<br>소금과 빛의 시작 (필리핀)
-                    </p>
-                  </li>
-                  <li>
-                    <p class="" style="font-weight: bold;">2008.11</p>
-                    <p>Start of SALT AND LIGHT (India)<br>소금과 빛의 시작 (인도)
-                    </p>
-                  </li>
-                  <li>
-                    <p class="" style="font-weight: bold;">2011.04</p>
-                    <p>Unified the name of organization into SALT & LIGHT INTERNATIONAL WORLD MISSION INC.<br>조직 이름을 소금과 빛 국제 월드 미션 주식회사로 통일
-                    </p>
-                  </li>
-                  <li>
-                    <p class="" style="font-weight: bold;">2012.07</p>
-                    <p>MOA with City of San Pedro<br>산 페드로 시와의 양해각서
-                    </p>
-                  </li>
-                  <li>
-                    <p class="" style="font-weight: bold;">2012.10</p>
-                    <p>Completion of construction of Salt and Light LOVE Community Center (Brgy. Landayan)<br>소금과 빛 LOVE 커뮤니티 센터 (브랑가이 랜다얀) 건설 완료 (2010-2012)
-                    </p>
-                  </li>
-                  <li>
-                    <p class="" style="font-weight: bold;">2013.05</p>
-                    <p>Vision trip to Korea (Scholars and Ministers)<br>한국 비전 여행 (학자 및 목회자)
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-      </div>
-      <div class="col">
-        <div class="container my-5">
-            <div class="row">
-              <div class="col-md-6 offset-md-3">
-              
-                <ul class="timeline-3">
-                    <li>
-                        <p class="" style="font-weight: bold;">2013.09</p>
-                        <p>Completion of Salt and Light Center in Chennai, India<br>인도 첸나이의 소금과 빛 센터 완공
-                        </p>
-                      </li>
-                      <li>
-                        <p class="" style="font-weight: bold;">2013.11</p>
-                        <p>Completion of Salt and Light Church in Catmon, Batangas<br>카트몬, 바탄가스의 소금과 빛 교회 완공
-                        </p>
-                      </li>
-                      <li>
-                        <p class="" style="font-weight: bold;">2014.06</p>
-                        <p>Started Salt and Light Bible College (Chennai, India)<br>소금과 빛 성경 대학 개설 (첸나이, 인도)
-                        </p>
-                      </li>
-                      <li>
-                        <p class="" style="font-weight: bold;">2015.03</p>
-                        <p>Joined Global Mission Society (Missionary Sungwon & Ara)<br>글로벌 미션 사회 가입 (선교사 성원 & 아라)
-                        </p>
-                      </li>
-                      <li>
-                        <p class="" style="font-weight: bold;">2016.07</p>
-                        <p>Ministry Cooperation with PTS College<br>PTS 대학과의 사역 협력
-                        </p>
-                      </li>
-                      <li>
-                        <p class="" style="font-weight: bold;">2017.06</p>
-                        <p>Start of Salt and Light Daycare (with CSWD San Pedro)<br>소금과 빛 데이케어 시작 (CSWD 산 페드로와 함께)
-                        </p>
-                      </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-      </div>
-      <div class="col">
-        <div class="container my-5">
-            <div class="row">
-              <div class="col-md-6 offset-md-3">
-           
-                <ul class="timeline-3">
-                    <li>
-                        <p class="" style="font-weight: bold;">2018.01</p>
-                        <p>Completion of Salt and Light Faith Center (Brgy Cuyab)<br>소금과 빛 신앙 센터 완공 (브랑가이 쿠야브)
-                        </p>
-                      </li>
-                      <li>
-                        <p class="" style="font-weight: bold;">2018.05</p>
-                        <p>Award Received from City of San Pedro<br>산 페드로 시로부터 받은 상
-                        </p>
-                        <p class="" style="font-weight: bold;">2018.05</p>
-                        <p>Started Y-Tree Ministry<br>Y-Tree 사역 시작
-                        </p>
-                      </li>
-                      <li>
-                        <p class="" style="font-weight: bold;">2019.02</p>
-                        <p>Opening of Salt and Light Health Center (with CHO San Pedro)<br>소금과 빛 건강 센터 개소 (CHO 산 페드로와 함께)
-                        </p>
-                      </li>
-                      <li>
-                        <p class="" style="font-weight: bold;">2020.04</p>
-                        <p>Start of Online Ministry SALT & LIGHT ON (Youtube)<br>온라인 사역 시작 SALT & LIGHT ON (유튜브)
-                        </p>
-                      </li>
-                      <li>
-                        <p class="" style="font-weight: bold;">2020.07</p>
-                        <p>Start of Online Children  Ministry- Salt and Light KIDS (Youtube)<br>온라인 어린이 사역 시작 - 소금과 빛 KIDS (유튜브)
-                        </p>
-                      </li>
-                      <li>
-                        <p class="" style="font-weight: bold;">2022.02</p>
-                        <p>Completion of House of Mission (Brgy Cuyab)<br>선교의 집 완공 (브랑가이 쿠야브)
-                        </p>
-                </ul>
-              </div>
-              
-            </div>
-          </div>
-      </div>
-    </div>
   </div>
-
-
-
-    <!-- Timeline End -->
-
-
-    <!-- Newsletter Start -->
-  
-    <!-- Newsletter End -->
 
 
  
