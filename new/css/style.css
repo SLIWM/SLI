@@ -1060,6 +1060,20 @@ img {
 
 }
 
+.whiteBg_Section {
+    background-color: #ffffff;
+    color: #000000;
+    width: 100%;
+    padding: 60px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 30px;
+
+}
+
 .violetBg_Section {
     background-color: #EE82EE;
     color: #000000;
@@ -1088,21 +1102,20 @@ img {
     align-items: center;
     text-align: center;
     z-index: 1;
-    padding: 20px;
     box-sizing: border-box;
     color: #fff;
     gap: 30px;
 }
 
 .welcomeText {
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 .welcomeText h1 {
-    font-size: 4em;
+    font-size: 6em;
     margin-bottom: 20px;
     color: #fff;
-    font-weight: normal;
+    font-weight: 700;
 }
 
 .welcomeText p {
@@ -1304,3 +1317,25 @@ img {
 
 
 
+/* Initial hidden state */
+.fade-slide-left, .fade-slide-right {
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 0.8s ease-out;
+}
+
+/* Slide from left */
+.fade-slide-left {
+  transform: translateX(-50px);
+}
+
+/* Slide from right */
+.fade-slide-right {
+  transform: translateX(50px);
+}
+
+/* When visible */
+.fade-show {
+  opacity: 1;
+  transform: translateX(0);
+}
