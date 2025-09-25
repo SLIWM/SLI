@@ -941,7 +941,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.582);
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 1;
 }
 
@@ -1121,12 +1121,14 @@ img {
 }
 
 .welcomeText {
-    max-width: 1000px;
+    max-width: 1400px;
 }
 
 .welcomeText h1 {
-    font-size: 6em;
+    font-size: 8em;
     margin-bottom: 20px;
+    font-family: 'Comfortaa', sans-serif;
+
     color: #fff;
     font-weight: 700;
 }
