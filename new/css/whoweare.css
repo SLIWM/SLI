@@ -242,10 +242,23 @@
 
 .container {
     width: 100%;
-    max-width: 800px; /* Max width similar to the image to keep text readable */
+    max-width: 100%; /* Max width similar to the image to keep text readable */
     padding: 20px;
     box-sizing: border-box; /* Include padding in the element's total width and height */
     text-align: center; /* Center align the section title */
+
+}
+
+.ourstory {
+
+    width: 100%;
+    /* max-width: 800px; */
+    padding-left: 150px;;
+    padding-right: 150px;
+    padding-top:50px;
+    box-sizing: border-box;
+    /* text-align: center; */
+    /* margin: 30px;*/
 
 }
 
@@ -294,6 +307,8 @@
         padding: 10px;
     }
 }
+
+
 
 /* Sample */
 
