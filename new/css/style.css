@@ -1284,51 +1284,50 @@ img {
 
 
 .bannerbtn_pri {
+  
     display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
+    padding: 0px 10px;
+    /* margin: 10px; */
     font-weight: bold;
     border-radius: 5px;
     transition: background-color 0.3s ease;
     border: 5px solid #ffc107;
     text-decoration: none;
     cursor: pointer;
-    background-color: #ffffff;
+    background-color: #ffc107;
     width: auto;
     box-sizing: border-box !important;
-    border-radius: 30px;
+    border-radius: 50px;
+    font-size: 40px;
+    color: white;
+    line-height: normal!important;
 
 }
 
 .bannerbtn_seco {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
+      display: inline-block;
+    padding: 0px 10px;
+    /* margin: 10px; */
     font-weight: bold;
-    border-radius: 5px;
     transition: background-color 0.3s ease;
     border: 5px solid #ffc107;
     text-decoration: none;
     cursor: pointer;
-    background-color: #ffffff00;
+    background-color: #ffc10700;
     width: auto;
-    color: #fff;
     box-sizing: border-box !important;
-    border-radius: 30px;
-
-}
-
-.bannerbtn_pri:hover {
-
-    background-color: #ffffff02;
+    border-radius: 50px;
+    font-size: 40px;
     color: white;
+    line-height: normal!important;
 
 }
 
-.bannerbtn_seco:hover {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
+.bannerbtn_pri:hover,.bannerbtn_seco:hover {
+    background-color: #fff;
+    color: #ffc107;
 }
+
 
 
 
@@ -1368,8 +1367,12 @@ img {
     /* Full screen height */
     object-fit: cover;
     max-height: 600px;
-}
+    border-radius: 30px;
 
+}
+.carousel-inner{
+    border-radius: 30px;
+}
 .carousel-item::before {
     content: "";
     position: absolute;
@@ -1429,3 +1432,38 @@ img {
 }
 
 
+
+.MainSection_80VH {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.MainSection_80VH::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.logo-img {
+  height: 60px;       /* Adjust to make it taller or smaller */
+  width: auto;        /* Keeps the original aspect ratio */
+}
+
+.txtalgin-left{
+    text-align: left!important;
+}
+
+.padding_s{
+    padding: 20px;
+}
+
+.team_block{
+    max-width: 400px;
+}
