@@ -1,0 +1,22 @@
+.welcomeText h2 {
+    color: #ffffff !important;
+    font-size: 30px;
+    
+}
+
+.form-select {
+  border: 2px solid #444;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.form-select:focus {
+  border-color: #ffcc00;
+  box-shadow: 0 0 8px rgba(255, 204, 0, 0.5);
+  outline: none;
+}
