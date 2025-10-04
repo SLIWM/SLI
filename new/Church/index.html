@@ -155,6 +155,7 @@
       function closeNav() {
          document.getElementById("mySidenav").style.width = "0";
          document.getElementById("myMenuWrapper").classList.remove("open");
+           window.scrollTo({ top: 0, behavior: 'smooth' });
       }
       document.getElementById("mySidenav").addEventListener("click", function (e) {
          // Only close if you clicked directly on sidenav background,
