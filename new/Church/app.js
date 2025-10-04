@@ -62,6 +62,9 @@ app.config(function ($routeProvider, $locationProvider) {
         .when("/YAFC", {
             templateUrl: "YAFC.html"
         })
+         .when("/ANC", {
+            templateUrl: "announcement.html"
+        })
         .otherwise({
             redirectTo: "/home"
         });
