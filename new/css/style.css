@@ -1472,29 +1472,41 @@ img {
 .team_block {
     max-width: 400px;
 }
+
 .schedCont {
     display: flex;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    width: 100%; /* Ensure it's responsive */
+    width: 100%;
+    /* Ensure it's responsive */
+    line-height: 1;
 }
 
 .schedwrap {
-    display: flex; /* Flexbox to align children in a row */
-    flex-direction: row; /* Align children horizontally */
-    width: 100%; /* Ensure wrapper spans full width */
-    align-items: center; /* Vertically center the items */
-    gap: 10px; /* Optional: space between items */
+    display: flex;
+    /* Flexbox to align children in a row */
+    flex-direction: row;
+    /* Align children horizontally */
+    width: 100%;
+    /* Ensure wrapper spans full width */
+    align-items: center;
+    /* Vertically center the items */
+    gap: 10px;
+    /* Optional: space between items */
     margin-top: 0;
     margin-bottom: 0;
 }
 
 .schedInCon {
-    display: flex; /* Flex container */
-    flex-direction: column; /* Stack content vertically inside each item */
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
+    display: flex;
+    /* Flex container */
+    flex-direction: column;
+    /* Stack content vertically inside each item */
+    align-items: center;
+    /* Center content horizontally */
+    justify-content: center;
+    /* Center content vertically */
 }
 
 .schedTime {
@@ -1508,17 +1520,20 @@ img {
     display: flex;
     flex-direction: column;
     margin-left: 10px;
-    font-size: 2rem;
-    line-height: 1.2; /* <--- This reduces the spacing between lines */
+    font-size: 1rem;
+    line-height: 1.2;
+    /* <--- This reduces the spacing between lines */
 }
 
 @media (max-width: 768px) {
     .schedTimeDesc {
-        font-size: 1.5rem;
-        line-height: 1.1; /* Reduce vertical spacing even more */
+        font-size: 0.8rem;
+        line-height: 1.1;
+        /* Reduce vertical spacing even more */
         text-align: left;
     }
 }
+
 .schedTitle {
     font-size: 4rem;
     font-weight: 600;
@@ -1528,25 +1543,172 @@ img {
 .schedTitle--left {
     text-align: left;
 }
+
 .schedTitle--center {
     text-align: center;
 }
+
 .schedTitle--right {
     text-align: right;
 }
 
-.padding-s{
+.padding-s {
     padding: 20px;
 }
 
-.textalign_l{
+.textalign_l {
     text-align: left !important;
     align-items: start;
 }
 
-.textalign_r{
+.textalign_r {
     text-align: right !important;
 }
-.textalign_c{
-    text-align: center !important; 
+
+.textalign_c {
+    text-align: center !important;
+}
+
+.top-center {
+    display: flex;
+    flex-direction: column;
+    /* stack children vertically */
+    justify-content: flex-start;
+    /* align them to the top */
+    align-items: center;
+    /* center horizontally */
+}
+
+/* Fullscreen banner background */
+.Banner_bg {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/YAFC.JPG") center center / cover no-repeat;
+}
+
+/* Black blurry overlay spans full width */
+.welcomeBannerBlur {
+    width: 100%;
+    /* always full width */
+    padding: 40px 20px;
+    /* padding top/bottom and sides */
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Responsive video wrapper with max-width */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    /* limit actual video width */
+    aspect-ratio: 16 / 9;
+}
+
+/* Make iframe fill container */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.menuCategories {
+    margin-top: 20px;
+}
+
+/* horizontal row of categories */
+.menuRow {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* wrap to next line on small screens */
+    gap: 40px;
+    /* space between category blocks */
+    text-align: left;
+}
+
+/* each category block */
+.menuCategory {
+    flex: 1 1 200px;
+    /* grow/shrink, min width 200px */
+    max-width: 280px;
+    /* don’t stretch too wide */
+    margin-bottom: 25px;
+}
+
+.menuCategory .categoryTitle {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffd700;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.menuCategory a {
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 4px 0;
+    text-decoration: none;
+    transition: 0.3s;
+    line-height: 1.4;
+}
+
+.menuCategory a:hover {
+    color: #f8f403;
+    padding-left: 10px;
+}
+
+/* ===== Responsive tweaks ===== */
+
+/* Tablet (<= 992px) */
+@media screen and (max-width: 992px) {
+    .menuRow {
+        gap: 25px;
+    }
+
+    .menuCategory {
+        flex: 1 1 45%;
+        /* two columns */
+        max-width: none;
+    }
+}
+
+/* Mobile (<= 576px) */
+@media screen and (max-width: 576px) {
+    .menuRow {
+        flex-direction: column;
+        /* stack vertically */
+        align-items: center;
+        gap: 20px;
+    }
+
+    .menuCategory {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .menuCategory .categoryTitle {
+        text-align: center;
+    }
+
+    .menuCategory a {
+        font-size: 16px;
+    }
 }
