@@ -920,7 +920,7 @@ img {
     /* spacing inside */
     margin: 20px auto;
     /* spacing outside */
-    max-width: 1000px;
+    max-width: 1200px;
     /* keeps it readable */
     box-sizing: border-box;
     /* ensures padding doesn’t add to width */
@@ -982,7 +982,7 @@ img {
     text-align: center;
     background-color: #000;
     /* black background */
-    color: #fff;
+    color: #000000;
     /* white font color */
     box-sizing: border-box;
     margin-top: 30px;
@@ -990,7 +990,7 @@ img {
 
 .redBg_Section {
     background-color: #FF0000;
-    color: #FFFFFF;
+    color: #FF0000;
     width: 100%;
     padding: 60px 60px;
     display: flex;
@@ -1004,7 +1004,7 @@ img {
 
 .orangeBg_Section {
     background-color: #FFA500;
-    color: #FFFFFF;
+    color: #FFA500;
     width: 100%;
     padding: 60px 60px;
     display: flex;
@@ -1284,7 +1284,7 @@ img {
 
 
 .bannerbtn_pri {
-  
+
     display: inline-block;
     padding: 0px 10px;
     /* margin: 10px; */
@@ -1300,12 +1300,12 @@ img {
     border-radius: 50px;
     font-size: 40px;
     color: white;
-    line-height: normal!important;
+    line-height: normal !important;
 
 }
 
 .bannerbtn_seco {
-      display: inline-block;
+    display: inline-block;
     padding: 0px 10px;
     /* margin: 10px; */
     font-weight: bold;
@@ -1319,11 +1319,12 @@ img {
     border-radius: 50px;
     font-size: 40px;
     color: white;
-    line-height: normal!important;
+    line-height: normal !important;
 
 }
 
-.bannerbtn_pri:hover,.bannerbtn_seco:hover {
+.bannerbtn_pri:hover,
+.bannerbtn_seco:hover {
     background-color: #fff;
     color: #ffc107;
 }
@@ -1370,9 +1371,11 @@ img {
     border-radius: 30px;
 
 }
-.carousel-inner{
+
+.carousel-inner {
     border-radius: 30px;
 }
+
 .carousel-item::before {
     content: "";
     position: absolute;
@@ -1452,18 +1455,98 @@ img {
 }
 
 .logo-img {
-  height: 60px;       /* Adjust to make it taller or smaller */
-  width: auto;        /* Keeps the original aspect ratio */
+    height: 60px;
+    /* Adjust to make it taller or smaller */
+    width: auto;
+    /* Keeps the original aspect ratio */
 }
 
-.txtalgin-left{
-    text-align: left!important;
+.txtalgin-left {
+    text-align: left !important;
 }
 
-.padding_s{
+.padding_s {
     padding: 20px;
 }
 
-.team_block{
+.team_block {
     max-width: 400px;
+}
+.schedCont {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 100%; /* Ensure it's responsive */
+}
+
+.schedwrap {
+    display: flex; /* Flexbox to align children in a row */
+    flex-direction: row; /* Align children horizontally */
+    width: 100%; /* Ensure wrapper spans full width */
+    align-items: center; /* Vertically center the items */
+    gap: 10px; /* Optional: space between items */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.schedInCon {
+    display: flex; /* Flex container */
+    flex-direction: column; /* Stack content vertically inside each item */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+}
+
+.schedTime {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: -3.8px;
+}
+
+.schedTimeDesc {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    font-size: 2rem;
+    line-height: 1.2; /* <--- This reduces the spacing between lines */
+}
+
+@media (max-width: 768px) {
+    .schedTimeDesc {
+        font-size: 1.5rem;
+        line-height: 1.1; /* Reduce vertical spacing even more */
+        text-align: left;
+    }
+}
+.schedTitle {
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: -3.8px;
+}
+
+.schedTitle--left {
+    text-align: left;
+}
+.schedTitle--center {
+    text-align: center;
+}
+.schedTitle--right {
+    text-align: right;
+}
+
+.padding-s{
+    padding: 20px;
+}
+
+.textalign_l{
+    text-align: left !important;
+    align-items: start;
+}
+
+.textalign_r{
+    text-align: right !important;
+}
+.textalign_c{
+    text-align: center !important; 
 }

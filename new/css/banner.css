@@ -33,7 +33,6 @@
   border-radius: 30px;
   width: auto;
   box-sizing: border-box !important;
-  padding: 0 20px;
 }
 
 /* === Base Banner === */
@@ -46,6 +45,7 @@
   font-weight: 700;
   margin: 0;
   word-break: break-word;
+  line-height: 1.1; /* <--- This reduces the spacing between lines */
 }
 
 /* 🔄 Responsive adjustments */
