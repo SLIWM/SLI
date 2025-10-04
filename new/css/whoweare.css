@@ -11,44 +11,30 @@
   }
   
   body {
-    font-family: "Arial", sans-serif;
-    --webkit-font-smoothing: antialiased;
-  
-
-    font-family: 'Montserrat', sans-serif; /* Using Montserrat for a clean, modern look */
     background-color: #f3f3f3; /* White background */
     color: #333; /* Dark gray for text */
     
     justify-content: center; /* Center the content horizontally */
     align-items: flex-start; /* Align content to the top */
     min-height: 100vh; /* Ensure body takes full viewport height */
-
-
   }
   
   ul {
     list-style: none;
   }
   
-  h1,
+  .showcase-content h1,
   h2,
   h3,
   h4 {
     color: #fff;
   }
-  
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
+ 
   p {
     margin: 0.5rem 0;
   }
   
-  img {
-    width: 100%;
-  }
+  
   
   /* Showcase Styling */
   
