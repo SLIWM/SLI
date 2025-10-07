@@ -1,4 +1,4 @@
-// general
+
 
 body {
 	font-family: 'PT Sans Caption',"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -25,32 +25,55 @@ body {
 }
 	
 
-
-.hero {
+#header {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	height: 100vh;
-	padding: 1em;
-	box-sizing: border-box;
-	color: white;
-	background: 
-	 linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url("../images/tithesherosection.jpg") center/cover no-repeat;
-	background-size: cover;
-
+	justify-content: space-between;
+	align-items: center;
 }
 
+#logo {
+  text-decoration: none;
+  color: white;
+  font-size: 5vh;
+  font-weight: bold;
+}
+	
+#menu-icon {
+  font-family: Geneva, sans-serif;
+  font-size: 6vh;
+}
+	
 
-.hero-title {
-    font-family: "Inter", 'Helvetica Neue', 'Lato', Helvetica, Arial, Sans-serif;
-    font-size: 7.5rem;
-    font-weight: 600;
-    line-height: 0.9em;
-    letter-spacing: -6.8px;
-	color: white;
+
+
+
+
+.display-4 {
+ font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.3em;
+    letter-spacing: -1.2px;
+    text-shadow: 0px 0px 26px rgba(0,0,0,0.3);
 	text-align: center;
+	color:white;
 }
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    padding: 20px 0 40px;
+}
+
+
+
+
 
 .display-4 {
  font-size: 1.6rem;
@@ -294,24 +317,6 @@ body {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-Tools
-
-Your Elementor chats aren’t used to improve our models. Gemini can make mistakes, so double-check it. Your privacy & GeminiOpens in a new window
-
-
-
-	
-	@media only screen and (min-width: 32em) { .hero-title { font-size: 16vh; } }	
 
 
 
