@@ -3,67 +3,87 @@ var app = angular.module("myApp", ["ngRoute"]);
 app.config(function ($routeProvider, $locationProvider) {
     $routeProvider
         .when("/", {
-            redirectTo: "/home"
+            redirectTo: "/home",
+            title: "Church"
         })
         .when("/home", {
-            templateUrl: "home.html"
+            templateUrl: "home.html",
+            title: "Church"
         })
         .when("/ImNew", {
-            templateUrl: "ImNew.html"
+            templateUrl: "ImNew.html",
+            title: "I'm New"
         })
         .when("/OurServices", {
-            templateUrl: "OurServices.html"
+            templateUrl: "OurServices.html",
+            title: "Services"
         })
         .when("/contactUs", {
-            templateUrl: "contactUs.html"
+            templateUrl: "contactUs.html",
+            title: "Contract Us"
         })
         .when("/Corramdeo", {
-            templateUrl: "Corramdeo.html"
+            templateUrl: "Corramdeo.html",
+            title: "Coram Deo"
         })
         .when("/Grow", {
-            templateUrl: "Grow.html"
+            templateUrl: "Grow.html",
+            title: "Grow"
+
         })
         .when("/LifeGroup", {
-            templateUrl: "LifeGroup.html"
+            templateUrl: "LifeGroup.html",
+            title: "Lifegroup"
         })
         .when("/Location", {
-            templateUrl: "Location.html"
+            templateUrl: "Location.html",
+            title: "Location"
         })
         .when("/MeetTheTeam", {
-            templateUrl: "MeetTheTeam.html"
+            templateUrl: "MeetTheTeam.html",
+            title: "Meet The Team"
         })
         .when("/MWF", {
-            templateUrl: "MWF.html"
+            templateUrl: "MWF.html",
+            title: "Men and Women"
         })
         .when("/PrayerWarriors", {
-            templateUrl: "PrayerWarriors.html"
+            templateUrl: "PrayerWarriors.html",
+            title: "Prayer Warriors"
         })
         .when("/Remnant", {
-            templateUrl: "Remnant.html"
+            templateUrl: "Remnant.html",
+            title: "Remant"
         })
         .when("/SaltAndLightKids", {
-            templateUrl: "SaltAndLightKids.html"
+            templateUrl: "SaltAndLightKids.html",
+            title: "Salt and Light Kids"
         })
         .when("/SundayWorship", {
             templateUrl: "SundayWorship.html"
         })
         .when("/tithes", {
-            templateUrl: "tithes.html"
+            templateUrl: "tithes.html",
+            title: "Tithes"
         })
         .when("/Volunteer", {
-            templateUrl: "Volunteer.html"
+            templateUrl: "Volunteer.html",
+            title: "Volunteer"
         })
         .when("/WednesdayWorship", {
             templateUrl: "WednesdayWorship.html"
         })
         .when("/whoweare", {
-            templateUrl: "whoweare.html"
+            templateUrl: "whoweare.html",
+            title: "Who we are"
         })
         .when("/YAFC", {
-            templateUrl: "YAFC.html"
+            templateUrl: "YAFC.html",
+            title: "YAFC"
         })
-         .when("/ANC", {
-            templateUrl: "announcement.html"
+        .when("/ANC", {
+            templateUrl: "announcement.html",
+            title: "Announcement"
         })
         .otherwise({
             redirectTo: "/home"
@@ -90,4 +110,13 @@ app.directive('navReady', function () {
             }
         }
     };
+});
+app.run(function ($rootScope, $route) {
+    $rootScope.$on('$routeChangeSuccess', function () {
+        if ($route.current && $route.current.title) {
+            document.title = $route.current.title;
+        } else {
+            document.title = "Salt and Light Church"; // default title
+        }
+    });
 });
