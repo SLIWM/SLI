@@ -61,7 +61,7 @@
 }
 
 .connection-box:hover {
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   transform: translateY(-5px);
 }
 
@@ -102,7 +102,8 @@
   margin-top: 20px;
 }
 
-.btn-primary, .btn-outline {
+.btn-primary,
+.btn-outline {
   display: inline-block;
   padding: 12px 25px;
   border-radius: 30px;
@@ -134,8 +135,15 @@
 }
 
 @keyframes floatIcon {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 @media (max-width: 768px) {
@@ -144,11 +152,112 @@
     text-align: center;
   }
 
-  .col-left, .col-right {
+  .col-left,
+  .col-right {
     flex: 1 1 100%;
   }
 
   .col-left h3 {
     margin-bottom: 25px;
+  }
+}
+
+.img_box {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .img_box {
+    max-width: 100%;
+  }
+}
+
+.ImNewcontainer {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  /* <-- centers left side vertically */
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 90px 20px;
+}
+
+.ImNewcontainer .row {
+  display: flex;
+  /* Bootstrap already sets this for rows, but we reapply to ensure gap works */
+  flex-wrap: wrap;
+  gap: 90px;
+  /* 👈 your desired space between the two columns */
+}
+
+
+.ImNew_h1 {
+  font-size: 5em;
+  font-weight: 750;
+  letter-spacing: -5px;
+  color: rgb(255, 255, 255);
+}
+
+/* CSS: add to your stylesheet */
+.justified-container {
+  max-width: 680px;
+  /* container width — change as needed */
+  margin: 0 auto;
+  /* center inside its parent */
+  /* breathing room */
+  box-sizing: border-box;
+  background: transparent;
+  /* or a subtle color: #fffefc */
+}
+
+
+
+/* Paragraph styling and justification */
+.jc-text {
+  margin: 0 0 14px 0;
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1.3em;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  text-align: justify;
+  /* key: justify the paragraph */
+  text-justify: inter-word;
+  /* better justification algorithm */
+  hyphens: auto;
+  /* allows nicer breaks for long words */
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  word-wrap: break-word;
+  font-family: "Inter", 'Helvetica Neue', 'Lato', Helvetica, Arial, Sans-serif;
+}
+
+/* Slightly larger on desktop */
+@media (min-width: 992px) {
+  .justified-container {
+    padding: 24px 16px;
+  }
+
+  .jc-text {
+    font-size: 1.2rem;
+  }
+}
+
+/* Ensure good spacing on small screens */
+@media (max-width: 576px) {
+  .justified-container {
+    padding: 14px 10px;
+    max-width: 100%;
+  }
+
+  .jc-text {
+    font-size: 0.98rem;
+    line-height: 1.5;
   }
 }
