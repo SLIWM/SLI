@@ -120,3 +120,30 @@ app.run(function ($rootScope, $route) {
         }
     });
 });
+
+app.run(function ($rootScope, $timeout) {
+  $rootScope.$on('$viewContentLoaded', function () {
+    $timeout(function () {
+      var $carousel = $('#carouselExampleIndicators');
+      if ($carousel.length) {
+        $carousel.carousel({
+          interval: 5000,
+          ride: 'carousel'
+        });
+
+        // Manually bind control buttons
+        $('.carousel-control-next').off('click').on('click', function (e) {
+          e.preventDefault();
+          $carousel.carousel('next');
+        });
+
+        $('.carousel-control-prev').off('click').on('click', function (e) {
+          e.preventDefault();
+          $carousel.carousel('prev');
+        });
+      }
+    }, 300);
+  });
+});
+
+
