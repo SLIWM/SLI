@@ -6,8 +6,8 @@
 
 /* Section Heading */
 .locations-section h1 {
-    font-size: 3em; /* Adjust size as needed */
-    font-weight: 900; /* Very bold/black */
+    font-size: 5em; /* Adjust size as needed */
+    font-weight: 400; /* Very bold/black */
     margin-bottom: 40px;
     color: black;
 }
