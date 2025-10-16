@@ -6,61 +6,8 @@ app.config(function ($routeProvider, $locationProvider) {
             redirectTo: "/home"
         })
         .when("/home", {
-            templateUrl: "home.html"
-        })
-        .when("/ImNew", {
-            templateUrl: "ImNew.html"
-        })
-        .when("/OurServices", {
-            templateUrl: "OurServices.html"
-        })
-        .when("/contactUs", {
-            templateUrl: "contactUs.html"
-        })
-        .when("/Corramdeo", {
-            templateUrl: "Corramdeo.html"
-        })
-        .when("/Grow", {
-            templateUrl: "Grow.html"
-        })
-        .when("/LifeGroup", {
-            templateUrl: "LifeGroup.html"
-        })
-        .when("/Location", {
-            templateUrl: "Location.html"
-        })
-        .when("/MeetTheTeam", {
-            templateUrl: "MeetTheTeam.html"
-        })
-        .when("/MWF", {
-            templateUrl: "MWF.html"
-        })
-        .when("/PrayerWarriors", {
-            templateUrl: "PrayerWarriors.html"
-        })
-        .when("/Remnant", {
-            templateUrl: "Remnant.html"
-        })
-        .when("/SaltAndLightKids", {
-            templateUrl: "SaltAndLightKids.html"
-        })
-        .when("/SundayWorship", {
-            templateUrl: "SundayWorship.html"
-        })
-        .when("/tithes", {
-            templateUrl: "tithes.html"
-        })
-        .when("/Volunteer", {
-            templateUrl: "Volunteer.html"
-        })
-        .when("/WednesdayWorship", {
-            templateUrl: "WednesdayWorship.html"
-        })
-        .when("/whoweare", {
-            templateUrl: "whoweare.html"
-        })
-        .when("/YAFC", {
-            templateUrl: "YAFC.html"
+            templateUrl: "home.html",
+            reloadOnSearch: false
         })
         .otherwise({
             redirectTo: "/home"
@@ -70,6 +17,34 @@ app.config(function ($routeProvider, $locationProvider) {
     // $locationProvider.html5Mode(true);
 });
 
+app.run(function ($rootScope, $timeout) {
+  $rootScope.$on('$viewContentLoaded', function () {
+    $timeout(function () {
+      var $carousel = $('#carouselExampleIndicators');
+      if ($carousel.length) {
+        $carousel.carousel({
+          interval: 5000,
+          ride: 'carousel'
+        });
+
+        // Manually bind control buttons
+        $('.carousel-control-next').off('click').on('click', function (e) {
+          e.preventDefault();
+          $carousel.carousel('next');
+        });
+
+        $('.carousel-control-prev').off('click').on('click', function (e) {
+          e.preventDefault();
+          $carousel.carousel('prev');
+        });
+      }
+    }, 300);
+  });
+});
+
+
+
+// Custom directive for nav behavior
 app.directive('navReady', function () {
     return {
         restrict: 'A',
