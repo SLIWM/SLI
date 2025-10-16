@@ -130,8 +130,15 @@
 }
 
 @keyframes sundayCircleFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 /* ===== MIDWEEK SECTION ===== */
@@ -274,6 +281,7 @@
   .sunday-text-block h2 {
     font-size: 2.1rem;
   }
+
   .sunday-text-block p {
     font-size: 1rem;
   }
@@ -306,3 +314,33 @@
     width: 90%;
   }
 }
+
+
+.ourServices_img_Section {
+  width: 100%;
+  max-width: 1500px;
+  height: 100%;
+  z-index: 2;
+  /* filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.4)); */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.ourServices-banner {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  /* matches desktop image dimensions (example: 1920x1080) */
+  background-image: url("../images/ourServices_Main.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: sticky;
+
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+/* ✅ Responsive (swap image + adjust ratio for mobile) */

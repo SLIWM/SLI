@@ -1,4 +1,4 @@
-<section class="heroOurServices">
+<section class="heroOurServices sticky-bg-section">
    <header class="hero-header">
       <img src="../images/youAreInvited.png" alt="You Are Invited" class="hero-image">
       <div class="hero-buttons">
@@ -8,36 +8,24 @@
    </header>
 </section>
 
-<div class="bg-section whiteBg_Section invite-section background_grad">
-   <div class="section-content">
-      <div class="invite-text">
-         <h2>You're Invited to Worship With Us</h2>
-         <p>Come as you are — there’s a place for you in our church family. Join us and experience God’s love, faith,
-            and fellowship together.</p>
-         <a href="#visit" class="btn-invite">Plan Your Visit</a>
+<section class="sticky-section">
+   <div class="content">
+      <div class="section-content">
+         <div class="center-image-section">
+            <div class="ourServices-banner"></div>
+         </div>
       </div>
    </div>
-</div>
-
-
-<!-- ===== CENTER IMAGE SECTION ===== -->
-<section class="bg-section orangeBg_Section background_grad_up">
-
-   <div class="center-image-section">
-      <img src="../images/SundayFaith.png" alt="Faith Service" class="section-image">
-
-      <img src="../images/SundayLove.png" alt="Prayer Works" class="section-image ">
-
-   </div>
-   <div class="circle-shape behind"></div>
 </section>
 
 
-
-<!-- ===== CENTER IMAGE SECTION ===== -->
-<section class="bg-section container_orange">
-   <div class="circle-shape behind"></div>
-
+<!-- HTML -->
+<section class="bg-section futuristic-pattern  ">
+   <!-- Images: will sit above the background pseudo-element -->
+   <div class="center-image-section">
+      <img src="../images/SundayFaith.png" alt="Faith Service" class="section-image">
+      <img src="../images/SundayLove.png" alt="Prayer Works" class="section-image">
+   </div>
    <div class="center-image-section">
       <img src="../images/prayerWorks.jpg" alt="Prayer Works" class="section-image center-img">
       <div class="center-text">
@@ -47,11 +35,6 @@
          <a href="#join" class="btn-learn">Join Us</a>
       </div>
    </div>
-</section>
-
-
-<!-- ===== CENTER IMAGE SECTION ===== -->
-<section class="bg-section orangeBg_Section container_orange">
 
    <div class="center-image-section">
       <img src="../images/FridayWorship.jpg" alt="Prayer Works" class="section-image center-img">
@@ -62,8 +45,25 @@
          <a href="#join" class="btn-learn">Join Us</a>
       </div>
    </div>
+   <!-- SVG filter defs (keep it in the document; the filter is used by the pseudo-element) -->
+   <svg width="0" height="0" style="position:absolute;pointer-events:none;">
+      <defs>
+         <filter id="advanced-texture">
+            <feTurbulence result="noise" numOctaves="3" baseFrequency="0.7" type="fractalNoise" />
+            <feSpecularLighting result="specular" lighting-color="#fff" specularExponent="20" specularConstant="0.8"
+               surfaceScale="2" in="noise">
+               <fePointLight z="100" y="50" x="50"></fePointLight>
+            </feSpecularLighting>
+            <feComposite result="litNoise" operator="in" in2="SourceGraphic" in="specular"></feComposite>
+            <feBlend mode="overlay" in2="litNoise" in="SourceGraphic"></feBlend>
+         </filter>
+      </defs>
+   </svg>
+
    <div class="circle-shape behind"></div>
 </section>
+
+
 
 <!-- ===== OUTREACH / 40-60 SECTION ===== -->
 <section class="bg-section container_blackstripe">
