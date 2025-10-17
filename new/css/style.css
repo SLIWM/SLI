@@ -1054,13 +1054,15 @@ button {
 
 .socialMedia {
     display: flex;
-    justify-content: space-evenly;
-    /* even spacing across full width */
+    flex-direction: row;
+    justify-content: center;
+  
     align-items: center;
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
     background-color: transparent;
+    gap: 20px;
 }
 
 .socialMedia i {

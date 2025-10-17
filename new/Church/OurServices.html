@@ -1,87 +1,93 @@
-<section class="heroOurServices sticky-bg-section">
-   <header class="hero-header">
-      <img src="../images/youAreInvited.png" alt="You Are Invited" class="hero-image">
-      <div class="hero-buttons">
-         <a href="#join" class="hero-btn primary-btn">On-site</a>
-         <a href="#watch" class="hero-btn outline-btn">Online</a>
-      </div>
-   </header>
-</section>
+<div class="scrollable-parent">
+   <section class="heroOurServices sticky-bg-section">
+      <header class="hero-header">
+         <img src="../images/youAreInvited.png" alt="You Are Invited" class="hero-image">
+         <div class="hero-buttons">
+            <a href="#join" class="hero-btn primary-btn">On-site</a>
+            <a href="#watch" class="hero-btn outline-btn">Online</a>
+         </div>
+      </header>
+   </section>
 
-<section class="sticky-section">
-   <div class="content">
-      <div class="section-content">
-         <div class="center-image-section">
-            <div class="ourServices-banner"></div>
+   <section class="sticky-section">
+      <div class="content">
+         <div class="section-content">
+            <div class="center-image-section">
+               <div class="ourServices-banner"></div>
+            </div>
          </div>
       </div>
-   </div>
-</section>
+   </section>
 
 
-<!-- HTML -->
-<section class="bg-section futuristic-pattern  ">
-   <!-- Images: will sit above the background pseudo-element -->
-   <div class="center-image-section">
-      <img src="../images/SundayFaith.png" alt="Faith Service" class="section-image">
-      <img src="../images/SundayLove.png" alt="Prayer Works" class="section-image">
-   </div>
-   
-   <div class="center-image-section">
-      <img src="../images/prayerWorks.jpg" alt="Prayer Works" class="section-image center-img">
-      <div class="center-text">
-         <h2>Wednesday Prayer Meeting</h2>
-         <p>Pause, reflect, and recharge your spirit. Join us every Wednesday for a night of prayer, worship, and
-            encouragement — where hearts unite and faith grows stronger.</p>
-         <a href="#join" class="btn-learn">Join Us</a>
+   <!-- HTML -->
+   <section class="bg-section futuristic-pattern  ">
+      <!-- Images: will sit above the background pseudo-element -->
+      <div class="center-image-section">
+         <img src="../images/SundayFaith.png" alt="Faith Service" class="section-image">
+         <img src="../images/SundayLove.png" alt="Prayer Works" class="section-image">
       </div>
-   </div>
 
-   <div class="center-image-section">
-      <img src="../images/FridayWorship.jpg" alt="Prayer Works" class="section-image center-img">
-      <div class="center-text">
-         <h2>Wednesday Prayer Meeting</h2>
-         <p>Pause, reflect, and recharge your spirit. Join us every Wednesday for a night of prayer, worship, and
-            encouragement — where hearts unite and faith grows stronger.</p>
-         <a href="#join" class="btn-learn">Join Us</a>
-      </div>
-   </div>
-   <!-- SVG filter defs (keep it in the document; the filter is used by the pseudo-element) -->
-   <svg width="0" height="0" style="position:absolute;pointer-events:none;">
-      <defs>
-         <filter id="advanced-texture">
-            <feTurbulence result="noise" numOctaves="3" baseFrequency="0.7" type="fractalNoise" />
-            <feSpecularLighting result="specular" lighting-color="#fff" specularExponent="20" specularConstant="0.8"
-               surfaceScale="2" in="noise">
-               <fePointLight z="100" y="50" x="50"></fePointLight>
-            </feSpecularLighting>
-            <feComposite result="litNoise" operator="in" in2="SourceGraphic" in="specular"></feComposite>
-            <feBlend mode="overlay" in2="litNoise" in="SourceGraphic"></feBlend>
-         </filter>
-      </defs>
-   </svg>
-
-   <div class="circle-shape behind"></div>
-</section>
-
-
-
-<!-- ===== OUTREACH / 40-60 SECTION ===== -->
-<section class="bg-section container_blackstripe">
-   <div class="fortySixty-content">
-      <div class="image-side">
-         <img src="../images/catchUsOnline.png" alt="Catch Us Online" class="section-image forty-img">
-      </div>
-      <div class="text-side">
-         <h2>Catch Us Online</h2>
-         <div class="video-wrapper">
-            <iframe
-               src="https://www.youtube.com/embed/videoseries?si=CMK_jndTsAG_dmup&amp;list=PLnGBCS9-PxVTCKQPTzUrWrbzwkgJn_rny"
-               title="YouTube video player" frameborder="0"
-               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-               referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-            </iframe>
+      <div class="center-image-section">
+         <img src="../images/prayerWorks.jpg" alt="Prayer Works" class="section-image center-img">
+         <div class="center-text">
+            <h2>Wednesday Prayer Meeting</h2>
+            <p>Pause, reflect, and recharge your spirit. Join us every Wednesday for a night of prayer, worship, and
+               encouragement — where hearts unite and faith grows stronger.</p>
+            <a href="#join" class="btn-learn">Join Us</a>
          </div>
       </div>
-   </div>
-</section>
+
+      <div class="center-image-section">
+         <img src="../images/FridayWorship.jpg" alt="Prayer Works" class="section-image center-img">
+         <div class="center-text">
+            <h2>Wednesday Prayer Meeting</h2>
+            <p>Pause, reflect, and recharge your spirit. Join us every Wednesday for a night of prayer, worship, and
+               encouragement — where hearts unite and faith grows stronger.</p>
+            <a href="#join" class="btn-learn">Join Us</a>
+         </div>
+      </div>
+      <!-- SVG filter defs (keep it in the document; the filter is used by the pseudo-element) -->
+      <svg width="0" height="0" style="position:absolute;pointer-events:none;">
+         <defs>
+            <filter id="advanced-texture">
+               <feTurbulence result="noise" numOctaves="3" baseFrequency="0.7" type="fractalNoise" />
+               <feSpecularLighting result="specular" lighting-color="#fff" specularExponent="20" specularConstant="0.8"
+                  surfaceScale="2" in="noise">
+                  <fePointLight z="100" y="50" x="50"></fePointLight>
+               </feSpecularLighting>
+               <feComposite result="litNoise" operator="in" in2="SourceGraphic" in="specular"></feComposite>
+               <feBlend mode="overlay" in2="litNoise" in="SourceGraphic"></feBlend>
+            </filter>
+         </defs>
+      </svg>
+
+      <div class="circle-shape behind"></div>
+   </section>
+
+
+
+   <!-- ===== OUTREACH / 40-60 SECTION ===== -->
+   <section class="bg-section container_blackstripe">
+      <div class="fortySixty-content">
+         <div class="image-side">
+            <img src="../images/catchUsOnline.png" alt="Catch Us Online" class="section-image forty-img">
+         </div>
+         <div class="text-side">
+            <div class="strokedContainer">
+               <div class="strokedBan">
+                  <h1 class="bannerTitle ">Salt and Light!</h1>
+               </div>
+            </div>
+            <div class="video-wrapper">
+               <iframe
+                  src="https://www.youtube.com/embed/videoseries?si=CMK_jndTsAG_dmup&amp;list=PLnGBCS9-PxVTCKQPTzUrWrbzwkgJn_rny"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+               </iframe>
+            </div>
+         </div>
+      </div>
+   </section>
+</div>

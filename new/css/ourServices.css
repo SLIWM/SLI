@@ -344,3 +344,13 @@
 }
 
 /* ✅ Responsive (swap image + adjust ratio for mobile) */
+.scrollable-parent {
+  height: 100vh; /* Or a specific height that allows content to overflow */
+  overflow-y: scroll; /* Add a vertical scrollbar when content overflows */
+
+    -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+.scrollable-parent::-webkit-scrollbar {
+  display: none;
+}
