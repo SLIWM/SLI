@@ -6,82 +6,82 @@
 	padding: 1em;
 	box-sizing: border-box;
 	color: white;
-	background: 
-	 linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url("../images/tithesherosection.jpg") center/cover no-repeat;
+	background:
+		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("../images/tithesherosection.jpg") center/cover no-repeat;
 	background-size: cover;
 
 }
 
 .hero-title {
-    font-family: "Inter", 'Helvetica Neue', 'Lato', Helvetica, Arial, Sans-serif;
-    font-size: 7.5rem;
-    font-weight: 600;
-    line-height: 0.9em;
-    letter-spacing: -6.8px;
+	font-family: "Inter", 'Helvetica Neue', 'Lato', Helvetica, Arial, Sans-serif;
+	font-size: 7.5rem;
+	font-weight: 600;
+	line-height: 0.9em;
+	letter-spacing: -6.8px;
 	color: white;
 	text-align: center;
 }
 
 
 .hero-image {
-  max-width: 80%;
-  height: auto;
-  margin-top: 1.5rem;
-  filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.6));
+	max-width: 80%;
+	height: auto;
+	margin-top: 1.5rem;
+	filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.6));
 }
 
 .hero-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	gap: 1.5rem;
 }
 
 /* Button container */
 .hero-buttons {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 1.5rem;
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 1.5rem;
 }
 
 /* Base button style */
 .hero-btn {
-  padding: 0.8rem 2rem;
-  font-size: 1.2rem;
-  font-weight: 500;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-family: "Inter", 'Helvetica Neue', 'Lato', Helvetica, Arial, Sans-serif;
+	padding: 0.8rem 2rem;
+	font-size: 1.2rem;
+	font-weight: 500;
+	border-radius: 50px;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	font-family: "Inter", 'Helvetica Neue', 'Lato', Helvetica, Arial, Sans-serif;
 }
 
 /* Solid primary button */
 .primary-btn {
-  background-color: #f5c542;
-  color: #222;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+	background-color: #f5c542;
+	color: #222;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 
 .primary-btn:hover {
-  background-color: #ffd966;
-  transform: translateY(-2px);
+	background-color: #ffd966;
+	transform: translateY(-2px);
 }
 
 /* Outline secondary button */
 .outline-btn {
-  border: 2px solid #fff;
-  color: #fff;
-  background: transparent;
+	border: 2px solid #fff;
+	color: #fff;
+	background: transparent;
 }
 
 .outline-btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
+	background-color: rgba(255, 255, 255, 0.1);
+	transform: translateY(-2px);
 }
 
 .heroLG {
@@ -92,9 +92,9 @@
 	padding: 1em;
 	box-sizing: border-box;
 	color: white;
-	background: 
-	 linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url("../images/LG.jpg") center/cover no-repeat;
+	background:
+		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("../images/LG.jpg") center/cover no-repeat;
 	background-size: cover;
 
 }
@@ -107,12 +107,13 @@
 	padding: 1em;
 	box-sizing: border-box;
 	color: white;
-	background: 
-	 linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url("../images/getConnected.jpg") center/cover no-repeat;
+	background:
+		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("../images/getConnected.jpg") center/cover no-repeat;
 	background-size: cover;
 
 }
+
 .heroOurServices {
 	display: flex;
 	flex-direction: column;
@@ -121,9 +122,24 @@
 	padding: 1em;
 	box-sizing: border-box;
 	color: white;
-	background: 
-	 linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url("../images/OurServices.jpeg") center/cover no-repeat;
+	background:
+		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("../images/OurServices.jpeg") center/cover no-repeat;
+	background-size: cover;
+
+}
+
+.hero-anc {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+	padding: 1em;
+	box-sizing: border-box;
+	color: white;
+	background:
+		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("../images/announcement.jpg") center/cover no-repeat;
 	background-size: cover;
 
 }
@@ -136,14 +152,14 @@
 	padding: 1em;
 	box-sizing: border-box;
 	color: white;
-	background: 
-	 linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url("../images/volunteer/Volunteer\ 1.png") center/cover no-repeat;
+	background:
+		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("../images/volunteer/Volunteer\ 1.png") center/cover no-repeat;
 	background-size: cover;
 
 }
 
-.heroSLK{
+.heroSLK {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -151,14 +167,14 @@
 	padding: 1em;
 	box-sizing: border-box;
 	color: white;
-	background: 
-	 linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url("../images/slkbg.jpg") center/cover no-repeat;
+	background:
+		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("../images/slkbg.jpg") center/cover no-repeat;
 	background-size: cover;
 
 }
 
-.heroRemnant{
+.heroRemnant {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -166,9 +182,9 @@
 	padding: 1em;
 	box-sizing: border-box;
 	color: white;
-	background: 
-	 linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url("../images/remnant_s.jpg") center/cover no-repeat;
+	background:
+		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("../images/remnant_s.jpg") center/cover no-repeat;
 	background-size: cover;
 
 }
