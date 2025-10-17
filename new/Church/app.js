@@ -111,6 +111,9 @@ app.directive('navReady', function () {
         }
     };
 });
+
+
+
 app.run(function ($rootScope, $route) {
     $rootScope.$on('$routeChangeSuccess', function () {
         if ($route.current && $route.current.title) {
@@ -122,16 +125,41 @@ app.run(function ($rootScope, $route) {
 });
 
 app.run(function ($rootScope, $timeout) {
+    $rootScope.$on('$viewContentLoaded', function () {
+        $timeout(function () {
+            var $carousel = $('#carouselExampleIndicators');
+            if ($carousel.length) {
+                $carousel.carousel({
+                    interval: 5000,
+                    ride: 'carousel'
+                });
+
+                // Manually bind control buttons
+                $('.carousel-control-next').off('click').on('click', function (e) {
+                    e.preventDefault();
+                    $carousel.carousel('next');
+                });
+
+                $('.carousel-control-prev').off('click').on('click', function (e) {
+                    e.preventDefault();
+                    $carousel.carousel('prev');
+                });
+            }
+        }, 300);
+    });
+});
+
+app.run(function ($rootScope, $timeout) {
   $rootScope.$on('$viewContentLoaded', function () {
     $timeout(function () {
+      // Existing carousel init
       var $carousel = $('#carouselExampleIndicators');
       if ($carousel.length) {
         $carousel.carousel({
-          interval: 5000,
+          interval: 1,
           ride: 'carousel'
         });
 
-        // Manually bind control buttons
         $('.carousel-control-next').off('click').on('click', function (e) {
           e.preventDefault();
           $carousel.carousel('next');
@@ -142,8 +170,31 @@ app.run(function ($rootScope, $timeout) {
           $carousel.carousel('prev');
         });
       }
-    }, 300);
+
+      // New: Smooth infinite scroll slider-track logic using requestAnimationFrame
+      var track = document.querySelector('.slider-track');
+      if (track) {
+        var scrollSpeed = 60; // smaller = slower, smoother
+        var maxScroll = track.scrollWidth - track.clientWidth;
+
+        // Cancel any existing animation frame loop if present
+        if (track._scrollAnimationFrame) {
+          cancelAnimationFrame(track._scrollAnimationFrame);
+        }
+
+        function smoothScroll() {
+          track.scrollLeft += scrollSpeed;
+
+          if (track.scrollLeft >= maxScroll) {
+            track.scrollLeft = 0;
+          }
+
+          track._scrollAnimationFrame = requestAnimationFrame(smoothScroll);
+        }
+
+        smoothScroll();
+      }
+    }, 1);
   });
 });
-
 

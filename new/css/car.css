@@ -1,46 +1,30 @@
-/* Smooth infinite scroll animation */
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-/* Duplicate items for continuous effect */
-.community-grid::after {
-  content: "";
-}
-
-/* Optional: responsive adjustment */
-@media (max-width: 768px) {
-  .ministry {
-    flex: 0 0 180px;
-  }
-}
-.service-right {
-  width: 100%;
-  overflow: hidden;
-  padding: 40px 0;
-  background: #fff;
-}
-
-.community-grid {
+.slider-track {
   display: flex;
-  gap: 30px;
-  width: calc(250px * 18); /* duplicate items for smooth loop */
-  animation: scroll 35s linear infinite;
+  overflow-x: hidden;  /* hide scrollbar */
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  width: 100%;  /* full width of container */
+  padding: 20px;
+  gap: 20px;
+}
+/* === Hide Scrollbar === */
+.slider-track::-webkit-scrollbar {
+  display: none;
+}
+.slider-track {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
 }
 
+/* === Individual Item === */
 .ministry {
-  flex: 0 0 250px;
-  text-align: center;
-  background: #ffffff;
+  flex: 0 0 20%;
+  scroll-snap-align: center;
+  background: #fff;
   border-radius: 15px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  margin-left: 10px;
+  text-align: center;
   transition: transform 0.3s;
 }
 
@@ -60,9 +44,34 @@
   color: #333;
   margin: 0;
 }
-/* =============== SLIDER WRAPPER =============== */
-.slider-track {
-  display: flex;
-  width: calc(250px * 18); /* number of slides × width */
-  animation: scroll 35s linear infinite;
+
+/* === Responsive Tweaks === */
+@media (max-width: 992px) {
+  .ministry {
+    flex: 0 0 45%;
+  }
+  .ministry img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ministry {
+    flex: 0 0 70%;
+  }
+  .ministry img {
+    height: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ministry {
+    flex: 0 0 90%;
+  }
+  .ministry img {
+    height: 100px;
+  }
+  .ministry p {
+    font-size: 0.9rem;
+  }
 }
