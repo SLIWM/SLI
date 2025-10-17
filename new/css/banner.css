@@ -1,27 +1,18 @@
-/*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
-
-
-/*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
-
-@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-
-@font-face {
-    font-family: "Righteous";
-    src: url("../fonts/BalooChettan-Regular.ttf");
-    src: url("../fonts/BalooChettan-Regular.ttf");
-}
 @import url(animate.min.css);
 @import url(normalize.css);
 @import url(icomoon.css);
-@import url(css/font-awesome.min.css);
+@import url(font-awesome.min.css);
 @import url(meanmenu.css);
-@import url(owl.carousel.min.css);
-@import url(swiper.min.css);
 @import url(slick.css);
 @import url(jquery.fancybox.min.css);
 @import url(jquery-ui.css);
 @import url(nice-select.css);
+
+@font-face {
+  font-family: "Righteous";
+  src: url("../fonts/BalooChettan-Regular.ttf");
+  src: url("../fonts/BalooChettan-Regular.ttf");
+}
 
 /* === Base Container (shared styles) === */
 .strokedContainer {
@@ -41,18 +32,22 @@
 }
 
 .strokedBan h1 {
-  font-size: 5em;   /* unchanged */
+  font-size: 5em;
+  /* unchanged */
   font-weight: 700;
   margin: 0;
   word-break: break-word;
-  line-height: 1.1; /* <--- This reduces the spacing between lines */
+  line-height: 1.1;
+  /* <--- This reduces the spacing between lines */
 }
 
 /* 🔄 Responsive adjustments */
 @media (max-width: 768px) {
-  .strokedContainer,.fillderCon {
+
+  .strokedContainer,
+  .fillderCon {
     width: 95%;
-    margin-top: 20px!important;
+    margin-top: 20px !important;
 
   }
 
@@ -62,7 +57,9 @@
 }
 
 @media (max-width: 480px) {
-  .strokedContainer,.fillderCon {
+
+  .strokedContainer,
+  .fillderCon {
     width: 90%;
     padding: 20px;
     border-radius: 20px;
@@ -75,34 +72,71 @@
 
 /* === Rainbow Colors === */
 /* Red */
-.strokedContainer-red { box-shadow: 0px 0px 1px 8px #ff0000; }
-.strokedBan-red h1 { color: #ff0000; }
+.strokedContainer-red {
+  box-shadow: 0px 0px 1px 8px #ff0000;
+}
+
+.strokedBan-red h1 {
+  color: #ff0000;
+}
 
 /* Orange */
-.strokedContainer-orange { box-shadow: 0px 0px 1px 8px #ff7f00; }
-.strokedBan-orange h1 { color: #ff7f00; }
+.strokedContainer-orange {
+  box-shadow: 0px 0px 1px 8px #ff7f00;
+}
+
+.strokedBan-orange h1 {
+  color: #ff7f00;
+}
 
 /* Yellow */
-.strokedContainer-yellow { box-shadow: 0px 0px 1px 8px #ffc107; }
-.strokedBan-yellow h1 { color: #ffc107; }
+.strokedContainer-yellow {
+  box-shadow: 0px 0px 1px 8px #ffc107;
+}
+
+.strokedBan-yellow h1 {
+  color: #ffc107;
+}
 
 /* Green */
-.strokedContainer-green { box-shadow: 0px 0px 1px 8px #00ff00; }
-.strokedBan-green h1 { color: #00ff00; }
+.strokedContainer-green {
+  box-shadow: 0px 0px 1px 8px #00ff00;
+}
+
+.strokedBan-green h1 {
+  color: #00ff00;
+}
 
 /* Blue */
-.strokedContainer-blue { box-shadow: 0px 0px 1px 8px #0000ff; }
-.strokedBan-blue h1 { color: #0000ff; }
+.strokedContainer-blue {
+  box-shadow: 0px 0px 1px 8px #0000ff;
+}
+
+.strokedBan-blue h1 {
+  color: #0000ff;
+}
 
 /* Indigo */
-.strokedContainer-indigo { box-shadow: 0px 0px 1px 8px #4b0082; }
-.strokedBan-indigo h1 { color: #4b0082; }
+.strokedContainer-indigo {
+  box-shadow: 0px 0px 1px 8px #4b0082;
+}
+
+.strokedBan-indigo h1 {
+  color: #4b0082;
+}
 
 /* Violet */
-.strokedContainer-violet { box-shadow: 0px 0px 1px 8px #8f00ff; }
-.strokedBan-violet h1 { color: #8f00ff; }
+.strokedContainer-violet {
+  box-shadow: 0px 0px 1px 8px #8f00ff;
+}
 
-.strokedContainer-white { box-shadow: 7px 7px 1px 0px #ffffff; }
+.strokedBan-violet h1 {
+  color: #8f00ff;
+}
+
+.strokedContainer-white {
+  box-shadow: 7px 7px 1px 0px #ffffff;
+}
 
 .strokedBox {
   border: 4px solid #000;
@@ -112,8 +146,10 @@
 .filledBan {
   text-align: center;
 }
+
 .filledBan h1 {
-  font-size: 5em;   /* unchanged */
+  font-size: 5em;
+  /* unchanged */
   font-weight: 700;
   word-break: break-word;
 }
@@ -137,13 +173,16 @@
 
 .fillContainer-orange {
   background-color: orange;
-  color: #ffffff; /* better contrast for yellow */
+  color: #ffffff;
+  /* better contrast for yellow */
 
 }
 
 .fillContainer-yellow {
-  background-color: #ffc107; /* bright yellow */
-  color: #ffffff; /* better contrast for yellow */
+  background-color: #ffc107;
+  /* bright yellow */
+  color: #ffffff;
+  /* better contrast for yellow */
 }
 
 .fillContainer-green {
@@ -163,7 +202,7 @@
 }
 
 .bannerContent img {
-   height: 100%;
-   width: 100%;
-   max-width: 70%;
+  height: 100%;
+  width: 100%;
+  max-width: 70%;
 }
