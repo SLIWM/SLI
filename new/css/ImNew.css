@@ -144,11 +144,19 @@
   }
 }
 
+.img_box {
+  width: 100%;
+  padding: 0 15px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
 .img_box img {
   width: 100%;
-  height: 100%;
-  max-width: none;
-  object-fit: cover;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
   border-radius: 10px;
 }
 
@@ -198,7 +206,7 @@
   font-family: "Inter", 'Helvetica Neue', 'Lato', Helvetica, Arial, Sans-serif;
 }
 
-/* === All Media Queries Moved Below === */
+/* === All Media Queries Below === */
 
 @media (max-width: 768px) {
   .connection-box .row {
@@ -209,14 +217,36 @@
   .col-left,
   .col-right {
     flex: 1 1 100%;
+    text-align: center;
   }
 
   .col-left h3 {
     margin-bottom: 25px;
   }
 
+  .ImNewcontainer .row {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .ImNew_h1 {
+    font-size: 2.5em;
+    letter-spacing: -2px;
+  }
+
+  .justified-container {
+    padding: 0 15px;
+  }
+
+  .img_box {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
   .img_box img {
     max-width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }
 
