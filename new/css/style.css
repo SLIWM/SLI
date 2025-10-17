@@ -898,7 +898,6 @@ img {
     }
 
     .header_section {
-        background-image: url("../images/mateo.jpg");
         background-size: cover;
     }
 
@@ -930,7 +929,7 @@ img {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url("../images/YAFC.JPG") center center / cover no-repeat;
+    
     overflow: hidden;
 }
 
