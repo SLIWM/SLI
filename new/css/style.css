@@ -141,10 +141,6 @@ a,
     transition: all .3s ease-in-out;
 }
 
-.img_logo {
-    max-width: 100%;
-    height: auto;
-}
 
 :focus {
     outline: 0;
@@ -806,7 +802,7 @@ button {
     /* include padding in width */
 }
 
-img {
+.img_logo {
 
     height: 40px;
 }
