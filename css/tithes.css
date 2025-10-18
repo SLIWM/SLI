@@ -1,0 +1,322 @@
+
+
+body {
+	font-family: 'PT Sans Caption',"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-size: 3vh;
+}
+
+
+#header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#logo {
+  text-decoration: none;
+  color: white;
+  font-size: 5vh;
+  font-weight: bold;
+}
+	
+#menu-icon {
+  font-family: Geneva, sans-serif;
+  font-size: 6vh;
+}
+	
+
+#header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#logo {
+  text-decoration: none;
+  color: white;
+  font-size: 5vh;
+  font-weight: bold;
+}
+	
+#menu-icon {
+  font-family: Geneva, sans-serif;
+  font-size: 6vh;
+}
+	
+
+
+
+
+
+.display-4 {
+ font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.3em;
+    letter-spacing: -1.2px;
+    text-shadow: 0px 0px 26px rgba(0,0,0,0.3);
+	text-align: center;
+	color:white;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    padding: 20px 0 40px;
+}
+
+
+
+
+
+.display-4 {
+ font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.3em;
+    letter-spacing: -1.2px;
+    text-shadow: 0px 0px 26px rgba(0,0,0,0.3);
+	text-align: center;
+	color:white;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    padding: 20px 0 40px;
+}
+
+.title {
+    font-size: 2.5em;
+    color: #4A69BD; /* A deep blue color for the title */
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Main Content Wrapper (Flexbox for Columns) */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ccc; /* Separator at the top */
+    padding-top: 40px;
+}
+
+/* Common Section Title */
+.section-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Left Column: Bank Transfer */
+.bank-transfer-column {
+    flex: 0 0 60%; /* Takes up about 60% of the width */
+    padding-right: 40px;
+    border-right: 1px solid #ccc; /* Vertical separator line */
+    text-align: center;
+}
+
+.bank-details-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.bank-item {
+    text-align: center;
+    padding: 10px;
+    margin: 0 15px;
+}
+
+.bank-logo-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333; /* Dark text for bank name */
+    margin-bottom: 10px;
+}
+
+.account-type {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.account-name {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.account-number {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #000;
+}
+
+.separator-line {
+    border: none;
+    border-top: 1px solid #eee; /* Light separator */
+    width: 80%;
+    margin: 30px auto;
+}
+
+/* USD Account Styling */
+.usd-account {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.account-number-label {
+    font-size: 1.1em;
+}
+
+/* QR Code Section */
+.qr-code-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.qr-transfer-text {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.qr-transfer-info {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.qr-image-placeholder {
+    width: 250px;
+    height: 250px;
+    background-color: #e0e0e0; /* Placeholder background */
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    position: relative;
+    border: 1px solid #ccc; /* Mimic a QR code border */
+}
+
+.instapay-overlay {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: #ffffff; /* White background for the logo text */
+    font-weight: bold;
+    font-size: 1.1em;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.download-qr {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #4A69BD; /* Blue color for the link */
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Right Column: Give Online */
+.give-online-column {
+    flex: 0 0 40%; /* Takes up about 40% of the width */
+    padding-left: 40px;
+    text-align: center;
+}
+
+.online-title {
+    text-align: center; /* Override default section-title alignment if needed */
+}
+
+.online-info {
+    font-size: 0.95em;
+    color: #333;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+/* The Green Button */
+.give-button {
+    display: inline-block;
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    transition: background-color 0.3s;
+}
+
+.give-button:hover {
+    background-color: #45a049;
+}
+
+/* Note Section */
+.note {
+    background-color: #f9f9f9; /* Light background for the note box */
+    border: 1px solid #eee;
+    padding: 20px;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 80%;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.note-title {
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 5px;
+    display: inline; /* To keep it on the same line as content starts */
+}
+
+.note-content {
+    display: inline;
+}
+
+/* Responsive adjustments (optional, but good practice) */
+@media (max-width: 800px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .bank-transfer-column {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px solid #ccc; /* Add separator at the bottom */
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+    }
+
+    .give-online-column {
+        padding-left: 0;
+    }
+}
+
+
+
+

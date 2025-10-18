@@ -1,0 +1,187 @@
+/* General Layout */
+.youth-hero-section, .youth-events-section, .youth-media-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Hero Section */
+.youth-hero-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.youth-hero-text {
+  flex: 1;
+  animation: fadeIn 1s ease-in;
+}
+
+.youth-hero-text h1 {
+  font-size: 3rem;
+  color: #2c3e50;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  color: #555;
+}
+
+.youth-cta-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #ff6b6b, #f06595);
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.youth-cta-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Facebook Embed */
+.youth-hero-image {
+  flex: 1;
+  animation: slideInRight 1s ease-in;
+}
+
+/* Events Section */
+.youth-events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.event-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.event-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.event-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Media Section */
+.responsive-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.responsive-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.youth-about-section {
+  padding: 80px 20px;
+  background-color: #f8f9fa;
+}
+
+.about-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.about-image-box {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-image-box img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.about-content-box {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-content-box h1 {
+  font-size: 2.8rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.about-content-box h2 {
+  font-size: 1.6rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.about-content-box p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.about-cta-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #ff6b6b;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.about-cta-btn:hover {
+  background-color: #e64949;
+}
+.about-image-box img {
+  height: 100% !important;
+}

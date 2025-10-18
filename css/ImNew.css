@@ -1,0 +1,273 @@
+.imnew-welcome {
+  padding: 100px 20px;
+  text-align: center;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.imnew-welcome .highlight {
+  color: #f4b400;
+}
+
+.welcome-text {
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.welcome-text h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111;
+}
+
+.welcome-text h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #333;
+  margin-top: 15px;
+}
+
+.icon {
+  font-size: 2rem;
+  display: inline-block;
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+.sparkle {
+  color: #007aff;
+  margin-bottom: 15px;
+}
+
+.smile {
+  color: #ff6b00;
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  font-size: 3rem;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+
+.connection-box {
+  border: 2px solid #000;
+  border-radius: 25px;
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  background: linear-gradient(135deg, #fff, #fefefe);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.connection-box:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+}
+
+.connection-box:hover .smile {
+  transform: rotate(15deg);
+}
+
+.connection-box .row {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.col-left {
+  flex: 1 1 45%;
+}
+
+.col-right {
+  flex: 1 1 50%;
+}
+
+.col-left h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0;
+}
+
+.col-right p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.cta-buttons {
+  margin-top: 20px;
+}
+
+.btn-primary,
+.btn-outline {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #111;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+}
+
+.btn-outline {
+  border: 2px solid #111;
+  color: #111;
+}
+
+.btn-outline:hover {
+  background-color: #111;
+  color: #fff;
+}
+
+@keyframes floatIcon {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.img_box {
+  width: 100%;
+  padding: 0 15px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.img_box img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.ImNewcontainer {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 90px 20px;
+}
+
+.ImNewcontainer .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 90px;
+}
+
+.ImNew_h1 {
+  font-size: 5em;
+  font-weight: 750;
+  letter-spacing: -5px;
+  color: rgb(255, 255, 255);
+}
+
+.justified-container {
+  max-width: 680px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.jc-text {
+  margin: 0 0 14px 0;
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1.3em;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  word-wrap: break-word;
+  font-family: "Inter", 'Helvetica Neue', 'Lato', Helvetica, Arial, Sans-serif;
+}
+
+/* === All Media Queries Below === */
+
+@media (max-width: 768px) {
+  .connection-box .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .col-left,
+  .col-right {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .col-left h3 {
+    margin-bottom: 25px;
+  }
+
+  .ImNewcontainer .row {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .ImNew_h1 {
+    font-size: 2.5em;
+    letter-spacing: -2px;
+  }
+
+  .justified-container {
+    padding: 0 15px;
+  }
+
+  .img_box {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .img_box img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 992px) {
+  .justified-container {
+    padding: 24px 16px;
+  }
+
+  .jc-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .justified-container {
+    padding: 14px 10px;
+    max-width: 100%;
+  }
+
+  .jc-text {
+    font-size: 0.98rem;
+    line-height: 1.5;
+  }
+}

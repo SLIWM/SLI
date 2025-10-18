@@ -1,0 +1,8 @@
+.MainSection {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background: url("../images/YAFC.JPG") center center / cover no-repeat;
+    overflow: hidden;
+
+}

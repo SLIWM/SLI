@@ -1,0 +1,149 @@
+/* FOOTER BASE */
+.modern-footer {
+  background-color: #0e0e0e;
+  color: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
+  padding: 60px 40px 30px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* LEFT SIDE */
+.footer-left {
+  flex: 1 1 35%;
+  min-width: 250px;
+}
+
+.footer-left img.footer-logo {
+  margin-bottom: 15px;
+}
+
+.footer-left h2 {
+  font-size: 1.8rem;
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.footer-left p {
+  font-size: 0.9rem;
+  color: #aaa;
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+/* RIGHT SIDE */
+.footer-right {
+  flex: 1 1 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-column h4 {
+  font-size: 0.9rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 6px;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #ff6600;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  border-top: 1px solid #222;
+  margin-top: 40px;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #888;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.footer-bottom a {
+  color: #888;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #ff6600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+
+.shining-text {
+  position: relative;
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    #fff 40%,
+    #ffd700 50%,
+    #fff 60%,
+    #fff 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shineMove 3s linear infinite;
+}
+
+@keyframes shineMove {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}

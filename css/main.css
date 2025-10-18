@@ -1,0 +1,86 @@
+body {
+  overflow-x: hidden;
+}
+html, body {
+  overflow-x: hidden;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section Heading */
+.locations-section h1 {
+    font-size: 5em; /* Adjust size as needed */
+    font-weight: 400; /* Very bold/black */
+    margin-bottom: 40px;
+    color: black;
+}
+
+/* Flexbox Container for the Cards */
+.locations-container {
+    display: flex;
+    gap: 20px; /* Space between the cards */
+}
+
+/* Individual Location Card (make it a link <a>) */
+.location-card {
+    flex: 1; /* Makes all three cards take equal width */
+    text-decoration: none; /* Remove underline from link */
+    color: black; /* Default text color */
+    display: block; /* Allows margin/padding/width to be set */
+}
+
+/* Image Wrapper and Overlay */
+.image-wrapper {
+    position: relative; /* Essential for positioning the city name */
+    overflow: hidden; /* Ensures image stays within bounds */
+    border-radius: 5px; /* Optional: adds subtle rounded corners */
+}
+
+/* Image Styling */
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Ensures the image covers the area */
+    /* Optional: filter/opacity to darken the image slightly for text readability */
+    filter: brightness(0.7);
+    transition: filter 0.3s ease; /* Smooth transition for hover */
+}
+
+/* City Name Text Overlay */
+.city-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the text perfectly */
+    color: white;
+    font-size: 3.5em; /* Large text as seen in the image */
+    font-weight: 900;
+    white-space: nowrap; /* Prevents wrapping if the name is too long */
+    z-index: 10;
+}
+
+/* Country/Details Text Line */
+.country-name {
+    font-size: 1.0em;
+    font-weight: 600;
+    margin-top: 10px;
+    display: inline-block; /* Allows the arrow to sit next to it */
+}
+
+/* Arrow Styling (can use an actual character or an icon font) */
+.arrow {
+    font-size: 1.0em;
+    font-weight: 900;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Hover effect (Optional) */
+.location-card:hover .image-wrapper img {
+    filter: brightness(0.8); /* Slightly less dark on hover */
+}
