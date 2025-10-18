@@ -403,7 +403,7 @@
 .futuristic-pattern {
   position: relative;
   width: 100%;
-  min-height: 2300px;
+  min-height: 2500px;
   /* fallback height; adjust as needed */
   overflow: hidden;
 }
