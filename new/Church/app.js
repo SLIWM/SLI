@@ -70,6 +70,10 @@ app.config(function ($routeProvider, $locationProvider) {
             templateUrl: "Volunteer.html",
             title: "Volunteer"
         })
+         .when("/VolunteerForm", {
+            templateUrl: "VolunteerForm.html",
+            title: "Volunteer Form"
+        })
         .when("/WednesdayWorship", {
             templateUrl: "WednesdayWorship.html"
         })
