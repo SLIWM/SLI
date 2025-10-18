@@ -4,9 +4,7 @@
 
     <header class="hero-header">
       <h1 class="hero-title">Tithes & Offerings</h1>
-      <h1 class="display-4">We thank you for your heart to give in honoring the Lord.<br>Giving your Tithe is simple and secure.</h1>
-      <p>Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver. - 2 Corinthians 9:7</p>
-      
+          
    </header>
   </section>
   
@@ -18,66 +16,198 @@
 
    <!-- main body starts here -->
    
-    <div class="container">
-        <header class="header">
-            <h1 class="title">Ways to Give</h1>
-            <p class="subtitle">We've made it convenient for you to give your tithes and offerings, from the comfort and safety of your home</p>
-        </header>
+<title>Ways to Give</title>
+    <style>
+        /* A common reset for better cross-browser consistency */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
 
-        <div class="content-wrapper">
-            <section class="bank-transfer-column">
-                <h2 class="section-title">Bank Transfer</h2>
+        /* --- STUNNING HEADING STYLES --- */
+        .give-header {
+            text-align: center;
+            padding: 50px 20px 20px;
+            background-color: #ffffff;
+            border-bottom: 5px solid #007bff;
+        }
 
-                <div class="bank-details-wrapper">
-                    <div class="bank-item">
-                        <p class="bank-logo-text">BDO</p>
-                        <p class="account-name">SALT AND LIGHT CHURCH PH INC</p>
-                        <p class="account-number">0101 5002 7176</p>
-                    </div>
+        .give-header h1 {
+            font-size: 3.5em;
+            color: #007bff;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 900;
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+        }
 
-                    <div class="bank-item">
-                        <p class="bank-logo-text">UnionBank</p>
-                        <p class="account-type">PHP ACCOUNT</p>
-                        <p class="account-name">SALT AND LIGHT CHURCH PH INC</p>
-                        <p class="account-number">0030 2000 1090</p>
-                    </div>
-                </div>
+        .give-header p {
+            font-size: 1.25em;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #555;
+            line-height: 1.6;
+            font-style: italic;
+        }
 
-                <hr class="separator-line">
+        /* --- CONTENT BLOCKS SECTION STYLES --- */
+        .content-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px; /* Space between content blocks and arrow */
+            padding: 40px 20px;
+            background-color: #f4f7f6;
+            position: relative; /* Needed for positioning the arrow */
+        }
 
-                <div class="usd-account">
-                    <p class="account-type">USD ACCOUNT</p>
-                    <p class="account-name">SALT AND LIGHT CHURCH PH INC</p>
-                    <p class="account-number-label">Account Number: <span class="account-number">133020002096</span></p>
-                </div>
+        .content-block {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+            max-width: 450px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 250px;
+            box-sizing: border-box;
+            text-align: center;
+        }
 
-                <hr class="separator-line">
+        .content-block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
 
-                <div class="qr-code-section">
-                    <p class="qr-transfer-text">Transfer via **Instapay QR**</p>
-                    <p class="qr-transfer-info">Scan this QR using any mobile banking apps/GCash/Paymaya</p>
-                    <div class="qr-image-placeholder">
-                         [InstaPay QR Code Image Placeholder]
-                        <div class="instapay-overlay">Insta Pay</div>
-                    </div>
-                    <p class="download-qr">DOWNLOAD QR</p>
-                </div>
+        /* Text content block specific styles */
+        .text-block h2 {
+            font-size: 2.2em;
+            color: #ff6f00;
+            margin-bottom: 10px;
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 800;
+        }
 
-            </section>
+        .text-block p {
+            font-size: 1.1em;
+            color: #666;
+            line-height: 1.5;
+            margin-top: 15px;
+        }
 
-            <section class="give-online-column">
-                <h2 class="section-title online-title">Give Online</h2>
+        /* Image within content block styles */
+        .content-block img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: contain;
+        }
 
-                <p class="online-info">Give online via **credit/debit card**, **GCash**, **Paymaya**, or **GrabPay**.</p>
+        /* --- ARROW STYLES --- */
+        .arrow-indicator {
+            position: relative;
+            width: 80px; /* Width of the arrow stem */
+            height: 30px; /* Height for vertical spacing, can be adjusted */
+            display: flex; /* Helps in centering the arrow if needed */
+            align-items: center;
+            justify-content: center;
+            margin: 0 -15px; /* Adjust margin to bring blocks closer if gap is too large */
+        }
 
-                <a href="#" class="give-button">Give to Favor Manila (PHP)</a>
+        /* Arrow stem */
+        .arrow-indicator::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 6px; /* Thickness of the arrow line */
+            background-color: #007bff; /* Blue color for the arrow */
+            border-radius: 3px;
+        }
 
-                <div class="note">
-                    <p class="note-title">NOTE:</p>
-                    <p class="note-content">All **donations/payments** made via PayMongo will be subject to additional **processing fees**. These **fees** will be charged on top of your **giving amount** and are set by **PayMongo** to cover transaction costs.</p>
-                </div>
-            </section>
+        /* Arrowhead */
+        .arrow-indicator::after {
+            content: '';
+            position: absolute;
+            left: 100%; /* Positions arrowhead at the end of the stem */
+            top: 50%;
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent; /* Half of arrowhead height */
+            border-bottom: 15px solid transparent; /* Half of arrowhead height */
+            border-left: 20px solid #007bff; /* Size and color of arrowhead */
+            transform: translateY(-50%); /* Vertically center arrowhead */
+            margin-left: -5px; /* Overlap with stem for seamless look */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .give-header h1 {
+                font-size: 2.5em;
+            }
+            .give-header p {
+                font-size: 1em;
+            }
+            .content-container {
+                flex-direction: column; /* Stack vertically */
+                align-items: center;
+            }
+            .content-block {
+                min-height: unset;
+            }
+            /* Arrow for vertical layout */
+            .arrow-indicator {
+                width: 6px; /* Arrow stem becomes vertical */
+                height: 80px; /* Height for vertical arrow */
+                margin: 20px 0; /* Vertical margin */
+            }
+            .arrow-indicator::before {
+                width: 100%;
+                height: 100%; /* Stem fills its container */
+            }
+            .arrow-indicator::after {
+                left: 50%; /* Center arrowhead horizontally */
+                top: 100%; /* Position arrowhead at bottom of stem */
+                border-left: 15px solid transparent; /* Adjust for vertical arrow */
+                border-right: 15px solid transparent;
+                border-top: 20px solid #007bff; /* Arrowhead points down */
+                border-bottom: 0; /* Remove bottom border */
+                transform: translateX(-50%); /* Center arrowhead horizontally */
+                margin-top: -5px; /* Overlap with stem */
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="give-header">
+        <h1>Ways to Give 🎁</h1>
+        <p>We've made it convenient for you to give your tithes and offerings, from the comfort and safety of your home.</p>
+    </div>
+
+    <div class="content-container">
+        
+        <div class="content-block text-block">
+            <h2>Joy to Give</h2>
+            <p>Give using our unified QR code! Scan to easily contribute your tithes and offerings anytime, anywhere.</p>
         </div>
+
+        <div class="arrow-indicator"></div> <div class="content-block">
+            <img src="../img/tithes/qr.png" alt="Instapay QR Code for Giving">
+        </div>
+
     </div>
 
 
