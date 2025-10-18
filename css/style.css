@@ -839,7 +839,7 @@ button {
 
 .mainCont {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     /* keeps content from being too wide */
     margin: 0 auto;
     /* centers the container */
@@ -1600,3 +1600,79 @@ button {
   height: 100%;            /* or set a fixed height like 100vh */
   width: 100%;
 }
+
+
+
+
+
+
+.homecard {
+  position: relative;
+  width: 100%;
+  min-width: 400px;
+  height: 100%;
+  min-height: 350px;
+  background: #fff;
+  border: solid 4px #333;
+  box-shadow: -5px 5px #333;
+  transition: all .2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.homecard:hover {
+  margin: 10px 10px 0 0;
+  box-shadow: 0px 0px #333;
+}
+
+.homecard .homeimg-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 350px;
+  width: 100%;
+  height: calc(100% - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: filter .2s 1s ease-in-out;
+}
+
+.homecard:hover .homeimg-card {
+  filter: blur(1px);
+}
+
+.homecard .homeadd-cart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 50px);
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  line-height: 250px;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.homecard:hover .homeadd-cart {
+  opacity: 1;
+  transition: opacity .3s 1s ease-in-out;
+}
+
+.homecard .homeinfo-card {
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: solid 1px #333;
+}
+
+.homecard .homeinfo-card p {
+  font-size: 14px;
+  margin: 5px;
+}
+
