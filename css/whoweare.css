@@ -11,14 +11,15 @@
   }
   
   body {
-    background-color: #f3f3f3; /* White background */
-    color: #333; /* Dark gray for text */
+
+margin:0;
+font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+background:var(--bg);
+
+justify-content:center;
+
     
-    justify-content: center; /* Center the content horizontally */
-    align-items: flex-start; /* Align content to the top */
-    min-height: 100vh; /* Ensure body takes full viewport height */
   }
-  
   ul {
     list-style: none;
   }
@@ -224,53 +225,149 @@
   
   /* For Main content */
 
-
+/* Three column */
 
 .container {
+    display: flex;
+    justify-content: space-around;
     width: 100%;
-    max-width: 100%; /* Max width similar to the image to keep text readable */
-    padding: 20px;
-    box-sizing: border-box; /* Include padding in the element's total width and height */
-    text-align: center; /* Center align the section title */
-
+    max-width: 1200px;
+    gap: 30px; /* Space between columns */
 }
 
-.ourstory {
-
-    width: 100%;
-    /* max-width: 800px; */
-    padding-left: 150px;;
-    padding-right: 150px;
-    padding-top:50px;
-    box-sizing: border-box;
-    /* text-align: center; */
-    /* margin: 30px;*/
-
+.column {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.section-title {
-    font-size: 3.5em; /* Large font size for the title */
-    font-weight: 700; /* Bold */
-    color: #000; /* Black color for the title */
-    margin-bottom: 40px; /* Space below the title */
-    line-height: 1.2;
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.content {
-    text-align: center; /* Align text within the content block to the left */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.content p {
-    font-size: 1.1em; /* Slightly larger font size for readability */
-    line-height: 1.7; /* Good line height for readability */
-    margin-bottom: 1.5em; /* Space between paragraphs */
-    font-weight: 700; /* Regular weight for paragraph text */
+blockquote {
+    font-size: 1.1em;
+    color: #555;
+    margin: 0;
+    padding: 15px;
+    border-left: 5px solid #007bff;
+    text-align: left;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    line-height: 1.6;
 }
 
-/* Specific styling for bold text mentioned in the content */
-.content p strong {
-    font-weight: 700; /* Make strong text bolder */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        width: 90%;
+        margin-bottom: 30px;
+    }
 }
+
+/* Three column */
+
+
+/* our story */
+
+.story-container {
+    max-width: 1200px; /* Max width for the content */
+    margin: 0 auto; /* Center the container */
+    padding: 40px;
+    background-color: #fff; /* White content background */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+/* --- Heading Styling --- */
+.story-heading {
+    text-align: center;
+    font-size: 2.5em;
+    color: #2c3e50; /* Dark color for emphasis */
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #f39c12; /* Accent line */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Center the inline-block heading */
+.story-container > .story-heading {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Two-Column Layout (Flexbox) --- */
+.story-content {
+    display: flex;
+    gap: 40px; /* Space between the image and text */
+    align-items: flex-start; /* Aligns items to the top */
+}
+
+.story-image-wrapper {
+    flex: 1; /* Takes up 1 part of the space */
+    min-width: 300px; /* Ensure image isn't too small */
+}
+
+.story-text {
+    flex: 2; /* Takes up 2 parts of the space (Text wider than image) */
+    font-size: 1.1em;
+}
+
+.story-image {
+    width: 100%; /* Image fills its container */
+    height: auto;
+    display: block;
+    border-radius: 8px; /* Slightly rounded corners */
+    object-fit: cover; /* Ensures image covers the space without distortion */
+}
+
+.story-text p {
+    margin-bottom: 1.5em;
+    text-align: justify; /* Nice, block text alignment */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .story-content {
+        flex-direction: column; /* Stack image and text vertically */
+    }
+
+    .story-image-wrapper, .story-text {
+        flex: none; /* Remove flex sizing on smaller screens */
+        width: 100%; /* Full width for both */
+    }
+
+    .story-container {
+        padding: 20px;
+    }
+}
+
+/* our story */
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -307,10 +404,11 @@
     transform: translateX(-50%);
     width: 100%;
     height: 150px; /* Height of the shape */
-    background-color: #f3f3f3; /* White background */
+    background-color: #ffff; /* White background */
 
     z-index: 1; /* Place below the content but above the next section */
     /* Creates the triangular shape */
     clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
     -webkit-clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
 }
+
