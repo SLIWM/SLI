@@ -70,7 +70,7 @@ app.config(function ($routeProvider, $locationProvider) {
             templateUrl: "Volunteer.html",
             title: "Volunteer"
         })
-         .when("/VolunteerForm", {
+        .when("/VolunteerForm", {
             templateUrl: "VolunteerForm.html",
             title: "Volunteer Form"
         })
@@ -88,6 +88,11 @@ app.config(function ($routeProvider, $locationProvider) {
         .when("/ANC", {
             templateUrl: "announcement.html",
             title: "Announcement"
+        })
+        .when("/admin", {
+            templateUrl: "admin.html",
+            title: "Announcement",
+            controller: "AdminCont"
         })
         .otherwise({
             redirectTo: "/home"

@@ -1,0 +1,151 @@
+<div ng-controller="AdminCont">
+    <!-- SEARCH + ADD BUTTON -->
+    <div style="padding-top:100px;"></div>
+    <div class="add-user-btn-container d-flex justify-content-between align-items-center mb-3">
+        <div>
+            <input class="form-control" type="text" placeholder="Search" ng-model="searchQuery">
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary btn-round ms-auto"
+                data-toggle="modal"
+                data-target="#ContentModal"
+                ng-click="addProductOnClick()">
+                <i class="fa fa-plus"></i> Add Product
+            </button>
+        </div>
+    </div>
+
+    <!-- ADD / EDIT MODAL -->
+    <div class="modal fade" id="ContentModal" data-backdrop="static" data-keyboard="false" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" ng-show="!content.id">Add Announcement</h5>
+                    <h5 class="modal-title" ng-show="content.id">Edit Announcement</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="resetForm()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Content Title</label>
+                        <input type="text" class="form-control" ng-model="content.content_title"
+                            placeholder="Enter content title">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Announcement Title</label>
+                        <input type="text" class="form-control" ng-model="content.announcement_title"
+                            placeholder="Enter announcement title">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Details</label>
+                        <textarea class="form-control" ng-model="content.details" rows="3"
+                            placeholder="Enter details"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Expiration Date</label>
+                        <input type="datetime-local" class="form-control" ng-model="content.exp_date">
+                    </div>
+
+                    <!-- IMAGE UPLOAD -->
+                    <form id="uploadForm" enctype="multipart/form-data">
+                        <input type="file" accept="image/*" id="imageInput"
+                            onchange="angular.element(this).scope().uploadImage(this.files)">
+                        <br>
+                        <img ng-if="content.photo_path" ng-src="../ANC_Images/{{content.photo_path}}"
+                            alt="Image Preview" style="width:100px; height:100px; margin-top:10px;">
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" ng-click="resetForm()">Cancel</button>
+                    <button type="button" class="btn btn-primary" ng-click="createContent()">
+                        {{ content.id ? 'Save Changes' : 'Create' }}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DELETE CONFIRMATION -->
+    <div class="modal fade" id="DeleteModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Delete Announcement</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete: <strong>{{ contentTitleForDelete }}</strong>?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-danger" ng-click="confirmDelete()">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TABLE VIEW -->
+    <table class="table table-striped table-bordered mt-3">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Content Title</th>
+                <th>Announcement Title</th>
+                <th>Details</th>
+                <th>Upload Date</th>
+                <th>Expiration Date</th>
+                <th>Image</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in contents | filter:searchQuery">
+                <td>{{($index + 1) + ((pagination.page - 1) * pagination.limit)}}</td>
+                <td>{{item.content_title}}</td>
+                <td>{{item.announcement_title}}</td>
+                <td>{{item.Details}}</td>
+                <td>{{item.upload_date}}</td>
+                <td>{{item.exp_date}}</td>
+                <td>
+                    <img ng-src="../ANC_Images/{{item.photo_path}}" style="width:80px; height:80px;" alt="No image">
+                </td>
+                <td>
+                    <button class="btn btn-link btn-primary" ng-click="editContent(item)" data-toggle="modal"
+                        data-target="#ContentModal">
+                        <i class="fa fa-edit"></i>
+                    </button>
+                    <button class="btn btn-link btn-danger" ng-click="deleteContent(item)" data-toggle="modal"
+                        data-target="#DeleteModal">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- PAGINATION -->
+    <div class="d-flex justify-content-between align-items-center mt-3">
+        <div>
+            <label>Show
+                <select ng-model="pagination.limit" ng-change="changePageSize()"
+                    ng-options="s for s in [5,10,25,50]"></select>
+                entries
+            </label>
+        </div>
+        <div>
+            <button class="btn btn-sm btn-outline-primary" ng-disabled="pagination.page === 1"
+                ng-click="loadContents(pagination.page - 1)">Prev</button>
+            Page {{pagination.page}} of {{pagination.pages}}
+            <button class="btn btn-sm btn-outline-primary" ng-disabled="pagination.page === pagination.pages"
+                ng-click="loadContents(pagination.page + 1)">Next</button>
+        </div>
+    </div>
+</div>

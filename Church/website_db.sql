@@ -28,11 +28,14 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `content` (
-  `id` int(11) NOT NULL,
-  `photo_path` varchar(255) NOT NULL,
-  `content_title` varchar(255) NOT NULL,
-  `announcement_title` varchar(255) NOT NULL,
-  `upload_date` datetime NOT NULL
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `photo_path` VARCHAR(255) NOT NULL,
+  `content_title` VARCHAR(255) NOT NULL,
+  `announcement_title` VARCHAR(255) NOT NULL,
+  `upload_date` DATETIME NOT NULL,
+  `Details` TEXT,
+  `exp_date` DATETIME NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
