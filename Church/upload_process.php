@@ -1,11 +1,13 @@
 
-    <header><h1>Our Latest News</h1></header>
+<header><h1>Our Latest News</h1></header>
 
-    <div class="content-container">
-        <?php
+<div class="content-container">
+    <?php
         // 1. Database connection code here ($conn)
 
-        $sql = "SELECT photo_path, content_title, announcement_title FROM content ORDER BY id DESC LIMIT 5";
+        $sql = "SELECT photo_path, content_title, announcement_title FROM content 
+        WHERE  exp_date > NOW()
+        ORDER BY id DESC LIMIT 5";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
@@ -30,4 +32,4 @@
         }
         $conn->close();
         ?>
-    </div>
+</div>
