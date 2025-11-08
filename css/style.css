@@ -1591,14 +1591,19 @@ button {
     height: 100%;
     border: 0;
 }
+
 .centered-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* horizontal centering */
-  align-items: center;     /* vertical centering */
-  text-align: center;      /* center-align text inside */
-  height: 100%;            /* or set a fixed height like 100vh */
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* horizontal centering */
+    align-items: center;
+    /* vertical centering */
+    text-align: center;
+    /* center-align text inside */
+    height: 100%;
+    /* or set a fixed height like 100vh */
+    width: 100%;
 }
 
 
@@ -1607,75 +1612,112 @@ button {
 
 
 .homecard {
-  position: relative;
-  width: 100%;
-  min-width: 400px;
-  height: 100%;
-  min-height: 350px;
-  background: #fff;
-  border: solid 4px #333;
-  box-shadow: -5px 5px #333;
-  transition: all .2s ease-in-out;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
+    position: relative;
+    width: 100%;
+    min-width: 400px;
+    height: 100%;
+    min-height: 350px;
+    background: #fff;
+    border: solid 4px #333;
+    box-shadow: -5px 5px #333;
+    transition: all .2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .homecard:hover {
-  margin: 10px 10px 0 0;
-  box-shadow: 0px 0px #333;
+    margin: 10px 10px 0 0;
+    box-shadow: 0px 0px #333;
 }
 
 .homecard .homeimg-card {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-height: 350px;
-  width: 100%;
-  height: calc(100% - 50px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: filter .2s 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 350px;
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: filter .2s 1s ease-in-out;
 }
 
 .homecard:hover .homeimg-card {
-  filter: blur(1px);
+    filter: blur(1px);
 }
 
 .homecard .homeadd-cart {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 50px);
-  background-color: rgba(0, 0, 0, 0.1);
-  text-align: center;
-  line-height: 250px;
-  font-weight: bold;
-  font-size: 19px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px);
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    line-height: 250px;
+    font-weight: bold;
+    font-size: 19px;
 }
 
 .homecard:hover .homeadd-cart {
-  opacity: 1;
-  transition: opacity .3s 1s ease-in-out;
+    opacity: 1;
+    transition: opacity .3s 1s ease-in-out;
 }
 
 .homecard .homeinfo-card {
-  position: absolute;
-  height: 50px;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-top: solid 1px #333;
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: solid 1px #333;
 }
 
 .homecard .homeinfo-card p {
-  font-size: 14px;
-  margin: 5px;
+    font-size: 14px;
+    margin: 5px;
 }
 
-.text-black{
-    color: #000000!important;
+.text-black {
+    color: #000000 !important;
+}
+
+#loadingModal .modal-content {
+    background: #fffaf0;
+    /* soft ivory */
+    border-radius: 1rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+#loadingModal h5 {
+    color: #8b6f27;
+    /* warm bronze */
+    font-weight: 600;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+#loadingModal p {
+    color: #6c584c;
+    /* muted earthy tone */
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+#loadingModal .spinner-grow {
+    color: #d4af37;
+    /* gold tone */
+    width: 3rem;
+    height: 3rem;
+}
+
+#loadingModal.fade.show {
+    opacity: 1 !important;
+}
+
+#loadingBackdrop {
+    background-color: rgba(0, 0, 0, 0.5) !important;
 }

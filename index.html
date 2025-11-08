@@ -54,11 +54,25 @@
   <ng-include src="'nav.html'"></ng-include>
   <div ng-view></div>
 
-  <!-- main body end -->
+  <div class="modal fade" id="loadingModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 bg-transparent shadow-none">
+        <div class="modal-body d-flex justify-content-center align-items-center"
+          style="min-height: 200px; position: relative;">
+          <!-- GIF Loader -->
+         <img src="images/ZKZx.gif"  style="width: 150px; height: 150px; border: none;" alt="" srcset="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
 
 
   <!-- footer section start -->
-  <footer class="modern-footer">
+  <footer class="modern-footer" id="footer">
     <div class="footer-container">
       <!-- Left Side -->
       <div class="footer-left">
@@ -99,6 +113,8 @@
   <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
   <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
   <script src="app.js"></script>
+
+
   <script>
     function openNav() {
       document.getElementById("mySidenav").style.width = "100%";
