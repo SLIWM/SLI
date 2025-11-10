@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
- 
+
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -48,6 +48,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular-route.min.js"></script>
+
 </head>
 
 <body class="scrollable">
@@ -126,6 +127,7 @@
   </footer>
   <script src="app.js"></script>
   <script src="controller/admin.js"></script>
+  <script src="controller/contentController.js"></script>
   <script src="../js/animations.js"></script>
   <script src="../js/jquery.min.js"></script>
   <script src="../js/popper.min.js"></script>
@@ -137,6 +139,22 @@
   <script src="../js/owl.carousel.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
   <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const fadeSections = document.querySelectorAll('.fade-section');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      fadeSections.forEach(section => observer.observe(section));
+    });
+  </script>
 
   <script>
     function openNav() {
@@ -161,6 +179,8 @@
       detail.style.display = detail.style.display === 'block' ? 'none' : 'block';
     }
   </script>
+
+
 </body>
 
 </html>

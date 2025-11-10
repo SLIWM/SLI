@@ -87,7 +87,9 @@ app.config(function ($routeProvider, $locationProvider) {
         })
         .when("/ANC", {
             templateUrl: "announcement.html",
-            title: "Announcement"
+            title: "Announcement",
+            controller: "ContentCont"
+
         })
         .when("/admin", {
             templateUrl: "admin.html",
@@ -121,8 +123,6 @@ app.directive('navReady', function () {
     };
 });
 
-
-
 app.run(function ($rootScope, $route) {
     $rootScope.$on('$routeChangeSuccess', function () {
         if ($route.current && $route.current.title) {
@@ -132,6 +132,7 @@ app.run(function ($rootScope, $route) {
         }
     });
 });
+
 app.run(function ($rootScope, $timeout) {
     $rootScope.$on('$viewContentLoaded', function () {
         $timeout(function () {
@@ -233,3 +234,4 @@ app.run(function ($rootScope, $timeout) {
         }, 300); // allow AngularJS to finish rendering
     });
 });
+

@@ -1442,7 +1442,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("../images/YAFC.JPG") center center / cover no-repeat;
+    background: url("../images/Church.jpg") center center / cover no-repeat;
 }
 
 /* Black blurry overlay spans full width */
@@ -1466,6 +1466,7 @@ button {
     position: relative;
     width: 100%;
     max-width: 1400px;
+    margin-top: 50px;
     /* limit actual video width */
     aspect-ratio: 16 / 9;
 }
@@ -1721,3 +1722,4 @@ button {
 #loadingBackdrop {
     background-color: rgba(0, 0, 0, 0.5) !important;
 }
+

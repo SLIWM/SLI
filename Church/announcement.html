@@ -1,115 +1,53 @@
-  <section class="hero-anc">
+<section class="hero-anc"  ng-controller="ContentCont">
 
     <header class="hero-header">
-      <h1 class="hero-title">Announcement</h1>
-      <h1 class="display-4">We thank you for your heart to give in honoring the Lord.<br>Giving your Tithe is simple and secure.</h1>
-      <p>Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver. - 2 Corinthians 9:7</p>
-      
-   </header>
-  </section>
+        <h1 class="hero-title">Announcement</h1>
+        <h1 class="display-4">We thank you for your heart to give in honoring the Lord.<br>Giving your Tithe is simple
+            and secure.</h1>
+        <p>Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for
+            God loves a cheerful giver. - 2 Corinthians 9:7</p>
+
+    </header>
+</section>
 
 
+<section class="service-times" ng-controller="ContentCont">
 
-    <style>
-        /* General styling for the page */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-
-        /* Container for the entire announcement post (mimics a card) */
-        .announcement-card {
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            width: 90%;
-            overflow: hidden; /* Ensures the image doesn't bleed out */
-        }
-
-        /* Image styling */
-        .post-photo {
-            width: 100%;
-            height: auto;
-            display: block; /* Removes any extra spacing below the image */
-            max-height: 300px;
-            object-fit: cover; /* Ensures the image covers the area nicely */
-        }
-
-        /* Content area (title, caption, date, link) */
-        .post-content {
-            padding: 20px;
-        }
-
-        /* Title styling */
-        .post-title {
-            color: #333;
-            font-size: 1.6em;
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        /* Caption styling */
-        .post-caption {
-            color: #555;
-            font-size: 1em;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        /* Date and Link container */
-        .post-details {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 15px;
-            padding-top: 10px;
-            border-top: 1px solid #eee;
-        }
-
-        /* Date styling */
-        .post-date {
-            color: #999;
-            font-size: 0.85em;
-        }
-
-        /* Social Link styling */
-        .social-link {
-            text-decoration: none; /* Removes underline */
-            color: #007bff; /* A nice blue for links */
-            font-weight: 600;
-            font-size: 0.9em;
-            transition: color 0.3s;
-        }
-
-        .social-link:hover {
-            color: #0056b3;
-        }
-    </style>
-
-
-    <div class="announcement-card">
-        <img class="post-photo" src="https://via.placeholder.com/500x300/4CAF50/FFFFFF?text=New+Product+Launch" alt="Placeholder image for new product launch">
-
-        <div class="post-content">
-            <h2 class="post-title">🎉 Introducing Our Brand New Feature!</h2>
-
-            <p class="post-caption">
-                We're thrilled to announce the launch of **Project Nova**, a revolutionary tool designed to streamline your workflow and boost efficiency by 40%! Check out the link below to see it in action and start your free trial today. Don't miss out on this game-changer!
-            </p>
-
-            <div class="post-details">
-                <span class="post-date">Posted on: **November 9, 2025**</span>
-
-                <a class="social-link" href="https://twitter.com/YourSocialHandle" target="_blank">
-                    Read the Full Thread 🚀
-                </a>
+    <div class="mainCont">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="ImNew_h1 text-black text-start">Announcement</h1>
+                <hr style="border: 1px solid #000000; margin-top: -10px;">
             </div>
         </div>
+
+        <!-- ================== ANNOUNCEMENT LIST ================== -->
+        <div class="row mt-4">
+            <div class="col-md-12 mb-4" ng-repeat="item in contents">
+                <div class="card shadow-sm h-100">
+
+                    <div class="card-body">
+                        <h5 class="fw-bold text-dark mb-1" style="font-size: 2.5rem;">{{item.content_title}}</h5>
+                        <h6 class="text-muted">When :  {{item.announcement_title | date:'mediumDate'}}</h6>
+
+                        <!-- Details -->
+                        <div class="card-body">
+                            <p class="card-text mt-2" ng-bind="item.Details"
+                                style="font-size: 1.05rem; line-height: 1.6;"></p>
+                        </div>
+                    </div>
+                    <img ng-src="ANC_Images/{{item.photo_path}}" class="card-img-top" alt="{{item.content_title}}"
+                        style="padding: 10px;">
+
+                    <div class="card-footer text-muted small bg-white border-top">
+                        <span><strong>Posted:</strong> {{item.upload_date | date:'medium'}}</span><br>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
     </div>
+
+</section>

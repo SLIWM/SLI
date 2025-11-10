@@ -10,9 +10,10 @@
 		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 		url("../images/tithesherosection.jpg") center/cover no-repeat;
 	background-size: cover;
-
+	text-align: center;
 }
 
+/* Base hero title styling */
 .hero-title {
 	font-family: "Inter", 'Helvetica Neue', 'Lato', Helvetica, Arial, Sans-serif;
 	font-size: 7.5rem;
@@ -20,8 +21,47 @@
 	line-height: 0.9em;
 	letter-spacing: -6.8px;
 	color: white;
-	text-align: center;
+	margin: 0 auto;
+	max-width: 90%;
 }
+
+/* Tablet screens (≤1024px) */
+@media (max-width: 1024px) {
+	.hero-title {
+		font-size: 5rem;
+		letter-spacing: -4px;
+	}
+}
+
+/* Mobile landscape (≤768px) */
+@media (max-width: 768px) {
+	.hero {
+		padding: 2em 1em;
+		height: auto;
+		min-height: 80vh;
+	}
+
+	.hero-title {
+		font-size: 3.5rem;
+		letter-spacing: -2px;
+		line-height: 1em;
+	}
+}
+
+/* Mobile portrait (≤480px) */
+@media (max-width: 480px) {
+	.hero {
+		padding: 2em 1em;
+		min-height: 70vh;
+	}
+
+	.hero-title {
+		font-size: 2.2rem;
+		letter-spacing: -1px;
+		line-height: 1.1em;
+	}
+}
+
 
 
 .hero-image {
@@ -141,7 +181,6 @@
 		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 		url("../images/announcement.jpg") center/cover no-repeat;
 	background-size: cover;
-
 }
 
 .heroVolunteer {
@@ -156,7 +195,6 @@
 		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 		url("../images/volunteer/Volunteer\ 1.png") center/cover no-repeat;
 	background-size: cover;
-
 }
 
 .heroSLK {
