@@ -45,7 +45,8 @@
   <link rel="stylesheet" type="text/css" href="../css/remnant.css">
   <link rel="stylesheet" type="text/css" href="../css/car.css">
   <link rel="stylesheet" href="../css/responsive.css">
-
+  <link rel="stylesheet" href="../css/thumbnail-gallery.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular-route.min.js"></script>
 
@@ -155,7 +156,10 @@
       fadeSections.forEach(section => observer.observe(section));
     });
   </script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+  <script>
+    baguetteBox.run('.tz-gallery');
+  </script>
   <script>
     function openNav() {
       document.getElementById("mySidenav").style.width = "100%";

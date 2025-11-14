@@ -235,3 +235,12 @@ app.run(function ($rootScope, $timeout) {
     });
 });
 
+
+
+app.run(function ($rootScope, $timeout) {
+    $rootScope.$on('$viewContentLoaded', function () {
+        $timeout(function () {
+            baguetteBox.run('.tz-gallery');
+        }, 0);
+    });
+});

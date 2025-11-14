@@ -1723,3 +1723,47 @@ button {
     background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
+/* make sure the column clips the zoom */
+.tz-gallery .col-sm-6 {
+    position: relative;
+    /* allows z-index to work */
+    overflow: hidden;
+    /* hide the part that scales outside */
+    padding: 0 !important;
+    /* keep your zero-padding */
+}
+
+/* ensure images behave predictably */
+.tz-gallery img {
+    display: block;
+    /* removes inline whitespace */
+    width: 100%;
+    /* responsive fit */
+    height: auto;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+/* hover zoom */
+.tz-gallery .col-sm-6:hover img {
+    transform: scale(1.05);
+    /* image is child of positioned parent, z-index will work if needed */
+    z-index: 2;
+}
+
+/* optional - subtle dark overlay on hover + caption space (if you add captions) */
+.tz-gallery .col-sm-6::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0);
+    /* default no overlay */
+    transition: background 0.4s ease;
+}
+
+.tz-gallery .col-sm-6:hover::after {
+    background: rgba(0, 0, 0, 0.08);
+}
+
