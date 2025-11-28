@@ -1816,3 +1816,39 @@ button {
     opacity: 1;
     transform: translateX(0);
 }
+
+.flex-row {
+    display: flex;
+    justify-content: left;
+    /* center the row horizontally */
+    align-items: center;
+    /* vertical alignment */
+    gap: 20px;
+    /* equal spacing between columns */
+    flex-wrap: wrap;
+    /* stack on mobile */
+}
+
+.flex-col {
+    flex: 1 1 200px;
+    /* flexible width, min 200px */
+    text-align: center;
+}
+
+
+.button-row {
+    display: flex;
+    justify-content: flex-start;
+    /* align left under heading */
+    align-items: center;
+    gap: 12px;
+    /* space between buttons */
+    flex-wrap: wrap;
+    /* stack on mobile */
+}
+
+.ending-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9; /* light background to separate from footer */
+}
+
