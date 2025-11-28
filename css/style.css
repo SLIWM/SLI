@@ -1485,24 +1485,21 @@ button {
     margin-top: 20px;
 }
 
-/* horizontal row of categories */
 .menuRow {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    /* wrap to next line on small screens */
     gap: 40px;
-    /* space between category blocks */
+    justify-content: center;
     text-align: left;
 }
 
-/* each category block */
 .menuCategory {
-    flex: 1 1 200px;
-    /* grow/shrink, min width 200px */
-    max-width: 280px;
-    /* don’t stretch too wide */
-    margin-bottom: 25px;
+    flex: 1 1 calc(50% - 40px);
+    /* two columns, subtract gap */
+    max-width: 600px;
+    /* optional cap */
+    margin-bottom: 40px;
+    /* match gap vertically */
 }
 
 .menuCategory .categoryTitle {
@@ -1517,12 +1514,12 @@ button {
 
 .menuCategory a {
     display: block;
-    font-size: 18px;
+    font-size: 16px;
     color: #ffffff;
     padding: 4px 0;
     text-decoration: none;
     transition: 0.3s;
-    line-height: 1.4;
+    line-height: 0.9;
 }
 
 .menuCategory a:hover {
@@ -1767,3 +1764,55 @@ button {
     background: rgba(0, 0, 0, 0.08);
 }
 
+
+
+.pastorCont {
+    width: 100%;
+    max-width: 900px;
+    /* keeps content from being too wide */
+    margin: 0 auto;
+    /* centers the container */
+    padding: 30px 30px;
+    /* top/bottom 70px, left/right 30px */
+    text-align: center;
+    /* centers text inside */
+    box-sizing: border-box;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Base state */
+.fade-left,
+.fade-right {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Fade in from left */
+.fade-left {
+    transform: translateX(-40px);
+}
+
+.fade-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Fade in from right */
+.fade-right {
+    transform: translateX(40px);
+}
+
+.fade-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}

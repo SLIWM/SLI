@@ -1,5 +1,6 @@
 var app = angular.module("myApp", ["ngRoute"]);
 
+
 app.config(function ($routeProvider, $locationProvider) {
   $routeProvider
     .when("/", {
@@ -137,4 +138,21 @@ app.run(function ($rootScope, $timeout) {
       }
     }, 300); // allow AngularJS to finish rendering
   });
+});
+
+app.directive("fadeInOnScroll", function () {
+  return {
+    restrict: "A",
+    link: function (scope, element) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            element.addClass("show");
+            observer.unobserve(entry.target); // animate once
+          }
+        });
+      });
+      observer.observe(element[0]);
+    }
+  };
 });
