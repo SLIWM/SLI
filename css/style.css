@@ -2034,7 +2034,18 @@ layer(design-system.symbols);
         font: var(--ui-body);
         text-wrap: pretty;
         margin: 10px !important;
+        text-align: center !important;
+        font-weight: 300;
+        font-size: 15px;
     }
+
+    @media (max-width: 480px) {
+        .desc {
+            font-size: 0.95rem;
+            margin: 8px !important;
+        }
+    }
+
 
     .card-link {
         position: absolute;
@@ -2046,7 +2057,7 @@ layer(design-system.symbols);
         /* stretch to right (optional) */
         display: inline-block;
         padding: 10px 20px;
-        background-color: #007BFF;
+      
         color: white;
         text-align: center;
         text-decoration: none;
@@ -2113,7 +2124,7 @@ layer(design-system.symbols);
     .cards {
         grid-auto-columns: calc((100% - (var(--ui-spacing-sm) * 2)) / 3);
         min-width: 225px;
-        
+
     }
 }
 
@@ -2176,7 +2187,8 @@ layer(design-system.symbols);
         max-width: 230px;
         width: 250px;
         padding: 10px !important;
-        max-height: 450px;
+        max-height: 600px !important;
+        min-height: 550px !important;
 
     }
 }
@@ -2261,6 +2273,11 @@ layer(design-system.symbols);
     font-size: 40px;
 }
 
+.C2 {
+    font-size: 13em;
+    line-height: 1.3;
+}
+
 /* Optional: adjust padding/margin on mobile */
 @media (max-width: 600px) {
     .responsive-h1 {
@@ -2276,6 +2293,10 @@ layer(design-system.symbols);
 
     }
 
+    .C2 {
+    font-size: 13em;
+    line-height: 0.8;
+}
 }
 
 
@@ -2308,3 +2329,53 @@ layer(design-system.symbols);
     text-align: left !important;
     padding-bottom: 0;
 }
+
+.connect-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.connect-link {
+    font-size: 1.1em;
+    color: #0000ff;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 2px;
+    display: inline-flex;
+    align-items: center;
+ 
+}
+
+.connect-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    height: 1px;
+    background-color: #0000ff;
+}
+
+.connect-link .fab.fa-instagram {
+    font-size: 0.9em;
+    margin-left: 0.5em;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.2em;
+    margin-top: 1em;
+    justify-content: center;
+}
+
+.social-links a {
+    color: #333333;
+    font-size: 1.8em;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+

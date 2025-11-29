@@ -14,9 +14,10 @@
 
 margin:0;
 font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-background:var(--bg);
+background-color: #fff;
 
-justify-content:center;
+
+
 
     
   }
@@ -234,6 +235,7 @@ justify-content:center;
     width: 100%;
     max-width: 1200px;
     gap: 30px; /* Space between columns */
+    background-color: #ffff;
 }
 
 .column {
@@ -294,7 +296,7 @@ blockquote {
 /* our story */
 
 .story-container {
-    max-width: 1200px; /* Max width for the content */
+    max-width: 100%; /* Max width for the content */
     margin: 0 auto; /* Center the container */
     padding: 40px;
     background-color: #fff; /* White content background */
@@ -414,3 +416,89 @@ blockquote {
     -webkit-clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
 }
 
+
+.where {
+
+ max-width: 100%; /* Limit the width of the content */
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff; /* White background for the content box */
+    /* No box-shadow or border in the original image, keeping it clean */
+}
+.h1where {
+font-size: 5em; /* Adjust as needed */
+    color: #333333;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.wherep {
+    font-size: 1.5em; /* Adjust as needed for readability */
+    line-height: 1.6;
+    color: #555555;
+    text-align: left; /* Text is left-aligned in the image */
+    margin: 0 auto; /* Center the paragraph if it's narrower than the container */
+
+}
+
+.wherewhat {
+    font-size: 1.1em; /* Adjust as needed for readability */
+    line-height: 1.6;
+    color: #555555;
+    text-align: justify!important; /* Text is left-aligned in the image */
+    margin: 0 auto; /* Center the paragraph if it's narrower than the container */
+
+}
+
+.containerwhat {
+    max-width: 100%; /* Adjust max-width as needed to match the image's line length */
+    width: 100%;
+    background-color: #ffffff; /* White background for the content */
+    padding: 20px;
+    box-sizing: border-box;
+    
+}
+
+.value-item {
+    margin-bottom: 2em; /* Space between each value section */
+    line-height: 1.6; /* Improved readability for paragraphs */
+}
+
+.value-item:last-child {
+    margin-bottom: 0; /* No bottom margin for the last item */
+}
+
+.h2what {
+    font-size: 2.5em; /* Slightly larger for the bolded keyword */
+    color: #333333;
+    display: inline; /* Keep it on the same line as the start of the paragraph */
+    margin-right: 0.5em; /* Space between the keyword and the dash */
+    font-weight: bold;
+}
+
+.pwhat {
+    font-size: 1.5em; /* Adjust as needed for readability */
+    color: #444444;
+
+}
+
+/* Specific styling for the dash separator */
+
+.mainCont2 {
+    width: 100%;
+    max-width: 1300px;
+    /* keeps content from being too wide */
+    margin: 0 auto;
+    /* centers the container */
+    padding: 30px 30px;
+    /* top/bottom 70px, left/right 30px */
+
+    /* centers text inside */
+    box-sizing: border-box;
+ 
+
+
+}
