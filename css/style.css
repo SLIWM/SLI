@@ -1982,6 +1982,7 @@ layer(design-system.symbols);
         scroll-behavior: smooth;
         scroll-padding-inline: var(--_carousel-inline-padding);
         scroll-snap-type: inline mandatory;
+
         /* md-n-above */
         @media (width >=768px) {
             --_carousel-inline-padding: var(--ui-spacing-lg);
@@ -2000,7 +2001,9 @@ layer(design-system.symbols);
         padding: var(--ui-spacing-xs);
         inline-size: min(75cqi, 330px);
         padding: 10px !important;
+
         max-height: 500px !important;
+
         border: 2px solid rgba(0, 0, 0, 1) !important;
         border-radius: 0 !important;
     }
@@ -2106,10 +2109,10 @@ layer(design-system.symbols);
     /* mobile default */
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
     .cards {
         grid-auto-columns: calc((100% - (var(--ui-spacing-sm) * 2)) / 3);
-        max-width: 240px;
+        min-width: 225px;
         
     }
 }
