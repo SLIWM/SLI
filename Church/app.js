@@ -96,6 +96,10 @@ app.config(function ($routeProvider, $locationProvider) {
             title: "Announcement",
             controller: "AdminCont"
         })
+        .when("/beliefs", {
+            templateUrl: "StatementOfBelief.html",
+            title: "Statement of Beliefs"
+        })
         .otherwise({
             redirectTo: "/home"
         });
