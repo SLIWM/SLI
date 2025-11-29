@@ -1968,7 +1968,7 @@ layer(design-system.symbols);
     .cards {
         --_carousel-inline-padding: var(--ui-spacing-sm);
         display: grid;
-        gap: var(--ui-spacing-sm);
+        gap: 20px;
         grid-auto-flow: column;
         grid-column: 2/-1;
         min-block-size: auto;
@@ -2162,7 +2162,7 @@ layer(design-system.symbols);
 
 .carouselcont {
     width: 100%;
-    max-width: 1050px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 30px 30px;
     text-align: center;
