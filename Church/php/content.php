@@ -51,7 +51,7 @@ class ContentController
     public function readAll()
     {
         $page =1;
-        $limit = 1;
+        $limit = 2;
         $offset = ($page - 1) * $limit;
 
         $countResult = $this->db->query("SELECT COUNT(*) as total FROM content");

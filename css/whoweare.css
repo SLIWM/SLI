@@ -333,9 +333,11 @@ blockquote {
     min-width: 300px; /* Ensure image isn't too small */
 }
 
-.story-text {
-    flex: 2; /* Takes up 2 parts of the space (Text wider than image) */
-    font-size: 1.1em;
+.story-text p {
+    font-weight: 500;
+    margin-bottom: 1.5em;
+    text-align: justify; /* Nice, block text alignment */
+    font-size: 17px;
 }
 
 .story-image {

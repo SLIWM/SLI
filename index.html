@@ -151,6 +151,26 @@
 
     document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
   </script>
+  <script>
+    function scrollCards(direction, button) {
+      
+      const wrapper = button.closest('.carousel-wrapper');
+      if (!wrapper) return;
+
+      const carousel = wrapper.querySelector('.cards');
+      if (!carousel) return;
+
+      const card = carousel.querySelector('.card');
+      if (!card) return;
+
+      const gap = parseFloat(getComputedStyle(carousel).gap) || 0;
+
+      const scrollAmount = card.offsetWidth + gap;
+      carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
+
+  </script>
+
 </body>
 
 

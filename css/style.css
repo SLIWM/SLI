@@ -881,7 +881,7 @@ button {
     }
 
     .welcomeText h1 {
-        font-size: 30px !important;
+        font-size: 45px !important;
     }
 
     .welcomeText h2 {
@@ -1848,7 +1848,463 @@ button {
 }
 
 .ending-section {
-  padding: 60px 20px;
-  background-color: #f9f9f9; /* light background to separate from footer */
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    /* light background to separate from footer */
 }
 
+
+
+@layer design-system, reset, base, utilities, components, layout, overrides;
+@import "https://unpkg.com/open-props" layer(design-system.tokens);
+@import "https://cdn.jsdelivr.net/gh/mobalti/open-props-interfaces@main/hdr-palettes-astro-op/src/styles/hdr-palettes.css"
+layer(design-system.tokens-hdr);
+/* Palettes demo: https://codepen.io/mobalti/pen/jEPRydX  */
+@import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_back,arrow_forward,arrow_forward_ios&display=block"
+layer(design-system.symbols);
+
+@layer reset {
+
+    *,
+    ::before,
+    ::after {
+        box-sizing: border-box;
+    }
+
+    :where(:not(dialog)) {
+        margin: 0;
+    }
+
+    :where(html) {
+        -webkit-text-size-adjust: none;
+
+        @media (prefers-reduced-motion: no-preference) {
+            scroll-behavior: smooth;
+        }
+    }
+
+    :where(body) {
+        min-block-size: 100svb;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+@layer base {
+    html {
+        color-scheme: dark;
+
+        /* Adjust the chroma for all palettes */
+        --palette-chroma: 1;
+
+        /* Contrast function based on perceptual lightness (OKLCH) */
+        --threshold: 0.625;
+        --contrast-fn: min(max(((l - var(--threshold)) * -infinity), 0), 1);
+
+        /* Semantic tokens */
+        --ui-surface: var(--hdr-purple-15);
+        --ui-surface-container: var(--hdr-purple-14);
+        --ui-on-surface: oklch(from var(--ui-surface) var(--contrast-fn) 0 h);
+        --ui-primary: var(--hdr-orange-2);
+
+        --ui-spacing-none: 0;
+        --ui-spacing-xxs: var(--size-1);
+        --ui-spacing-xs: var(--size-2);
+        --ui-spacing-sm: var(--size-3);
+        --ui-spacing-md: var(--size-5);
+        --ui-spacing-lg: var(--size-7);
+        --ui-spacing-xl: var(--size-8);
+        --ui-spacing-xxl: var(--size-11);
+
+        --base-font: "Roboto";
+        --ui-label: var(--font-weight-5) var(--font-size-1) / var(--font-lineheight-0) var(--base-font),
+            var(--font-system-ui);
+        --ui-body: var(--font-weight-4) var(--font-size-2) / var(--font-lineheight-3) var(--base-font),
+            var(--font-system-ui);
+        --ui-title: var(--font-weight-5) var(--font-size-4) / var(--font-lineheight-1) var(--base-font),
+            var(--font-system-ui);
+
+        --ui-icon-font-family: "Material Symbols Outlined";
+        --icon-font-small: var(--font-weight-6) var(--font-size-1) / 1 var(--ui-icon-font-family);
+        --icon-font-medium: var(--font-weight-4) var(--font-size-4) / 0 var(--ui-icon-font-family);
+
+        /* Force dark theme shadow values in light mode */
+        /* OSlight */
+        @media (prefers-color-scheme: light) {
+            --shadow-color: 220 40% 2%;
+            --shadow-strength: 25%;
+        }
+
+        /* Component-specific token */
+        --ui-scroll-btn-radius: var(--radius-4);
+        --ui-scroll-btn-layer: var(--layer-3);
+        --ui-scroll-btn-outline: var(--border-size-2) dashed var(--ui-primary);
+        --ui-scroll-btn-border: var(--border-size-1) solid var(--ui-primary);
+        --ui-scroll-btn-size: var(--size-px-9);
+
+        --ui-visual-radius: var(--radius-3);
+        --ui-card-radius: calc(var(--ui-visual-radius) * 1.25);
+        --ui-btn-radius: var(--radius-2);
+        --ui-icon-size: var(--size-7);
+        --ui-card-shadow: var(--shadow-2);
+    }
+}
+
+@layer layout {
+    .section {
+        container-type: inline-size;
+        min-block-size: 100svb;
+
+        background: var(--ui-surface-container) url("https://raw.githubusercontent.com/mobalti/open-props-interfaces/refs/heads/main/hdr-palettes-astro-op/src/assets/images/hero.avif") no-repeat center / cover;
+
+        inline-size: 100%;
+
+        display: grid;
+        place-items: center;
+        column-gap: var(--ui-spacing-xs);
+        row-gap: var(--ui-spacing-lg);
+        padding-block: var(--ui-spacing-xxl);
+    }
+
+    .cards {
+        --_carousel-inline-padding: var(--ui-spacing-sm);
+        display: grid;
+        gap: var(--ui-spacing-sm);
+        grid-auto-flow: column;
+        grid-column: 2/-1;
+        min-block-size: auto;
+        grid-template-rows: auto;
+        inline-size: 100%;
+        list-style: none;
+        overflow-inline: auto;
+        overscroll-behavior-inline: contain;
+        padding-block: var(--ui-spacing-lg);
+        padding-inline: var(--_carousel-inline-padding);
+        scroll-behavior: smooth;
+        scroll-padding-inline: var(--_carousel-inline-padding);
+        scroll-snap-type: inline mandatory;
+
+        /* md-n-above */
+        @media (width >=768px) {
+            --_carousel-inline-padding: var(--ui-spacing-lg);
+        }
+    }
+
+    .card {
+        scroll-snap-align: start;
+        /* scroll-snap-stop: always; */
+        background-color: var(--ui-surface);
+        border-radius: var(--ui-card-radius);
+        box-shadow: var(--ui-card-shadow);
+        display: grid;
+        grid-row: 1/-1;
+        grid-template-rows: subgrid;
+        padding: var(--ui-spacing-xs);
+        inline-size: min(75cqi, 330px);
+        padding: 10px !important;
+
+        max-height: 500px !important;
+
+        border: 2px solid rgba(0, 0, 0, 1) !important;
+        border-radius: 0 !important;
+    }
+
+    .visual {
+        border-radius: var(--ui-visual-radius);
+        overflow: clip;
+    }
+
+    .img {
+        display: block;
+        inline-size: 100%;
+        block-size: 100%;
+        object-fit: cover;
+        /* fallback */
+        background-color: var(--ui-surface-container);
+    }
+
+    .title {
+        font: var(--ui-title);
+        text-wrap: pretty;
+        text-align: left !important;
+        font-size: 30px !important;
+        font-weight: 500 !important;
+    }
+
+    .desc {
+        font: var(--ui-body);
+        text-wrap: pretty;
+        margin: 10px !important;
+    }
+
+    .card-link {
+        position: absolute;
+        bottom: 16px;
+        /* distance from bottom */
+        left: 16px;
+        /* align to left (optional) */
+        right: 16px;
+        /* stretch to right (optional) */
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+
+    @supports (scroll-marker-group: after) {
+        .cards {
+            anchor-name: --carousel;
+            scrollbar-width: none;
+
+            &::scroll-button(*) {
+                -webkit-tap-highlight-color: transparent;
+                -webkit-touch-callout: none;
+                background-color: transparent;
+                block-size: var(--ui-scroll-btn-size);
+                border-radius: var(--ui-scroll-btn-radius);
+                color: var(--ui-primary);
+                cursor: pointer;
+                display: inline grid;
+                font: var(--icon-font-medium);
+                inline-size: var(--ui-scroll-btn-size);
+                outline-width: 0;
+                place-items: center;
+                position-anchor: --carousel;
+                inset-block-end: calc(anchor(end) - calc(var(--ui-spacing-xs) + var(--ui-scroll-btn-size)));
+                inset-inline-start: calc(anchor(start) + var(--_carousel-inline-padding));
+                position: absolute;
+                user-select: none;
+                border: var(--ui-scroll-btn-border);
+            }
+
+            &::scroll-button(*):focus:not(:disabled) {
+                outline: var(--ui-scroll-btn-outline);
+            }
+
+            &::scroll-button(*):disabled {
+                cursor: not-allowed;
+                opacity: 0.4;
+            }
+
+            &::scroll-button(*):not(:disabled):hover {
+                background-color: oklch(from var(--ui-on-surface) l c h / 8%);
+            }
+
+            /* &::scroll-button(inline-start) {
+                content: "arrow_back" / "Scroll back";
+            }
+
+            &::scroll-button(inline-end) {
+                content: "arrow_forward" / "Scroll forward";
+                inset-inline-start: calc(anchor(start) + var(--ui-spacing-xs) + var(--ui-scroll-btn-size) + var(--_carousel-inline-padding));
+            } */
+        }
+    }
+}
+
+.cards {
+    grid-auto-columns: 100%;
+    /* mobile default */
+}
+
+@media (min-width: 768px) {
+    .cards {
+        grid-auto-columns: calc((100% - (var(--ui-spacing-sm) * 2)) / 3);
+        min-width: 232px;
+        ;
+    }
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    /* include padding/border in width */
+    margin: 0;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+    inline-size: var(--ui-scroll-btn-size);
+    block-size: var(--ui-scroll-btn-size);
+    display: grid;
+    place-items: center;
+    border-radius: var(--ui-scroll-btn-radius);
+    background: var(--ui-primary);
+    color: oklch(from var(--ui-primary) var(--contrast-fn) 0 h);
+    font: var(--icon-font-medium);
+    cursor: pointer;
+    border: var(--ui-scroll-btn-border);
+}
+
+/* Left arrow */
+.carousel-btn.left {
+    left: 0;
+    transform: translate(-90%, -50%);
+    /* pulls arrow slightly OUTSIDE */
+}
+
+/* Right arrow */
+.carousel-btn.right {
+    right: 0;
+    transform: translate(90%, -50%);
+    /* pulls arrow slightly OUTSIDE */
+}
+
+.carousel-btn:hover {
+    background: oklch(from var(--ui-on-surface) l c h / 10%);
+}
+
+.carouselcont {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 30px 30px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 480px) {
+    .card {
+        inline-size: 100%;
+        max-width: 330px;
+        width: 250px;
+        padding: 10px !important;
+        max-height: 450px;
+
+    }
+}
+
+.visual .img {
+    min-height: 200px;
+    max-height: 200px;
+}
+
+.car-content {
+    padding: 10px;
+}
+
+.title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1.25rem;
+    text-align: left !important;
+    padding-bottom: 0;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.2em 0.6em;
+    /* small padding like a badge */
+    font-size: 15px;
+    /* smaller than heading */
+    font-weight: 500;
+    background-color: #007bff;
+    color: white;
+    border-radius: 9999px;
+    /* pill shape */
+    line-height: 1;
+    /* align text vertically */
+}
+
+
+.meaning {
+    display: block;
+    /* moves it below the title */
+    font-size: 0.85em;
+    /* smaller than the title */
+    font-style: italic;
+    /* italic style */
+    color: var(--ui-on-surface);
+    /* optional: slightly muted color */
+    margin-top: 0.1em;
+    /* smaller space under title */
+}
+
+/* Mobile-friendly adjustment */
+@media (max-width: 600px) {
+    .title {
+        display: flex;
+        /* switch from inline-flex to flex */
+        flex-direction: column;
+        /* stack title and tag vertically */
+        align-items: flex-start;
+        /* left-align items */
+        gap: 0.25em;
+        /* optional: small gap between title and tag */
+    }
+
+    .tag {
+        margin-left: 0;
+        /* remove inline spacing on mobile */
+    }
+}
+
+
+.responsive-h1 {
+    font-size: clamp(2rem, 8vw, 5rem);
+    line-height: 1.1;
+}
+
+.responsive-h1v2 {
+    font-size: 30px;
+}
+
+.responsive-time {
+    font-size: 40px;
+}
+
+/* Optional: adjust padding/margin on mobile */
+@media (max-width: 600px) {
+    .responsive-h1 {
+        font-size: clamp(1.5rem, 10vw, 3rem) !important;
+    }
+
+    .responsive-time {
+        font-size: 20px;
+    }
+
+    .responsive-h1v2 {
+        font-size: clamp(1.5rem, 10vw, 1.5rem) !important;
+
+    }
+
+}
+
+
+.AccordionContent {
+    scroll-snap-align: start;
+    /* scroll-snap-stop: always; */
+    background-color: var(--ui-surface);
+    border-radius: var(--ui-card-radius);
+    box-shadow: var(--ui-card-shadow);
+    display: grid;
+    grid-row: 1/-1;
+    grid-template-rows: subgrid;
+    padding: var(--ui-spacing-xs);
+    inline-size: min(75cqi, 330px);
+    padding: 10px !important;
+
+    border: 2px solid rgba(0, 0, 0, 1) !important;
+    border-radius: 0 !important;
+}
+
+.heigh300px {
+    height: 300px !important;
+}
+
+.C2title {
+    display: inline-flex;
+    align-items: center;
+
+    font-size: 1.25rem;
+    text-align: left !important;
+    padding-bottom: 0;
+}

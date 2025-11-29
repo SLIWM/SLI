@@ -32,7 +32,7 @@ app.controller("ContentCont", function ($scope, $http) {
     // -------------------- LOAD ALL CONTENT --------------------
     function getAllContents(page = 1, limit = 1) {
       
-        $http.get('../church/php/content.php?action=readAll&page=1&limit=1')
+        $http.get('../church/php/content.php?action=readAll&page=1&limit=2')
             .then(function (response) {
                 $scope.contents = response.data.data;
           
