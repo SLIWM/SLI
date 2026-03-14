@@ -824,3 +824,81 @@
   justify-content: center;
   align-items: center;
 }
+
+
+/* On site and onlicne Button */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Playfair+Display:ital,wght@1,700&display=swap');
+
+.join-us-container {
+    text-align: center;
+ order: 2;            
+    position: relative;   
+    margin-top: -110px;    
+    margin-bottom: 0;    
+    width: 100%;         
+}
+
+
+/* The "join us" text with subtle bevel effect */
+.join-us-text {
+  font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 64px;
+    color: #eeeeee; /* Light grey-white */
+    text-transform: lowercase;
+    margin-bottom: 30px;
+    letter-spacing: -2px;
+    /* Subtle 3D emboss effect */
+    text-shadow: 2px 2px 0px #fff, -1px -1px 0px #ddd;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.join-button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    text-transform: uppercase;
+    background: none;
+    cursor: pointer;
+    
+    /* The Rounded Border */
+    border: 2px solid #e0e0e0; /* Default light grey border */
+    border-radius: 50px;       /* Makes it a pill shape */
+    padding: 12px 35px;        /* Spacing inside the border */
+    
+    /* Smooth transition for the hover effect */
+    transition: all 0.4s ease;
+    outline: none;
+}
+
+/* Default state for ON-SITE */
+.on-site {
+    color: #d1d1d1;
+}
+
+/* Default state for ONLINE (already yellow) */
+.online {
+   color: #d1d1d1;
+}
+
+/* --- THE HOVER EFFECT --- */
+
+.join-button:hover {
+    color: #FFD700;          /* Text turns yellow */
+    border-color: #FFD700;   /* Border turns yellow */
+    
+    /* The "Yellow Effect" (Glow) */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); 
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+    
+    /* Slight lift effect */
+    transform: translateY(-2px);
+}
