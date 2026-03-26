@@ -56,7 +56,7 @@
 }
 
 .blueBg_Section {
-  background: #0044cc;
+  background: #191970;
   color: #fff;
 }
 
@@ -759,9 +759,9 @@
 .sticky-section {
   position: sticky;
   top: 0;
-  height: 100vh;
+  height: 95vh;
   background-color: #fff;
-  background-image: url("../images/ourServices_Main.png");
+  background-image: url("../images/Oursvs.png");
   background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
@@ -901,4 +901,13 @@
     
     /* Slight lift effect */
     transform: translateY(-2px);
+}
+
+.ourSvs-image {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  z-index: 2;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.4));
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }

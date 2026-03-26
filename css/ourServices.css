@@ -354,3 +354,13 @@
 .scrollable-parent::-webkit-scrollbar {
   display: none;
 }
+
+.OurSvscontainer {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 90px 20px;
+}
