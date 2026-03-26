@@ -25,6 +25,18 @@
 	max-width: 90%;
 }
 
+.hero-title-sm {
+	font-family: "Inter", 'Helvetica Neue', 'Lato', Helvetica, Arial, Sans-serif;
+	font-size: 5rem;
+	font-weight: 600;
+	line-height: 0.9em;
+	letter-spacing: -3.8px;
+	color: white;
+	margin: 0 auto;
+	max-width: 90%;
+}
+
+
 /* Tablet screens (≤1024px) */
 @media (max-width: 1024px) {
 	.hero-title {
