@@ -9,6 +9,87 @@
     </div>
 </header>
 
+<style>
+
+        /* The main section containing all elements */
+        .belief-section {
+            position: relative;
+            height: 100vh; /* This makes the section fill the screen height. Adjust as needed. */
+            width: 100%;
+            overflow: hidden; /* Ensures no content leaks outside the section bounds */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* 1. The Top Sand/Beige Layer (creates the upper pointed shape) */
+        .sand-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 40%; /* Adjusts how far down the sand shape goes */
+            background-color: #e2dacd; /* The specific light beige color from the image */
+            /* Clip-path creates the pointed downward shape */
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+            z-index: 2; /* Lowest content layer */
+        }
+
+        /* 2. The Main Content Area (the large white background layer) */
+        .white-content-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 85%; /* Adjusts where the white part ends, revealing the black below */
+            background-color: #fff; /* White background */
+            /* Clip-path creates the lower pointed shape, meeting the sand layer at the sides */
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+            z-index: 1; /* Sits above the sand background, but below the text */
+            pointer-events: none; /* Allows clicks to pass through this decoration layer */
+        }
+
+        /* The text content sits in the center of the white area */
+        .content {
+            position: relative;
+            z-index: 3; /* Sits on top of both backgrounds */
+            padding: 20px;
+            margin-top: 150px;
+        }
+
+        /* The Main Heading "What We Believe" */
+        h1 {
+            font-size: 3rem; /* Large and bold */
+            font-weight: 700;
+            margin: 0 0 10px 0; /* Minimal spacing below */
+            color: #000; /* Crisp black color */
+        }
+
+        /* The Small Heading "STATEMENT OF BELIEFS" */
+    .SOB {
+            font-size: 0.8rem; /* Small, all-caps text */
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em; /* Slight letter spacing for a modern look */
+            margin: 0;
+            display: inline-block;
+            position: relative; /* Essential for positioning the underline */
+            color: #000; /* Matching black color */
+        }
+
+        /* The Underline underneath the small heading */
+        .SOB::after {
+            content: "";
+            position: absolute;
+            bottom: -5px; /* Adjusts the space between text and underline */
+            left: 0;
+            width: 100%; /* Spans the width of the H2 text */
+            height: 1px; /* The thickness of the underline */
+            background-color: #000; /* Underline color */
+        }
+</style>
+
 
 <!-- PYRAMID SECTION -->
 <div class="cut-out-shape"></div>
@@ -146,6 +227,9 @@
         </div>
     </div>
 </section>
+
+
+
 <!-- <div class="where">
         <h1 class="h1where">What We Value</h1>
          <p class="wherewhat">
@@ -176,4 +260,18 @@ We are a spiritual family encouraging one another, united in grace, and walking 
 </div>
 </section>
 
+<section class="belief-section">
+        
+        <div class="sand-background"></div>
+
+        <div class="white-content-background"></div>
+
+        <div class="content">
+            <h1>What We Believe</h1>
+            <a href="StatementOfBelief.html" target="_blank" rel="noopener noreferrer"><h2 class="SOB">Statement of Beliefs</h2></a>
+        </div>
+
+    </section>
+
 <!-- main body end -->
+
