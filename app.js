@@ -10,6 +10,10 @@ app.config(function ($routeProvider, $locationProvider) {
       templateUrl: "home.html",
       reloadOnSearch: false
     })
+    .when("/community", {
+      templateUrl: "community.html",
+      reloadOnSearch: false
+    })
     .otherwise({
       redirectTo: "/home"
     });
@@ -55,6 +59,13 @@ app.directive('navReady', function () {
 
       if (sidenav && menuWrapper) {
         sidenav.addEventListener("click", function (e) {
+          const menuLink = e.target.closest && e.target.closest("#myMenuWrapper a");
+          if (menuLink && !menuLink.classList.contains("closebtn")) {
+            menuWrapper.classList.remove("open");
+            sidenav.style.width = "0";
+            return;
+          }
+
           if (e.target === this) {
             menuWrapper.classList.remove("open");
             sidenav.style.width = "0";
@@ -143,15 +154,17 @@ app.run(function ($rootScope, $timeout) {
 app.directive("fadeInOnScroll", function () {
   return {
     restrict: "A",
-    link: function (scope, element) {
+    link: function (scope, element, attrs) {
+      const parsedThreshold = Number.parseFloat(attrs.fadeInThreshold);
+      const threshold = Number.isFinite(parsedThreshold) ? parsedThreshold : 0;
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && entry.intersectionRatio >= threshold) {
             element.addClass("show");
             observer.unobserve(entry.target); // animate once
           }
         });
-      });
+      }, { threshold });
       observer.observe(element[0]);
     }
   };
