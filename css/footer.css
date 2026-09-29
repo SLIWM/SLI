@@ -79,7 +79,18 @@
     letter-spacing: -0.04em;
     line-height: 1.1;
     margin-bottom: 6px;
-    color:black;
+    color:yellow;
+    
+  }
+
+  .footer-col h4 {   
+    font-size: 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    margin-bottom: 6px;
+    color:#aaa;
     
   }
   .footer-col ul { list-style: none; }
@@ -162,6 +173,7 @@
       justify-items: center;
       text-align: center;
       gap: 28px;
+      
     }
     .locations { justify-self: center; }
   }
@@ -177,3 +189,23 @@
     .accredited { flex-direction: column; gap: 12px; }
     .copyright { white-space: normal; }
   }
+
+  .footer-bottom {
+display: flex;
+  flex-direction: column;   /* stack copyright above location; use "row" to keep them side by side */
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  text-align: center;
+  padding: 0 24px;
+  }
+
+  .copyright { text-align: center; white-space: nowrap; }
+
+.locations {
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    
