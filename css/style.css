@@ -2213,6 +2213,50 @@ layer(design-system.symbols);
     }
 }
 
+@media (max-width: 600px) {
+    .service-times.carousel-section {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .carousel-section .carouselcont {
+        padding: 24px 0;
+    }
+
+    .carousel-section .cards {
+        grid-auto-columns: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .carousel-section .card {
+        inline-size: 100%;
+        width: 100%;
+        max-width: 340px;
+        min-height: 0 !important;
+        max-height: none !important;
+        margin-inline: auto;
+    }
+
+    .carousel-section .carousel-btn {
+        inline-size: 40px;
+        block-size: 40px;
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid #111;
+        color: #111;
+    }
+
+    .carousel-section .carousel-btn.left {
+        left: max(-8px, calc((100% - 340px) / 2 - 8px));
+        transform: translate(-50%, -50%);
+    }
+
+    .carousel-section .carousel-btn.right {
+        right: max(-8px, calc((100% - 340px) / 2 - 8px));
+        transform: translate(50%, -50%);
+    }
+}
+
 .visual .img {
     min-height: 200px;
     max-height: 200px;
