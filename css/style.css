@@ -245,7 +245,7 @@ button {
 .sidenav .closebtn {
     position: absolute;
     top: 0;
-   
+
     font-size: 36px;
     margin-left: 50px;
 }
@@ -737,35 +737,55 @@ button {
 }
 
 
-
-/* Start of updates - Lex */
-
 .menuWrapper {
-    overflow-x: hidden;
+    position: absolute;
+
     top: 0;
-    position: fixed;
-    transition: 0.5s;
-    width: 0;
-    height: 100%;
-    background-color: rgba(8, 8, 8, 1);
+    right: 0;
+
+    width: 25%;
+    height: 100vh;
+
+    background: #000;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    /* Initially hidden from LEFT to RIGHT */
+    clip-path: inset(0 100% 0 0);
+
+    opacity: 0;
+
+    transition:
+        clip-path 0.5s ease,
+        opacity 0.3s ease;
 }
 
 
-/* Desktop */
-@media (min-width: 769px) {
-    .menuWrapper.open {
-        width: 25%;
-        /* desktop size */
-    }
+/* OPEN: reveal LEFT → RIGHT */
+.menuWrapper.open {
+    clip-path: inset(0 0 0 0);
+
+    opacity: 1;
 }
 
-/* Mobile */
+
+/* CLOSE: hide LEFT → RIGHT */
+.menuWrapper.closing {
+    clip-path: inset(0 0 0 100%);
+
+    opacity: 0;
+}
+
+
 @media (max-width: 768px) {
-    .menuWrapper.open {
-        width: 100vw;
-        /* full width on mobile */
+
+    .menuWrapper {
+        width: 100%;
     }
+
 }
+
 
 .padding_0 {
     padding-left: 0 !important;
@@ -2057,7 +2077,7 @@ layer(design-system.symbols);
         /* stretch to right (optional) */
         display: inline-block;
         padding: 10px 20px;
-      
+
         color: white;
         text-align: center;
         text-decoration: none;
@@ -2294,9 +2314,9 @@ layer(design-system.symbols);
     }
 
     .C2 {
-    font-size: 13em;
-    line-height: 0.8;
-}
+        font-size: 13em;
+        line-height: 0.8;
+    }
 }
 
 
@@ -2344,7 +2364,7 @@ layer(design-system.symbols);
     padding-bottom: 2px;
     display: inline-flex;
     align-items: center;
- 
+
 }
 
 .connect-link::after {
@@ -2379,3 +2399,235 @@ layer(design-system.symbols);
     color: #007bff;
 }
 
+
+
+
+/* ==============================
+   CLOSE BUTTON
+================================ */
+
+.closebtn {
+    position: absolute;
+
+    top: 10px;
+    right: 20px;
+
+    color: #fff;
+
+    font-size: 32px;
+    line-height: 1;
+
+    text-decoration: none;
+
+    z-index: 20;
+}
+
+.closebtn:hover {
+    color: #ccc;
+}
+
+
+/* ==============================
+   SOCIAL MEDIA
+================================ */
+
+.socialMedia {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.socialMedia i {
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.socialMedia i:hover {
+    color: #ccc;
+}
+
+
+/* ==============================
+   TWO COLUMN GRID
+================================ */
+
+.menuGrid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Each side is now independent */
+.menuColumn {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+
+
+    max-width: 200px;
+}
+
+
+/* ==============================
+   MENU CARD
+================================ */
+
+.menuCard {
+    background: #151515;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    align-self: start;
+    width: 100%;
+}
+
+
+/* ==============================
+   WHITE TITLE
+================================ */
+
+.menuCardTitle {
+    background: #fff;
+    color: #000;
+    min-height: 31px;
+    padding: 7px 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+
+/* ==============================
+   MENU LINKS
+================================ */
+
+.menuLinks {
+    padding: 14px 11px 13px;
+}
+
+.menuLinks a {
+    display: block;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    line-height: 1.15;
+
+    font-weight: 700;
+
+    padding: 1px 0;
+}
+
+.menuLinks a:hover {
+    color: #ccc;
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   SUB HEADINGS
+================================ */
+
+.menuSubheading {
+    color: #aaa;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    margin-top: 7px;
+    margin-bottom: 4px;
+}
+
+
+/* ==============================
+   MOBILE
+================================ */
+
+@media screen and (max-width: 600px) {
+
+
+
+    .menuGrid {
+        gap: 12px 10px;
+    }
+
+    .menuCardTitle {
+        font-size: 14px;
+    }
+
+    .menuLinks {
+        padding: 13px 10px 12px;
+    }
+
+    .menuLinks a {
+        font-size: 13px;
+    }
+
+    .socialMedia {
+        gap: 14px;
+        padding-right: 40px;
+    }
+
+    .socialMedia i {
+        font-size: 15px;
+    }
+
+}
+
+.menuCloseBtn {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    width: 36px;
+    height: 36px;
+
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    color: #fff;
+
+    font-size: 32px;
+    font-weight: 300;
+
+    line-height: 36px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    z-index: 100;
+}
+
+.menuCloseBtn:hover {
+    color: #aaa;
+}
+
+.menuCloseBtn:focus {
+    outline: none;
+}
