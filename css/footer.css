@@ -79,7 +79,18 @@
     letter-spacing: -0.04em;
     line-height: 1.1;
     margin-bottom: 6px;
-    color:black;
+    color:yellow;
+    
+  }
+
+  .footer-col h4 {   
+    font-size: 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    margin-bottom: 6px;
+    color:#aaa;
     
   }
   .footer-col ul { list-style: none; }
