@@ -33,7 +33,7 @@ app.config(function ($routeProvider, $locationProvider) {
         })
         .when("/LifeGroup", {
             templateUrl: "LifeGroup.html",
-            title: "Lifegroup"
+            title: "Small Group"
         })
         .when("/Location", {
             templateUrl: "Location.html",
