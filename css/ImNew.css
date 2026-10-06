@@ -374,6 +374,8 @@ body.scrollable {
   color: #000;
 }
 
+
+/* divider */
  .sl-divider {
   display: flex;
   align-items: center;
