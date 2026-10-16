@@ -1879,9 +1879,152 @@ button {
 }
 
 .ending-section {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-    /* light background to separate from footer */
+    padding: 28px 24px 38px;
+    background-color: #fff;
+}
+
+.ending-inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    max-width: 960px;
+    min-height: 220px;
+    margin: 0 auto;
+    border-top: 1px solid #777;
+    color: #080808;
+    text-align: center;
+}
+
+.ending-inner::after {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    width: 2px;
+    height: 76%;
+    background: #111;
+    content: "";
+    transform: rotate(20deg);
+}
+
+.ending-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+.ending-column h2 {
+    margin: 0 0 16px;
+    color: #080808;
+    font-size: clamp(1.4rem, 2.8vw, 1.8rem);
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.ending-social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.ending-social-links a,
+.ending-social-links span {
+    color: #111;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.ending-social-links .ending-x-icon {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.ending-social-links a {
+    text-decoration: none;
+}
+
+.ending-social-links a:hover,
+.ending-social-links a:focus-visible {
+    color: #555;
+}
+
+.ending-connect {
+    gap: 16px;
+}
+
+.ending-connect h2 {
+    margin-bottom: 2px;
+}
+
+.ending-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(205px, 82%);
+    min-height: 37px;
+    padding: 8px 12px;
+    border: 1px solid #222;
+    color: #111;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.ending-button:hover,
+.ending-button:focus-visible {
+    background: #111;
+    color: #fff;
+}
+
+@media (max-width: 560px) {
+    .ending-section {
+        padding: 24px 16px 32px;
+    }
+
+    .ending-inner {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        padding: 26px 0;
+        gap: 28px;
+    }
+
+    .ending-inner::after {
+        display: none;
+    }
+
+    .ending-column h2 {
+        font-size: 1.35rem;
+    }
+
+    .ending-social-links {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .ending-social-links a,
+    .ending-social-links span {
+        font-size: 16px;
+    }
+
+    .ending-social-links .ending-x-icon {
+        font-size: 15px;
+    }
+
+    .ending-connect {
+        padding-top: 28px;
+        border-top: 1px solid #777;
+        gap: 12px;
+    }
+
+    .ending-button {
+        width: min(205px, 94%);
+        font-size: 0.72rem;
+    }
 }
 
 

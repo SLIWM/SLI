@@ -428,3 +428,20 @@
 	max-width: 100%;
 	font-size: clamp(2.5rem, 11vw, 8rem);
 }
+
+.heroHome.frontpage-hero {
+	background:
+		linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)),
+		url("../images/fronSLI%20WEBSITE%20-%20FRONTPAGE%201.png") center/cover no-repeat;
+}
+
+.heroHome.frontpage-hero .hero-title {
+	font-family: "Poppins", "Montserrat", Arial, sans-serif;
+	font-size: clamp(3rem, 8vw, 7.5rem);
+	font-weight: 700;
+	line-height: 0.98;
+	letter-spacing: -0.045em;
+	text-transform: lowercase;
+	text-wrap: balance;
+	text-shadow: 0 3px 18px rgba(0, 0, 0, 0.3);
+}
