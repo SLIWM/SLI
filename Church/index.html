@@ -50,6 +50,7 @@
   <!-- Responsive and gallery styles -->
   <link rel="stylesheet" href="../css/responsive.css">
   <link rel="stylesheet" href="../css/thumbnail-gallery.css">
+  <link rel="stylesheet" href="../css/church-theme.css?v=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular-route.min.js"></script>
@@ -61,7 +62,7 @@
   <script async defer crossorigin="anonymous"
     src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v23.0&appId=APP_ID"></script>
 
-  <ng-include src="'nav.html'"></ng-include>
+  <ng-include src="'nav.html?v=2'"></ng-include>
   <div ng-view></div>
   <div class="modal fade" id="loadingModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -217,6 +218,30 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
   <script>
     baguetteBox.run('.tz-gallery');
+
+    function scrollSetApart(btn, dir) {
+      const track = btn.closest('.setapart').querySelector('.setapart-track');
+      const card = track.querySelector('.setapart-card');
+      const step = card.offsetWidth + (parseFloat(getComputedStyle(track).columnGap) || 0);
+      track.scrollBy({ left: dir * step, behavior: 'smooth' });
+    }
+
+    function updateSetApartArrows(track) {
+      const arrows = track.closest('.setapart').querySelectorAll('.setapart-btn');
+      arrows[0].disabled = track.scrollLeft <= 2;
+      arrows[1].disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+    }
+
+    // the section is rendered later by AngularJS, so listen on the document
+    document.addEventListener('scroll', function (e) {
+      if (e.target.classList && e.target.classList.contains('setapart-track')) updateSetApartArrows(e.target);
+    }, true);
+    window.addEventListener('resize', function () {
+      document.querySelectorAll('.setapart-track').forEach(updateSetApartArrows);
+    });
+    new MutationObserver(function () {
+      document.querySelectorAll('.setapart-track').forEach(updateSetApartArrows);
+    }).observe(document.body, { childList: true, subtree: true });
   </script>
   <script>
     function openNav() {
@@ -229,12 +254,6 @@
       document.getElementById("myMenuWrapper").classList.remove("open");
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-
-    document.getElementById("mySidenav").addEventListener("click", function (e) {
-      if (e.target === this) {
-        closeNav();
-      }
-    });
 
     function toggleDetails(card) {
       const detail = card.querySelector('.details');

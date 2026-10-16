@@ -1,0 +1,186 @@
+/* Shared theme for all pages in /Church — loaded last so it refines the older page styles */
+:root {
+    --ct-navy: #2a3a52;
+    --ct-cream: #faf7f2;
+    --ct-ink: #2f3338;
+    --ct-gold: #f2c14e;
+    --ct-gold-dark: #c9972b;
+    --ct-radius: 24px;
+    --ct-shadow: 0 6px 18px rgba(0, 0, 0, .12);
+    --ct-shadow-hover: 0 12px 24px rgba(0, 0, 0, .22);
+}
+
+/* ---- Section bands: navy / cream instead of orange / black / white ---- */
+.orangeBg_Section,
+.redBg_Section {
+    background: var(--ct-navy);
+    color: #fff;
+}
+
+.blackBg_Section:not(:empty),
+.whiteBg_Section,
+.yellowBg_Section {
+    background: var(--ct-cream);
+    color: var(--ct-ink);
+}
+
+.blackBg_Section:not(:empty) .ImNew_h1,
+.blackBg_Section:not(:empty) .jc-text,
+.whiteBg_Section .jc-text {
+    color: var(--ct-ink);
+}
+
+/* ---- Headings ---- */
+.ImNew_h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.orangeBg_Section .ImNew_h1,
+.redBg_Section .ImNew_h1 {
+    color: #fff;
+}
+
+.blackBg_Section:not(:empty) .ImNew_h1,
+.whiteBg_Section .ImNew_h1 {
+    color: var(--ct-ink);
+}
+
+/* ---- Text blocks ---- */
+.ImNewcontainer {
+    padding: 70px 24px;
+    align-items: center;
+}
+
+.justified-container {
+    max-width: 640px;
+}
+
+.jc-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    letter-spacing: 0;
+    text-align: left;
+    color: inherit;
+}
+
+.orangeBg_Section .jc-text,
+.redBg_Section .jc-text {
+    color: rgba(255, 255, 255, .92);
+}
+
+/* ---- Images ---- */
+.img_box img {
+    border-radius: var(--ct-radius);
+    box-shadow: var(--ct-shadow);
+}
+
+.max_W_500 {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---- Cards ---- */
+.event-card,
+.ya-card,
+.ministry,
+.location-card,
+.location-box {
+    border-radius: var(--ct-radius);
+    box-shadow: var(--ct-shadow);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.event-card:hover,
+.ya-card:hover,
+.ministry:hover,
+.location-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--ct-shadow-hover);
+}
+
+.ministry img,
+.location-card img,
+.event-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ya-card h3 {
+    color: var(--ct-navy);
+}
+
+/* ---- Buttons ---- */
+.event-btn,
+.bannerbtn_pri {
+    padding: 10px 24px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--ct-navy);
+    color: #fff;
+    font-weight: 600;
+    transition: background-color .2s ease, transform .2s ease;
+}
+
+.event-btn:hover,
+.bannerbtn_pri:hover {
+    background: var(--ct-gold-dark);
+    transform: translateY(-2px);
+}
+
+/* ---- Contact / locations / generic ---- */
+.h1Meet {
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    color: var(--ct-ink);
+    border-bottom: 2px solid var(--ct-gold);
+    margin-bottom: 14px;
+}
+
+.location-box {
+    margin: 0 auto 24px;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.address_text {
+    font-size: 1.1rem;
+}
+
+iframe,
+video {
+    max-width: 100%;
+}
+
+.responsive-iframe-container iframe,
+.video-container iframe {
+    border-radius: 16px;
+}
+
+/* ---- Small screens ---- */
+@media (max-width: 767px) {
+    .ImNewcontainer {
+        padding: 44px 16px;
+    }
+
+    .img_box {
+        padding: 0;
+    }
+
+    .justified-container {
+        max-width: 100%;
+    }
+
+    .about_text {
+        width: 100%;
+        float: none;
+    }
+
+    .orangeBg_Section .row,
+    .blackBg_Section .row {
+        flex-direction: column;
+    }
+}

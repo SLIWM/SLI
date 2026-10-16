@@ -1,77 +1,121 @@
-<div id="mySidenav" class="sidenav" nav-ready>
-   <div class="menuWrapper" id="myMenuWrapper" style="right: 0;">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="margin-top: 15px;">&times;</a>
+<div id="mySidenav" class="sidenav transition-[width] duration-500" nav-ready>
+   <div class="menuWrapper" id="myMenuWrapper">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" aria-label="Close navigation">×</a>
       <div class="childMenuWrapper">
-         <div class="socialMedia">
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-youtube"></i>
-            <i class="fa-brands fa-tiktok"></i>
-            <i class="fa-solid fa-envelope"></i>
+         <div class="socialMedia" aria-label="Salt and Light social media">
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
          </div>
 
-         <div class="menuRow">
-            <div class="menuCol">
-               <div class="menuCategory">
-                  <span class="categoryTitle">ARE YOU NEW</span>
-                  <a href="#!/ImNew" onclick="closeNav()">I'm New</a>
-                  <a href="#!/OurServices" onclick="closeNav()">Our Services</a>
-                  <a href="#!/whoweare" onclick="closeNav()">Who we are</a>
+         <div class="menuGrid">
+            <div class="menuColumn">
+               <div class="menuCard">
+                  <div class="menuCardTitle">ARE YOU NEW?</div>
+                  <div class="menuLinks">
+                     <a href="#!/ImNew" onclick="closeNav()">I'M NEW</a>
+                     <a href="#!/whoweare" onclick="closeNav()">WHO WE ARE</a>
+                     <a href="#!/beliefs" onclick="closeNav()">STATEMENT OF FAITH</a>
+                     <a href="#!/MeetTheTeam" onclick="closeNav()">MEET OUR MINISTERS</a>
+                  </div>
                </div>
-            </div>
-            <div class="menuCol">
-               <div class="menuCategory">
-                  <span class="categoryTitle">GET INVOLVED</span>
-                  <a href="#!/LifeGroup" onclick="closeNav()">Life Group</a>
-                  <a href="#!/Grow" onclick="closeNav()">Grow Together</a>
-                  <a href="#!/beliefs" onclick="closeNav()">Statement of Faith</a>
-                  
-                  <a href="#!/Volunteer" onclick="closeNav()">Be a Volunteer</a>
-                  <a href="#!/tithes" onclick="closeNav()">Tithes & Offerings</a>
-                  <a href="#!/ANC" onclick="closeNav()">Announcement</a>
-               </div>
-            </div>
-            <div class="menuCol">
-               <div class="menuCategory">
-                  <span class="categoryTitle">MINISTRIES</span>
-                  <a href="#!/SaltAndLightKids" onclick="closeNav()">Salt and Light Kids</a>
-                  <a href="#!/YAFC" onclick="closeNav()">YAFC</a>
-                  <a href="#!/Remnant" onclick="closeNav()">Remnant</a>
-                  <a href="#!/MWF" onclick="closeNav()">MWF</a>
-                  <a href="#!/PrayerWarriors" onclick="closeNav()">Prayer Warriors</a>
-                  <a href="#!/Corramdeo" onclick="closeNav()">Coram Deo</a>
 
+               <div class="menuCard">
+                  <a href="../index.html#!/community">
+                     <div class="menuCardTitle">COMMUNITY MINISTRY</div>
+                  </a>
+                  <div class="menuLinks">
+                     <a href="../index.html#!/community">COMMUNITY — COMPASSION IN ACTION</a>
+                     <a href="../index.html#!/community#scholarship">SCHOLARSHIP &amp; SPONSORSHIP</a>
+                     <a href="../index.html#!/community#feeding-ministry">FEEDING MINISTRY</a>
+                     <a href="../index.html#!/community#medical-missions">MEDICAL MISSIONS</a>
+                     <a href="../index.html#!/community#community-services">COMMUNITY SERVICES</a>
+                     <a href="../index.html#!/community#emergency-relief">EMERGENCY RELIEF</a>
+                  </div>
+               </div>
+
+               <div class="menuCard">
+                  <div class="menuCardTitle">SPECIAL SERVICES</div>
+                  <div class="menuLinks">
+                     <a href="#!/OurServices" onclick="closeNav()">BAPTISMS</a>
+                     <a href="#!/OurServices" onclick="closeNav()">WEDDINGS</a>
+                     <a href="#!/OurServices" onclick="closeNav()">WAKES &amp; FUNERALS</a>
+                     <a href="#!/OurServices" onclick="closeNav()">OTHER DEDICATIONS</a>
+                  </div>
+               </div>
+
+               <div class="menuCard">
+                  <div class="menuCardTitle">RESOURCES</div>
+                  <div class="menuLinks">
+                     <a href="#!/SundayWorship" onclick="closeNav()">SUNDAY SERMONS</a>
+                     <a href="#!/WednesdayWorship" onclick="closeNav()">WEDNESDAY SERMONS</a>
+                     <a href="#!/ANC" onclick="closeNav()">WEEKLY ANNOUNCEMENTS</a>
+                  </div>
                </div>
             </div>
-            <!-- <div class="menuCol">
-               <div class="menuCategory">
-                  <span class="categoryTitle">MOVEMENT</span>
-                  <a href="#">Event Movments</a>
+
+            <div class="menuColumn">
+               <div class="menuCard">
+                  <div class="menuCardTitle">GET INVOLVED</div>
+                  <div class="menuLinks">
+                     <a href="#!/LifeGroup" onclick="closeNav()">SMALL GROUPS</a>
+                     <a href="#!/Grow" onclick="closeNav()">TRAINING &amp; EQUIPPING</a>
+                     <a href="#!/GrowTogether" onclick="closeNav()">SEMINARS</a>
+                     <a href="#!/GrowTogether" onclick="closeNav()">CONFERENCES</a>
+                     <a href="#!/Volunteer" onclick="closeNav()">VOLUNTEER</a>
+                  </div>
                </div>
-            </div> -->
-            <div class="menuCol">
-               <div class="menuCategory">
-                  <span class="categoryTitle">WATCH</span>
-                  <a href="#!/SundayWorship" onclick="closeNav()">Sunday Servce</a>
-                  <a href="#!/WednesdayWorship" onclick="closeNav()">Wednesday Service</a>
-                  <!-- <a href="#" onclick="closeNav()"></a> -->
+
+               <div class="menuCard">
+                  <div class="menuCardTitle">CHURCH MINISTRY</div>
+                  <div class="menuLinks">
+                     <div class="menuSubheading">DEPARTMENT OF DISCIPLESHIP</div>
+                     <a href="#!/SaltAndLightKids" onclick="closeNav()">SALT AND LIGHT KIDS</a>
+                     <a href="#!/YAFC" onclick="closeNav()">YOUTH AMBASSADORS FOR CHRIST</a>
+                     <a href="#!/Remnant" onclick="closeNav()">REMNANT</a>
+                     <a href="#!/MWF" onclick="closeNav()">MEN &amp; WOMEN OF FAITH</a>
+                     <a href="#!/PrayerWarriors" onclick="closeNav()">PRAYER WARRIORS</a>
+                     <div class="menuSubheading">DEPARTMENT OF WORSHIP</div>
+                     <a href="#!/Corramdeo" onclick="closeNav()">CORAM DEO WORSHIP</a>
+                     <a href="#!/OurServices" onclick="closeNav()">SALT AND LIGHT ON MEDIA</a>
+                     <a href="#!/OurServices" onclick="closeNav()">SIGLA TAMBOURINE DANCE</a>
+                     <a href="#!/OurServices" onclick="closeNav()">CHOSEN CCD DANCE</a>
+                  </div>
+               </div>
+
+               <div class="menuCard">
+                  <div class="menuCardTitle">GIVE</div>
+                  <div class="menuLinks">
+                     <a href="#!/tithes" onclick="closeNav()">TITHES &amp; OFFERINGS</a>
+                     <a href="#!/tithes" onclick="closeNav()">SPECIAL OFFERINGS</a>
+                  </div>
+               </div>
+
+               <div class="menuCard">
+                  <div class="menuCardTitle">CONTACT US</div>
+                  <div class="menuLinks">
+                     <a href="#!/contactUs" onclick="closeNav()">GENERAL INQUIRIES</a>
+                     <a href="#!/Location" onclick="closeNav()">LOCATIONS</a>
+                  </div>
                </div>
             </div>
          </div>
       </div>
-
    </div>
-
 </div>
 
 <div class="container-fluid padding_0 nav_header">
-   <nav class="navbar navbar-light bg-dark justify-content-between bg-solid-Black" style="width:100vw;padding: 1rem;">
-      <a href="/"><img src="../images/logo.png" class="img_logo" style="border-radius: 0px;"></a>
-      <div class="logo">
-         <span style="font-size:30px;cursor:pointer; color: #fff;" onclick="openNav()"><img
-               src="../images/toggle-icon.png" style="border-radius: 0px;"></span>
-
-
-      </div>
+   <nav class="navbar navbar-light bg-dark justify-content-between w-100 bg-solid-Black" style="width: 100%;">
+      <a href="#!/home" aria-label="Salt and Light home">
+         <picture>
+            <source media="(max-width: 768px)" srcset="../images/logo_mobile.png">
+            <img src="../images/logo.png" class="img_logo" alt="Salt and Light">
+         </picture>
+      </a>
+      <button type="button" class="site-menu-trigger" onclick="openNav()" aria-label="Open navigation">
+         <img src="../images/toggle-icon.png" height="30" alt="">
+      </button>
    </nav>
 </div>

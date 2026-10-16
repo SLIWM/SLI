@@ -31,6 +31,10 @@ app.config(function ($routeProvider, $locationProvider) {
             title: "Grow"
 
         })
+        .when("/GrowTogether", {
+            templateUrl: "GrowTogether.html",
+            title: "Grow Together"
+        })
         .when("/LifeGroup", {
             templateUrl: "LifeGroup.html",
             title: "Small Group"
