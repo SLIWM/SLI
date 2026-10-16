@@ -795,7 +795,8 @@
     background-position: center top;
     background-repeat: no-repeat;
     padding: 80px 20px; /* adds breathing room */
-    width: 400px; height: 800px;
+    width: 100%;
+    min-height: 70vh;
     
   }
 

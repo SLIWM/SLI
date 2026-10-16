@@ -345,14 +345,19 @@
 
 /* ✅ Responsive (swap image + adjust ratio for mobile) */
 .scrollable-parent {
-  height: 100vh; /* Or a specific height that allows content to overflow */
-  overflow-y: scroll; /* Add a vertical scrollbar when content overflows */
-
-    -ms-overflow-style: none;
-  scrollbar-width: none; /* Firefox */
-}
-.scrollable-parent::-webkit-scrollbar {
-  display: none;
+  /* Inner scroller (the original effect): sections pin and slide over each other inside it.
+     When it reaches the top/bottom the wheel / swipe passes on to the page, so nothing gets trapped. */
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior-y: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  outline: none;
 }
 
 .OurSvscontainer {
@@ -363,4 +368,108 @@
   max-width: 1600px;
   margin: 0 auto;
   padding: 90px 20px;
+}
+/* ===== SCROLL EFFECT: each section slides up over the one before it ===== */
+.scrollable-parent {
+  position: relative;
+  isolation: isolate;
+}
+
+/* 1. Invitation hero stays pinned while the next section covers it */
+.scrollable-parent .heroOurServices {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* 2. Banner slides over the hero and pins in turn */
+.scrollable-parent .sticky-section {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-radius: 32px 32px 0 0;
+  box-shadow: 0 -18px 40px rgba(0, 0, 0, .35);
+}
+
+/* 3. Service photos slide over the banner */
+.scrollable-parent .bg-section {
+  z-index: 3;
+  border-radius: 32px 32px 0 0;
+  box-shadow: 0 -18px 40px rgba(0, 0, 0, .35);
+}
+
+/* Fade and shrink the pinned hero as it gets covered (browsers with scroll-driven animations) */
+@keyframes ourSvsHeroCover {
+  from { opacity: 1; transform: scale(1); }
+  to   { opacity: .25; transform: scale(.92); }
+}
+
+@keyframes ourSvsBannerCover {
+  from { opacity: 1; filter: none; }
+  to   { opacity: .4; filter: brightness(.7); }
+}
+
+@supports (animation-timeline: view()) {
+  .scrollable-parent .heroOurServices .hero-header {
+    animation: ourSvsHeroCover linear both;
+    animation-timeline: scroll(nearest block);
+    animation-range: 0 100dvh;
+  }
+
+  .scrollable-parent .sticky-section .content {
+    animation: ourSvsBannerCover linear both;
+    animation-timeline: scroll(nearest block);
+    animation-range: 100dvh 180dvh;
+  }
+}
+
+/* Gentle fade-up for the photos as the section arrives */
+.scrollable-parent .bg-section .ourSvs-image,
+.scrollable-parent .bg-section .section-image,
+.scrollable-parent .bg-section .center-text {
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  /* keep the pinned hero, but let the other sections flow normally on small screens */
+  .scrollable-parent .sticky-section {
+    position: relative;
+    border-radius: 24px 24px 0 0;
+  }
+
+  .scrollable-parent .bg-section {
+    border-radius: 24px 24px 0 0;
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scrollable-parent .heroOurServices,
+  .scrollable-parent .sticky-section {
+    position: relative;
+  }
+
+  .scrollable-parent .heroOurServices .hero-header,
+  .scrollable-parent .sticky-section .content {
+    animation: none;
+  }
+}
+
+.scrollable-parent::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollable-parent .heroOurServices,
+.scrollable-parent .sticky-section,
+.scrollable-parent .bg-section {
+  scroll-snap-align: start;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scrollable-parent {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+  }
 }
